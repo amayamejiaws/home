@@ -93,7 +93,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url('/Users/lillianma/Library/Mobile\ Documents/com\~apple\~CloudDocs/test-website/junco1.JPG') no-repeat center center/cover; /* Background image */
+    background: url('junco1.JPG') no-repeat center center/cover; /* Background image */
     color: #fff;
     text-align: center;
     position: relative;
