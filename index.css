@@ -87,13 +87,14 @@ nav {
     }
 }
 
-/* Hero Section */
 .hero {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url("./images/junco1.JPG") no-repeat center center/cover; /* Background image */
+    background: url('/images/junco1.JPG') no-repeat center center/cover; /* Reference image directly */
+    background-size: cover; /* Ensure the image covers the full container */
+    background-color: #000; /* Fallback color in case image is not loaded */
     color: #fff;
     text-align: center;
     position: relative;
