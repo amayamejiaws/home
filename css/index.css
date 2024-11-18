@@ -126,7 +126,7 @@ nav {
 }
 
 /* Purple moving shape with lower opacity */
-<!-- .hero::after {
+/*.hero::after {
     content: '';
     position: absolute;
     top: 0;
@@ -136,7 +136,7 @@ nav {
     background: rgba(128, 0, 128, 0.2); /* Purple color with low opacity */
     animation: rotate-bg 20s linear infinite;
     z-index: 1; /* Ensure this is lower */
-}-->
+}*/
 
 @keyframes rotate-bg {
     from {
