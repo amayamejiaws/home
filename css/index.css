@@ -364,50 +364,44 @@ ul li {
     }
 }
 /* ------------------------------- TABS ------------------------------- */
-/* Tabs Container */
-.tabs {
-    margin-top: 20px;
+.alltabs{
+    display: flex; 
+    flex-wrap: wrap;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 25px; 
 }
 
-/* Tab Buttons */
-.tab-buttons {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
-.tab-button {
-    background-color: #f4f4f9;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 10px 20px;
-    margin: 0 5px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-}
-
-.tab-button.active {
-    background-color: #ffd100; /* Highlighted color for the active tab */
-    border-color: #333;
-    color: #333;
-}
-
-/* Tab Panels */
-.tab-content {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 20px;
-    background-color: white;
-}
-
-.tab-panel {
+.alltabs input[type="radio"]{
     display: none;
 }
 
-.tab-panel.active {
+.alltabs label{
+    padding: 25px;
+    background:#e2e2e2;
+    font-weight: bold;
+    order:2;
+}
+
+.mytabs .tab{
+    width: 100%;
+    padding:20px;
+    background: #fff;
+    order: 1;
+}
+
+.mytabs .tab h2{
+    font-size: 3em;
+}
+
+.mytabs input[type="radio"]:checked + label + .tab{
     display: block;
 }
+
+.mytabs input[type="radio"]checked + label{
+    background: #fff;
+}
+
 /* ------------------------------- FOOTER ------------------------------- */
 /* Footer */
 footer {
