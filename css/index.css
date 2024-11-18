@@ -427,7 +427,7 @@ ul li {
 
 .research-image img {
     width: 100%; /* Image takes full width of its container */
-    max-width: 400px; /* Limit max size of the image */
+    max-width: 300px; /* Limit max size of the image */
     height: auto; /* Maintain aspect ratio */
     border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -456,21 +456,28 @@ p.right-align {
 @media screen and (max-width: 768px) {
     .research-container {
         flex-direction: column; /* Stack image and text vertically */
-        justify-content: center; /* Align them at the center */
+        justify-content: flex-start; /* Align items at the start */
+        align-items: center; /* Center items horizontally */
     }
 
     /* Ensures the image stays below the text */
-    .research-image {
-        order: 2; /* Force the image to be below the text */
-        margin-top: 20px; /* Adds space between the text and image */
-        width: 100%;  /* Ensure the image takes up the full width on mobile */
-        max-width: 300px; /* Optional: Adjust max width for the image */
-    }
-
     .research-text {
-        order: 1; /* Ensure the text stays above the image */
-        text-align: center; /* Center-align the text */
-        width: 100%; /* Ensure the text container takes up full width */
+        order: 1; /* Text comes first */
+        text-align: left; /* Keep text aligned to the left */
+        width: 100%; /* Full width for text */
+        max-width: 600px; /* Optional: Limit the text width for readability */
+    }
+    .research-image {
+        order: 2; /* Image comes second */
+        margin-top: 20px; /* Add space between the text and the image */
+        width: 100%; /* Full width for the image */
+        max-width: 300px; /* Optional: Limit the image width */
+        text-align: center; /* Center the image container */
+    }
+    .research-image img {
+        width: auto; /* Maintain natural aspect ratio */
+        height: auto; /* Ensure correct proportions */
+        max-width: 100%; /* Ensure the image is responsive */
     }
 }
 /* ------------------------------- TABS ------------------------------- */
