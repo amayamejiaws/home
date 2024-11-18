@@ -108,9 +108,11 @@ nav {
         align-items: center;
     }
    
-    .menu-toggle {
-        display: none; /* Hide the checkbox entirely */
+    /* Ensure the checkbox is hidden */
+    input[type="checkbox"].menu-toggle {
+        display: none !important;  /* Use !important to override any conflicting styles */
     }
+
 }
 
 .navbar-list a {
