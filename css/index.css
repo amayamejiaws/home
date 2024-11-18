@@ -11,12 +11,7 @@ body {
     background-color: #f4f4f9;
     color: #333;
     overflow-x: hidden;
-    padding-top: 50px;
-}
-
-/* Remove top padding on the home page */
-.home-page {
-    padding-top: 0;
+    padding-top: 25px;
 }
 
 /* Header and navigation styling */
@@ -472,7 +467,7 @@ footer {
 
 .home-page footer {
     padding: 0px 0;
-    margin-top: 0px
+    margin-top: 0px;
     padding-top: 0;
 }
 
