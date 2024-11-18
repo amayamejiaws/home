@@ -417,21 +417,25 @@ ul li {
     display: flex;
     align-items: center;    /* Vertically align text and image */
     gap: 20px;              /* Space between image and text */
-    flex-wrap: wrap;        /* Ensures wrapping on smaller screens */
-    justify-content: center;/* Center content horizontally */
+    flex-wrap: nowrap; /* Prevent wrapping on larger screens */
+    justify-content: space-between; /* Spread text and image evenly */
+}
+
+.research-image {
+    flex: 1 1 40%; /* Image takes 40% of the container */
 }
 
 .research-image img {
-    width: 100%;            /* Make image take up full width of container */
-    max-width: 350px;       /* Max image size to prevent it from getting too big */
-    height: auto;           /* Maintain aspect ratio */
+    width: 100%; /* Image takes full width of its container */
+    max-width: 400px; /* Limit max size of the image */
+    height: auto; /* Maintain aspect ratio */
     border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Text Styling */
 .research-text {
-    max-width: 100%;
+    flex: 1 1 60%; /* Text takes 60% of the container */
 }
 
 .research-text h2 {
