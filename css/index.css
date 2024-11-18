@@ -147,6 +147,30 @@ nav {
     }
 }
 
+
+/* Purple moving shape with lower opacity*/
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -80%;
+    width: 200%;
+    height: 200%;
+    background: rgba(128, 0, 128, 0.4); /* Purple color with low opacity */
+    animation: rotate-bg 20s linear infinite;
+    z-index: 1; /* Ensure this is lower */
+}
+
+@keyframes rotate-bg {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
 /* Sections */
 .section {
     padding: 60px 20px;
