@@ -11,6 +11,12 @@ body {
     background-color: #f4f4f9;
     color: #333;
     overflow-x: hidden;
+    padding-top: 50px;
+}
+
+/* Remove top padding on the home page */
+.home-page {
+    padding-top: 0;
 }
 
 /* Header and navigation styling */
@@ -514,7 +520,11 @@ footer {
     color: #fff;
     text-align: center;
     padding: 15px 0;
-    margin-top: 20px;
+    margin-top: 30px;
+}
+
+.home-page footer {
+    padding-top: 0;
 }
 
 /* Smooth Scroll */
