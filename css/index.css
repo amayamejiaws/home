@@ -80,6 +80,38 @@ nav {
     transform: translateY(-5px);
 }
 
+/* Hamburger icon */
+.hamburger {
+    display: none;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Responsive styles (for mobile screens) */
+@media (max-width: 768px) {
+    .nav-right, .nav-left {
+        display: none;  /* Hide nav items on small screens */
+        width: 100%;
+        text-align: center;
+    }
+
+    .hamburger {
+        display: block; /* Show the hamburger icon */
+    }
+
+    /* When the hamburger icon is clicked, display the nav links */
+    .navbar.active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .navbar li {
+        margin: 10px 0; /* Space out the items */
+    }
+}
 
 /* Home page Hero Section */
 .hero {
