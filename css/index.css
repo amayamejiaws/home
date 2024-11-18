@@ -124,7 +124,7 @@ nav {
     transform: translateY(-5px); /* Slight lift effect */
 }
 
-/* Purple moving shape with lower opacity */
+/* Purple moving shape with lower opacity
 .hero::after {
     content: '';
     position: absolute;
@@ -144,7 +144,7 @@ nav {
     to {
         transform: rotate(360deg);
     }
-}
+} */
 
 /* Hero text fade-in effect */
 .hero h1 {
