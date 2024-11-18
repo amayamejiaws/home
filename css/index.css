@@ -78,6 +78,11 @@ nav {
     color: #333;
 }
 
+/* Ensure the checkbox is hidden */
+input[type="checkbox"].menu-toggle {
+    display: none !important;  /* Use !important to override any conflicting styles */
+}
+
 /* Hamburger icon */
 .hamburger {
     display: none;  /* Default, hides on larger screens */
@@ -123,11 +128,6 @@ nav {
         display: flex;
         flex-direction: column;
         align-items: center;
-    }
-   
-    /* Ensure the checkbox is hidden */
-    input[type="checkbox"].menu-toggle {
-        display: none !important;  /* Use !important to override any conflicting styles */
     }
 
 }
