@@ -8,37 +8,34 @@
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f9; /* Light Gray Background */
-    color: #333; /* Default Text Color */
+    background-color: #f4f4f9;
+    color: #333;
     overflow-x: hidden;
-    padding-top: 25px; /* Adjust based on navbar height */
+    padding-top: 25px;
 }
 
 /* Header and navigation styling */
 header {
-    background-color: #333; /* Dark background color */
+    background-color: #333;
     padding: 10px 0;
-    position: fixed; /* Fixes the navbar at the top of the page */
-    top: 0; /* Sticks the navbar to the top */
-    left: 0; /* Sticks the navbar to the left */
-    width: 100%; /* Ensures the navbar takes up the full width */
-    z-index: 1000; /* Ensures the navbar is on top of other content */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Optional shadow for a subtle effect */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
-/* Navbar container */
 nav {
     display: flex;
-    justify-content: space-between; /* Aligns left and right sections */
+    justify-content: space-between;
     padding: 0 20px;
 }
 
-/* Left and right sections of the navbar */
 .nav-left, .nav-right {
     display: flex;
 }
 
-/* Style the navigation lists */
 .nav-left ul, .nav-right ul {
     list-style: none;
     padding: 0;
@@ -46,12 +43,10 @@ nav {
     display: flex;
 }
 
-/* Style each list item */
 .nav-left li, .nav-right li {
     margin: 0 15px;
 }
 
-/* Style the links */
 .nav-left a, .nav-right a {
     text-decoration: none;
     color: white;
@@ -62,95 +57,58 @@ nav {
     transition: background-color 0.3s ease;
 }
 
-/* Hover effect for the links */
 .nav-left a:hover, .nav-right a:hover {
-    background-color: #f4f4f9; /* Highlight color on hover */
+    background-color: #f4f4f9;
     color: #333;
 }
 
-@media screen and (max-width: 768px) {
-    nav {
-        flex-direction: column; /* Stack the items vertically */
-        align-items: center; /* Center-aligns the items */
-    }
-
-    .nav-left, .nav-right {
-        width: 100%; /* Makes each section take up the full width */
-        justify-content: center; /* Centers the content inside */
-        margin-bottom: 10px; /* Adds space below each section */
-    }
-
-    .nav-left ul, .nav-right ul {
-        justify-content: center; /* Centers the links inside */
-        width: 100%; /* Makes the unordered list span full width */
-        flex-wrap: wrap; /* Wraps the items if necessary */
-    }
+.nav-right a.cv-link-box {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-/* ------------------------------- HOME PAGE ------------------------------- */
-/* Hero Section */
+.nav-right a.cv-link-box:hover {
+    background-color: #dedce0;
+    color: #333;
+    transform: translateY(-5px);
+}
+
+/* Home page Hero Section */
 .hero {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url('../images/junco1.JPG') no-repeat center center/cover; /* Background image */
+    background: url('../images/junco1.JPG') no-repeat center center/cover;
     color: #fff;
     text-align: center;
     position: relative;
     overflow: hidden;
 }
 
-/* Purple rotating background box */
-.hero::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -80%;
-    width: 200%;
-    height: 200%;
-    background: rgba(128, 0, 128, 0.2); /* Purple color with low opacity */
-    animation: rotate-bg 20s linear infinite;
-    z-index: 0; /* Ensure this is behind everything else */
+/* CV Link box on the hero */
+.hero-content h1, .hero-content p {
+    margin: 10px 0;
 }
 
-/* Keyframe for the purple background rotation */
-@keyframes rotate-bg {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-/* Hero Content Layout - Stack text vertically */
-.hero-content {
-    display: flex;
-    flex-direction: column; /* Stack items vertically */
-    align-items: center;
-    justify-content: center;
-    position: relative; /* Keep content above the rotating background */
-    z-index: 1; /* Ensure this stays above the purple background */
-    width: 90%; /* Adjust width for responsiveness */
-    text-align: center; /* Center align the text */
-}
-
-/* Hero Title */
 .hero-content h1 {
     font-size: 4rem;
-    animation: fade-in 3s ease forwards;
     opacity: 0;
-    z-index: 6;
+    animation: fade-in 3s ease forwards;
 }
 
-/* Hero Subtitle */
 .hero-content p {
     font-size: 2rem;
     margin-top: 20px;
-    animation: fade-in 3s ease forwards;
     opacity: 0;
-    z-index: 7;
+    animation: fade-in 3s ease forwards;
 }
 
 @keyframes fade-in {
@@ -162,46 +120,16 @@ nav {
     }
 }
 
-.hero-content h1, .hero-content p {
-    animation: fade-in 3s ease forwards;
-}
-
-
-/* CV Link Box */
-.cv-link-box {
-    margin-top: 30px;
-    padding: 15px 30px;
-    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
-    color: #333;
-    border-radius: 8px;
-    font-size: 1.1rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    text-decoration: none;
-    display: inline-block;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    position: relative;
-    z-index: 2; /* Higher than the purple box */
-}
-
-/* Hover effect for the CV link box */
-.cv-link-box:hover {
-    background-color: #dedce0;
-    color: #333;
-    transform: translateY(-5px); /* Slight lift effect */
-}
-
-/* General styles for the navigation boxes */
+/* Nav Boxes */
 .nav-box-container {
-    display: flex;
-    flex-wrap: wrap; /* Allow items to wrap onto next line */
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    margin-top: 50px; /* Shift the boxes down a bit */
+    margin-top: 50px;
     padding: 20px;
     max-width: 1000px;
-    position: relative; /* Ensure boxes are above the purple background */
-    z-index: 2; /* Ensures the boxes are above the rotating purple box */
+    justify-items: center;
+    position: relative;
 }
 
 .nav-box {
@@ -213,13 +141,13 @@ nav {
     border: 1px solid #ddd;
     border-radius: 10px;
     padding: 15px;
-    width: 250px; /* Make boxes a fixed size */
+    width: 250px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s, box-shadow 0.2s;
-    height: auto; /* Adjusting height to be smaller */
+    height: auto;
 }
 
-/* Hover effect for the boxes */
+/* Hover effect for the nav-box */
 .nav-box:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
@@ -228,44 +156,12 @@ nav {
 
 .nav-box h2 {
     font-size: 1.5rem;
-    margin-bottom: 5px;
 }
 
-.nav-box p {
-    font-size: 1rem;
-    color: #555;
-}
-
-/* Make sure we have 3 boxes on top and 2 on the bottom */
-.nav-box-container {
-    display: grid; /* Use grid for layout */
-    grid-template-columns: repeat(3, 1fr); /* 3 columns for the first row */
-    gap: 20px;
-    margin-top: 50px;
-    padding: 20px;
-    max-width: 1000px;
-    position: relative;
-    justify-content: center;
-}
-
+/* Media Query for Smaller Screens */
 @media (max-width: 768px) {
-    .hero-content h1 {
-        font-size: 2em;
-    }
-
-    .hero-content p {
-        font-size: 1em;
-    }
-
-    /* Adjust grid layout for smaller screens */
     .nav-box-container {
-        grid-template-columns: repeat(1, 1fr); /* 2 columns for smaller screens */
-    }
-
-    .nav-box {
-        width: 50%; /* Make boxes smaller on small screens */
-        max-width: 350px;
-        padding: 15px;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -277,165 +173,6 @@ nav {
     .nav-box p {
         font-size: 0.9em;
     }
-
-    /* Ensuring boxes stay within the screen on small devices */
-    .nav-box-container {
-        padding: 10px;
-    }
-}
-
-
-/* ------------------------------- SECTIONS ------------------------------- */
-.section {
-    padding: 60px 20px;
-    margin: 40px auto;
-    max-width: 1200px;
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.section:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
-}
-
-.section h2 {
-    color: #6A1B9A; /* Purple */
-    margin-bottom: 20px;
-    text-align: center;
-    position: relative;
-}
-
-.section h2::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    width: 80px;
-    height: 3px;
-    background-color: #FF69B4; /* Pink */
-    transform: translateX(-50%);
-}
-
-.section p {
-    text-align: center;
-    line-height: 1.8;
-}
-
-ul {
-    margin-top: 20px;
-    padding-left: 20px;
-}
-
-ul li {
-    margin-bottom: 10px;
-}
-
-
-
-/* ------------------------------- ABOUT SECTION ------------------------------- */
-/* About Section */
-#about {
-    padding: 60px 20px; /* Space inside the section */
-    margin-top: 40px; /* Adds space between the hero and about sections */
-    background: #fff; /* White background */
-    border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
-}
-
-/* About Section Content Layout */
-.about-container {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    flex-wrap: wrap; /* Ensures responsiveness on smaller screens */
-    justify-content: center;
-}
-
-.about-image img {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.about-text {
-    max-width: 600px;
-}
-
-.about-text h2 {
-    color: #6A1B9A; /* Purple color */
-    margin-bottom: 20px;
-}
-
-.about-text p {
-    line-height: 1.8;
-}
-
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-    .about-container {
-        flex-direction: column; /* Stack image and text vertically */
-    }
-
-    .about-image img {
-        max-width: 200px; /* Smaller image on small screens */
-    }
-
-    .about-text {
-        text-align: center;
-    }
-}
-
-/* ------------------------------- TABS ------------------------------- */
-/* Tabs Container */
-.tabs {
-    margin-top: 20px;
-}
-
-/* Tab Buttons */
-.tab-buttons {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
-}
-
-.tab-button {
-    background-color: #f4f4f9;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 10px 20px;
-    margin: 0 5px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-}
-
-.tab-button.active {
-    background-color: #ffd100; /* Highlighted color for the active tab */
-    border-color: #333;
-    color: #333;
-}
-
-/* Tab Panels */
-.tab-content {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 20px;
-    background-color: white;
-}
-
-.tab-panel {
-    display: none;
-}
-
-.tab-panel.active {
-    display: block;
 }
 
 /* ------------------------------- FOOTER ------------------------------- */
