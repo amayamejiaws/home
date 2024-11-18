@@ -175,6 +175,155 @@ nav {
     }
 }
 
+/* ------------------------------- SECTIONS ------------------------------- */
+.section {
+    padding: 60px 20px;
+    margin: 40px auto;
+    max-width: 1200px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.section h2 {
+    color: #6A1B9A; /* Purple */
+    margin-bottom: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    width: 80px;
+    height: 3px;
+    background-color: #FF69B4; /* Pink */
+    transform: translateX(-50%);
+}
+
+.section p {
+    text-align: center;
+    line-height: 1.8;
+}
+
+ul {
+    margin-top: 20px;
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+/* ------------------------------- ABOUT SECTION ------------------------------- */
+/* About Section */
+#about {
+    padding: 60px 20px; /* Space inside the section */
+    margin-top: 40px; /* Adds space between the hero and about sections */
+    background: #fff; /* White background */
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+
+/* About Section Content Layout */
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Ensures responsiveness on smaller screens */
+    justify-content: center;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about-text {
+    max-width: 600px;
+}
+
+.about-text h2 {
+    color: #6A1B9A; /* Purple color */
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    line-height: 1.8;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .about-container {
+        flex-direction: column; /* Stack image and text vertically */
+    }
+
+    .about-image img {
+        max-width: 200px; /* Smaller image on small screens */
+    }
+
+    .about-text {
+        text-align: center;
+    }
+}
+/* ------------------------------- TABS ------------------------------- */
+/* Tabs Container */
+.tabs {
+    margin-top: 20px;
+}
+
+/* Tab Buttons */
+.tab-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    background-color: #f4f4f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.tab-button.active {
+    background-color: #ffd100; /* Highlighted color for the active tab */
+    border-color: #333;
+    color: #333;
+}
+
+/* Tab Panels */
+.tab-content {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: white;
+}
+
+.tab-panel {
+    display: none;
+}
+
+.tab-panel.active {
+    display: block;
+}
 /* ------------------------------- FOOTER ------------------------------- */
 /* Footer */
 footer {
