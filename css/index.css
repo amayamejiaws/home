@@ -403,6 +403,72 @@ ul li {
         text-align: center;
     }
 }
+
+/* ------------------------------- RESEARCH ------------------------------- */
+#research {
+    padding: 60px 20px; /* Space inside the section */
+    margin-top: 40px; /* Adds space between the hero and about sections */
+    background: #fff; /* White background */
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+
+.research-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Ensures responsiveness on smaller screens */
+    justify-content: center;
+}
+
+.research-image img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Text Styling */
+.research-text {
+    max-width: 100%;
+}
+
+.research-text h2 {
+    color: #6A1B9A; /* Purple color */
+    margin-bottom: 20px;
+}
+
+.research-text p {
+    line-height: 1.8;
+}
+p.left-align {
+    text-align: left;
+}
+p.right-align {
+    text-align: right;
+}
+
+@media screen and (max-width: 768px) {
+    .research-container {
+        flex-direction: column; /* Stack image and text vertically */
+        justify-content: center; /* Align them at the center */
+    }
+
+    /* Ensures the image stays below the text */
+    .research-image {
+        order: 2; /* Force the image to be below the text */
+        margin-top: 20px; /* Adds space between the text and image */
+        width: 100%;  /* Ensure the image takes up the full width on mobile */
+        max-width: 300px; /* Optional: Adjust max width for the image */
+    }
+
+    .research-text {
+        order: 1; /* Ensure the text stays above the image */
+        text-align: center; /* Center-align the text */
+        width: 100%; /* Ensure the text container takes up full width */
+    }
+}
 /* ------------------------------- TABS ------------------------------- */
 /* Box Styling for Tabs */
 .tabs-container {
