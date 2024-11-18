@@ -149,18 +149,18 @@ nav {
 
 /* Hero text fade-in effect */
 .hero h1 {
-    font-size: 3rem;
+    font-size: 5rem;
     animation: fade-in 3s ease forwards;
     opacity: 0;
-    z-index: 4;
+    z-index: 6;
 }
 
 .hero p {
-    font-size: 1.2rem;
+    font-size: 3rem;
     margin-top: 20px;
     animation: fade-in 3s ease forwards;
     opacity: 0;
-    z-index: 3;
+    z-index: 7;
 }
 
 @keyframes fade-in {
