@@ -136,12 +136,6 @@ nav {
     text-align: center; /* Center align the text */
 }
 
-/* Hero Title and Subtitle */
-.hero-content h1,
-.hero-content p {
-    margin: 10px 0; /* Add some spacing between the elements */
-}
-
 /* Hero Title */
 .hero-content h1 {
     font-size: 4rem;
@@ -237,6 +231,7 @@ nav {
     padding: 20px;
     max-width: 1000px;
     position: relative;
+    justify-content: center;
 }
 
 @media (max-width: 768px) {
@@ -250,11 +245,11 @@ nav {
 
     /* Adjust grid layout for smaller screens */
     .nav-box-container {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns for smaller screens */
+        grid-template-columns: repeat(1, 1fr); /* 2 columns for smaller screens */
     }
 
     .nav-box {
-        width: 80%; /* Make boxes smaller on small screens */
+        width: 50%; /* Make boxes smaller on small screens */
         max-width: 350px;
         padding: 15px;
     }
