@@ -406,7 +406,7 @@ ul li {
 
 /* ------------------------------- RESEARCH ------------------------------- */
 #research {
-    padding: 60px 20px; /* Space inside the section */
+    padding: 40px 40px; /* Space inside the section */
     margin-top: 40px; /* Adds space between the hero and about sections */
     background: #fff; /* White background */
     border-radius: 12px;
@@ -436,6 +436,7 @@ ul li {
 /* Text Styling */
 .research-text {
     flex: 1 1 60%; /* Text takes 60% of the container */
+    padding: 0 40px; /* Add padding on the left and right */
 }
 
 .research-text h2 {
@@ -463,6 +464,7 @@ p.right-align {
     /* Ensures the image stays below the text */
     .research-text {
         order: 1; /* Text comes first */
+        padding: 0 20px; /* Add padding on the left and right */
         text-align: center; /* Keep text aligned to the left */
         width: 100%; /* Full width for text */
         max-width: 600px; /* Optional: Limit the text width for readability */
@@ -478,10 +480,13 @@ p.right-align {
         height: auto; /* Ensure correct proportions */
         max-width: 80%; /* Ensure the image is responsive */
     }
+    p.left-align, p.right-align {
+        text-align: center;
+    }
 }
 
 #researchextra{
-    padding: 20px 60px; /* Add padding on the left and right */
+    padding: 40px 40px; /* Add padding on the left and right */
     margin-top: 20px;
     background: #fff;
     border-radius: 12px;
@@ -496,7 +501,7 @@ ul {
 
 ul li {
     margin-bottom: 15px; /* Space between list items */
-    line-height: 1.8; /* Better readability */
+    line-height: 1; /* Better readability */
 }
 
 /* Link Styling */
