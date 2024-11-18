@@ -87,13 +87,14 @@ nav {
     }
 }
 
+
 /* Hero Section */
 .hero {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url('../images/junco1.JPG') no-repeat center center/cover; /* Background image */
+    background: url('/Users/lillianma/Library/Mobile\ Documents/com\~apple\~CloudDocs/test-website/images/junco1.JPG') no-repeat center center/cover; /* Background image */
     color: #fff;
     text-align: center;
     position: relative;
@@ -114,39 +115,17 @@ nav {
     display: inline-block;
     transition: background-color 0.3s ease, transform 0.3s ease;
     position: relative; /* Ensure it's positioned */
-    z-index: 5; /* Higher than the purple box */
+    z-index: 2; /* Higher than the purple box */
 }
 
 /* Hover effect for the CV link box */
 .cv-link-box:hover {
-    background-color: #787878; /* Highlight color on hover */
+    background-color: #dedce0; /* Highlight color on hover */
     color: #333;
     transform: translateY(-5px); /* Slight lift effect */
 }
 
-/* Hero text fade-in effect */
-.hero h1 {
-    font-size: 6rem;
-    animation: fade-in 3s ease forwards;
-    opacity: 0;
-    z-index: 4;
-}
-
-.hero p {
-    font-size: 4.5rem;
-    margin-top: 30px;
-    animation: fade-in 3s ease forwards;
-    opacity: 0;
-    z-index: 3;
-}
-
-@keyframes fade-in {
-    to {
-        opacity: 1;
-    }
-}
-
-/* Purple moving shape with lower opacity*/
+/* Purple moving shape with lower opacity */
 .hero::after {
     content: '';
     position: absolute;
@@ -168,6 +147,83 @@ nav {
     }
 }
 
+/* Hero text fade-in effect */
+.hero h1 {
+    font-size: 3rem;
+    animation: fade-in 2s ease forwards;
+    opacity: 0;
+    z-index: 2;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-top: 20px;
+    animation: fade-in 3s ease forwards;
+    opacity: 0;
+    z-index: 2;
+}
+
+@keyframes fade-in {
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+/* About Section */
+#about {
+    padding: 60px 20px; /* Space inside the section */
+    margin-top: 40px; /* Adds space between the hero and about sections */
+    background: #fff; /* White background */
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+
+/* About Section Content Layout */
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Ensures responsiveness on smaller screens */
+    justify-content: center;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about-text {
+    max-width: 600px;
+}
+
+.about-text h2 {
+    color: #6A1B9A; /* Purple color */
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    line-height: 1.8;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .about-container {
+        flex-direction: column; /* Stack image and text vertically */
+    }
+
+    .about-image img {
+        max-width: 200px; /* Smaller image on small screens */
+    }
+
+    .about-text {
+        text-align: center;
+    }
+}
 
 /* Sections */
 .section {
