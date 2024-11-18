@@ -480,34 +480,6 @@ p.right-align {
     }
 }
 
-
-Here’s how you can modify your code to include bullet points, links below each point, and padding on the left and right of the section within the box.
-
-Updated HTML:
-html
-Copy code
-<section id="extra" class="section">
-    <h2>Additional Projects</h2>
-    <p>In addition to my main research, I have contributed to several other studies:</p>
-    <ul>
-        <li class="left-align">
-            Currently under review: How feather macrostructures change in response to urbanization
-            <br>
-            <a href="#" class="link">Read more about this project</a>
-        </li>
-        <li class="left-align">
-            Previous publication: "Instructor Talk" of graduate teaching assistants
-            <br>
-            <a href="#" class="link">Access the publication</a>
-        </li>
-        <li class="left-align">
-            Previous publication: Zebrafish model for Schwachman-Diamond Syndrome
-            <br>
-            <a href="#" class="link">Read the study</a>
-        </li>
-    </ul>
-</section>
-
 #researchextra{
     padding: 20px 60px; /* Add padding on the left and right */
     margin-top: 40px;
@@ -519,7 +491,7 @@ Copy code
 /* List Styling */
 ul {
     list-style-type: disc; /* Use bullet points */
-    padding-left: 20px; /* Indent bullets */
+    padding-left: 100px; /* Indent bullets */
     margin: 20px 0; /* Add spacing between the list and other elements */
 }
 
@@ -533,6 +505,7 @@ ul li {
     color: #6A1B9A; /* Purple for the links */
     text-decoration: none;
     font-weight: bold;
+    font-size: 1rem;
 }
 
 .link:hover {
