@@ -426,9 +426,9 @@ ul li {
 }
 
 .research-image img {
-    width: 100%; /* Image takes full width of its container */
-    max-width: 300px; /* Limit max size of the image */
-    height: auto; /* Maintain aspect ratio */
+    width: auto; /* Image takes full width of its container */
+    max-width: 400px; /* Limit max size of the image */
+    height: 100%; /* Maintain aspect ratio */
     border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
@@ -463,21 +463,20 @@ p.right-align {
     /* Ensures the image stays below the text */
     .research-text {
         order: 1; /* Text comes first */
-        text-align: left; /* Keep text aligned to the left */
+        text-align: center; /* Keep text aligned to the left */
         width: 100%; /* Full width for text */
         max-width: 600px; /* Optional: Limit the text width for readability */
     }
     .research-image {
         order: 2; /* Image comes second */
         margin-top: 20px; /* Add space between the text and the image */
-        width: 100%; /* Full width for the image */
-        max-width: 300px; /* Optional: Limit the image width */
+        width: 80%; /* Full width for the image */
         text-align: center; /* Center the image container */
     }
     .research-image img {
         width: auto; /* Maintain natural aspect ratio */
         height: auto; /* Ensure correct proportions */
-        max-width: 100%; /* Ensure the image is responsive */
+        max-width: 80%; /* Ensure the image is responsive */
     }
 }
 /* ------------------------------- TABS ------------------------------- */
