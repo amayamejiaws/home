@@ -22,56 +22,75 @@
             <div class="nav-right">
                 <ul class="navbar">
                     <li><a href="/files/CV AmayaMejia.pdf" target="_blank">Curriculum Vitae</a></li> 
-                    <li><a href="data-availability.html">Data Availability</a>
-                    <li><a href="contact.html">Contact</a>
+                    <li><a href="data-availability.html">Data Availability</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
         </nav>
     </header>
 
     <!-- Outreach Section -->
-    <section id="outreach" class="section">
-        <h2>Outreach Initiatives</h2>
-        <p>The best science is the kind that works with people. To achieve this goal, I have engaged with community organizations, developed outreach efforts, and am dedicated to my mentoring efforts. Below are a few examples:</p>
+<section id="outreach" class="section">
+    <h2>Outreach Initiatives</h2>
+    <p>The best science is the kind that works with people. To achieve this goal, I have engaged with community organizations, developed outreach efforts, and am dedicated to my mentoring efforts. Below are a few examples:</p>
     
-        <!-- Tabs Container -->
+    <div class="tabs-container">
         <div class="alltabs">
-            <input type="radio" id="ameba" name="alltabs" checked="checked">
-            <label for="ameba"><Ameba</label>
-            <div class="tab">
+            <!-- Tabs -->
+            <div class="tab-label active" onclick="showTab('ameba')">Ameba</div>
+            <div class="tab-label" onclick="showTab('hola')">HoLA</div>
+            <div class="tab-label" onclick="showTab('mentorship')">Mentorship</div>
+        </div>
+        
+        <div class="mytabs">
+            <!-- Tab content -->
+            <div id="ameba" class="tab-content active">
                 <h3>AMEBA: The Association for Multi-Ethnic Bioscientists' Advancement</h3>
                 <p>I joined AMEBA in 2021 and since then have served as Co-Chief Administrative Officer (2021,2024) and Co-President (2022-2023). AMEBA is dedicated to supporting post-undergraduate level researchers at UCLA through community-building efforts, holding outreach events, offering professional development opportunities, and supporting mental wellness series. <br /> Notable events include: Annual Demystifying the Oral Qualifying Exam, Friendsgiving, First Friday Coffee Hours, Journey Talk seminars, participation in Explore Your Universe, and more.</p>
             </div>
 
-            <input type="radio" id="hola" name="alltabs">
-            <label for="hola"><HoLA</label>
-            <div class="tab">
+            <div id="hola" class="tab-content">
                 <h3>Heart of Los Angeles and "Your Neighbors, the Birds!"</h3>
                 <p>Community engagement begins early. As part of a larger effort, I, in partnership with graduate students Ellie Diamant and Sara Freimuth, developed the "Your Neighbors, The Birds" afterschool program hosted at Heart of Los Angeles. This is a weekly 1-hour class with activities designed to help children learn about bird biology. Classes focus on the inclusion of local bird species to explore concepts ranging from identification, bird anatomy, behaviors, and conservation.</p>
             </div>
 
-            <input type="radio" id="mentorship" name="alltabs">
-            <label for="mentorship"><Mentorship</label>
-            <div class="tab">
+            <div id="mentorship" class="tab-content">
                 <h3>Mentorship</h3>
                 <p>Mentoring is the most direct source of change. Students will develop a living compact to set expectations and guidelines for both mentor and mentee. These, along with regular communication, are necessary to ensure students have the support they need regardless of their ultimate career and personal goals. Previous students have moved on to pursue careers in industry, academia, medical fields, and veterinary fields.</p>
             </div>
         </div>
-    </section>   
+    </div>
+</section>
+<script>
+    function showTab(tabId) {
+        // Hide all tab content
+        const tabs = document.querySelectorAll('.tab-content');
+        tabs.forEach(tab => tab.classList.remove('active'));
 
-    
+        // Remove the 'active' class from all tab labels
+        const labels = document.querySelectorAll('.tab-label');
+        labels.forEach(label => label.classList.remove('active'));
+
+        // Show the clicked tab's content and set the label as active
+        document.getElementById(tabId).classList.add('active');
+        const activeLabel = document.querySelector(`.tab-label[onclick="showTab('${tabId}')"]`);
+        activeLabel.classList.add('active');
+    }
+</script>
+
+
     <section id="getinvolved" class="section">
         <h2>Get Involved</h2>
-            <p>If you are interested in learning how to adapt these strategies or want to volunteer for future outreach events, you are encouraged to reach out.</p>
-            <p>For the best response times, see the <a href="contact.html">Contact</a> page.</p>
+        <p>If you are interested in learning how to adapt these strategies or want to volunteer for future outreach events, you are encouraged to reach out.</p>
+        <p>For the best response times, see the <a href="contact.html">Contact</a> page.</p>
     </section>
 
-<!-- Footer Section -->
-<footer>
-    <p>© <span id="year"></span> Amaya-Mejia. All rights reserved.</p>
-</footer>
+    <!-- Footer Section -->
+    <footer>
+        <p>© <span id="year"></span> Amaya-Mejia. All rights reserved.</p>
+    </footer>
 
-<script src="assets/index.js"></script>
+    <script src="assets/index.js"></script>
 </body>
 
 </html>
