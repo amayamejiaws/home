@@ -495,6 +495,8 @@ footer {
 }
 
 .home-page footer {
+    padding: 0px 0;
+    margin-top: 0px
     padding-top: 0;
 }
 
