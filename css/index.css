@@ -61,6 +61,23 @@ nav {
     color: #333;
 }
 
+.navbar-list {
+    display: none;
+}
+
+.navbar-list a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    padding: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-list a:hover {
+    background-color: #f4f4f9;
+    color: #333;
+}
+
 /* Hamburger icon */
 .hamburger {
     display: none;  /* Default, hides on larger screens */
@@ -115,18 +132,6 @@ nav {
 
 }
 
-.navbar-list a {
-    text-decoration: none;
-    color: white;
-    font-size: 1.2rem;
-    padding: 15px;
-    transition: background-color 0.3s ease;
-}
-
-.navbar-list a:hover {
-    background-color: #f4f4f9;
-    color: #333;
-}
 
 
 
