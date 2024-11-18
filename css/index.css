@@ -117,7 +117,6 @@ nav {
     z-index: 5; /* Higher than the purple box */
 }
 
-
 /* Hover effect for the CV link box */
 .cv-link-box:hover {
     background-color: #787878; /* Highlight color on hover */
@@ -146,7 +145,6 @@ nav {
         opacity: 1;
     }
 }
-
 
 /* Purple moving shape with lower opacity*/
 .hero::after {
