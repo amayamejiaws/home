@@ -405,9 +405,17 @@ ul li {
 }
 
 /* ------------------------------- RESEARCH ------------------------------- */
+#researchgoals {
+    padding: 40px 40px; /* Space inside the section */
+    margin-top: 30px; /* Adds space between the hero and about sections */
+    background: #fff; /* White background */
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
+}
+
 #research {
     padding: 40px 40px; /* Space inside the section */
-    margin-top: 40px; /* Adds space between the hero and about sections */
+    margin-top: 30px; /* Adds space between the hero and about sections */
     background: #fff; /* White background */
     border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
@@ -453,8 +461,41 @@ p.left-align {
 p.right-align {
     text-align: right;
 }
+#researchextra{
+    padding: 40px 40px; /* Add padding on the left and right */
+    margin-top: 20px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* List Styling */
+ul {
+    list-style-type: disc; /* Use bullet points */
+    padding-left: 100px; /* Indent bullets */
+}
+
+ul li {
+    margin-bottom: 20px; /* Space between list items */
+    line-height: 1; /* Better readability */
+}
+
+/* Link Styling */
+.link {
+    color: #6A1B9A; /* Purple for the links */
+    margin-left: 10px;
+    text-decoration: none;
+    padding-left: 4ch;
+}
+
+.link:hover {
+    text-decoration: underline; /* Underline on hover */
+}
 
 @media screen and (max-width: 768px) {
+    #research {
+    padding: 20px 20px; /* Space inside the section */
+    }
     .research-container {
         flex-direction: column; /* Stack image and text vertically */
         justify-content: flex-start; /* Align items at the start */
@@ -485,35 +526,6 @@ p.right-align {
     }
 }
 
-#researchextra{
-    padding: 40px 40px; /* Add padding on the left and right */
-    margin-top: 20px;
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* List Styling */
-ul {
-    list-style-type: disc; /* Use bullet points */
-    padding-left: 100px; /* Indent bullets */
-}
-
-ul li {
-    margin-bottom: 20px; /* Space between list items */
-    line-height: 1; /* Better readability */
-}
-
-/* Link Styling */
-.link {
-    color: #6A1B9A; /* Purple for the links */
-    margin-left: 10px;
-    text-decoration: none;
-}
-
-.link:hover {
-    text-decoration: underline; /* Underline on hover */
-}
 
 /* ------------------------------- TABS ------------------------------- */
 /* Box Styling for Tabs */
