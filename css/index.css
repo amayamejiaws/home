@@ -500,13 +500,14 @@ ul {
 }
 
 ul li {
-    margin-bottom: 15px; /* Space between list items */
+    margin-bottom: 20px; /* Space between list items */
     line-height: 1; /* Better readability */
 }
 
 /* Link Styling */
 .link {
     color: #6A1B9A; /* Purple for the links */
+    margin-left: 10px;
     text-decoration: none;
 }
 
