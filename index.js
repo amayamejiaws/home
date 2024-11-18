@@ -49,4 +49,21 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll("section").forEach(section => {
         sectionsObserver.observe(section);
     });
+
+    // Tab switching for Outreach Initiatives
+    const tabButtons = document.querySelectorAll('.tab-button');
+    const tabPanels = document.querySelectorAll('.tab-panel');
+
+    tabButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+            // Remove 'active' class from all buttons and panels
+            tabButtons.forEach((btn) => btn.classList.remove('active'));
+            tabPanels.forEach((panel) => panel.classList.remove('active'));
+
+            // Add 'active' class to clicked button and corresponding panel
+            button.classList.add('active');
+            const tabId = button.getAttribute('data-tab');
+            document.getElementById(tabId).classList.add('active');
+        });
+    });
 });
