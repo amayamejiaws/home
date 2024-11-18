@@ -57,13 +57,13 @@ document.addEventListener("DOMContentLoaded", () => {
     tabButtons.forEach((button) => {
         button.addEventListener('click', () => {
             // Remove 'active' class from all buttons and panels
-            tabButtons.forEach((btn) => btn.classList.remove('active'));
-            tabPanels.forEach((panel) => panel.classList.remove('active'));
+            tabButtons.forEach((btn) => btn.classList.remove('.active'));
+            tabPanels.forEach((panel) => panel.classList.remove('.active'));
 
             // Add 'active' class to clicked button and corresponding panel
             button.classList.add('active');
             const tabId = button.getAttribute('data-tab');
-            document.getElementById(tabId).classList.add('active');
+            document.getElementById(tabId).classList.add('.active');
         });
     });
 });
