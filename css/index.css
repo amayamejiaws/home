@@ -101,6 +101,52 @@ nav {
     overflow: hidden;
 }
 
+/* Purple rotating background box */
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -80%;
+    width: 200%;
+    height: 200%;
+    background: rgba(128, 0, 128, 0.2); /* Purple color with low opacity */
+    animation: rotate-bg 20s linear infinite;
+    z-index: 0; /* Ensure this is behind everything else */
+}
+
+/* Keyframe for the purple background rotation */
+@keyframes rotate-bg {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Hero Content Layout (adjust left and right sections) */
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative; /* This ensures the content stays above the rotating background */
+    z-index: 1; /* This keeps the text and CV link above the rotating box */
+    width: 90%; /* Adjust width for responsiveness */
+}
+
+/* Left section (text) */
+.hero-text {
+    flex: 2; /* Left section takes up more space */
+    text-align: left;
+    padding: 20px;
+}
+
+/* Right section (image) */
+.hero-image {
+    flex: 1; /* Right section (image) takes up less space */
+    margin-top: 30px; /* Shift the image section down */
+}
+
 /* CV Link Box */
 .cv-link-box {
     margin-top: 30px;
@@ -114,59 +160,15 @@ nav {
     text-decoration: none;
     display: inline-block;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    position: relative; /* Ensure it's positioned */
+    position: relative;
     z-index: 2; /* Higher than the purple box */
 }
 
 /* Hover effect for the CV link box */
 .cv-link-box:hover {
-    background-color: #dedce0; /* Highlight color on hover */
+    background-color: #dedce0;
     color: #333;
     transform: translateY(-5px); /* Slight lift effect */
-}
-
-/* Purple moving shape with lower opacity */
-/*.hero::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -80%;
-    width: 200%;
-    height: 200%;
-    background: rgba(128, 0, 128, 0.2); /* Purple color with low opacity */
-    animation: rotate-bg 20s linear infinite;
-    z-index: 1; /* Ensure this is lower */
-}*/
-
-@keyframes rotate-bg {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-/* Hero text fade-in effect */
-.hero h1 {
-    font-size: 4rem;
-    animation: fade-in 3s ease forwards;
-    opacity: 0;
-    z-index: 6;
-}
-
-.hero p {
-    font-size: 2.5rem;
-    margin-top: 20px;
-    animation: fade-in 3s ease forwards;
-    opacity: 0;
-    z-index: 7;
-}
-
-@keyframes fade-in {
-    to {
-        opacity: 1;
-    }
 }
 
 /* General styles for the navigation boxes */
@@ -175,9 +177,11 @@ nav {
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
-    margin: 20px auto;
+    margin-top: 50px; /* Shift the boxes down a bit */
     padding: 20px;
     max-width: 1000px;
+    position: relative; /* Ensure boxes are above the purple background */
+    z-index: 2; /* Ensures the boxes are above the rotating purple box */
 }
 
 .nav-box {
@@ -188,10 +192,11 @@ nav {
     background-color: #f5f5f5;
     border: 1px solid #ddd;
     border-radius: 10px;
-    padding: 20px;
+    padding: 15px;
     width: 250px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s, box-shadow 0.2s;
+    height: auto; /* Adjusting height to be smaller */
 }
 
 .nav-box:hover {
@@ -230,7 +235,7 @@ nav {
     }
 
     .nav-box {
-        width: 80%;
+        width: 90%; /* Make boxes smaller on small screens */
         max-width: 350px;
         padding: 15px;
     }
@@ -244,7 +249,13 @@ nav {
     .nav-box p {
         font-size: 0.9em;
     }
+
+    /* Ensuring boxes stay within the screen on small devices */
+    .nav-box-container {
+        padding: 10px;
+    }
 }
+
 
 
 /* ------------------------------- SECTIONS ------------------------------- */
