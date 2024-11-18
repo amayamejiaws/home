@@ -142,91 +142,64 @@ input[type="checkbox"].menu-toggle {
 
 /* Home page Hero Section */
 .hero {
-    height: 100vh; /* Full viewport height */
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url('../images/junco1.JPG') no-repeat center center/cover; /* Ensures the image fully covers the section */
+    background: url('../images/junco1.JPG') no-repeat center center/cover; /* Background image */
     color: #fff;
     text-align: center;
     position: relative;
     overflow: hidden;
-    margin: 0; /* Make sure no margins are applied */
-    padding: 0; /* Remove padding */
 }
 
-.hero-content {
-    position: relative; /* Make sure the text is above the background */
-    z-index: 1; /* Ensure text is above the purple rectangle */
+/* CV Link Box */
+.cv-link-box {
+    margin-top: 30px;
+    padding: 15px 30px;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+    color: #333;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    position: relative; /* Ensure it's positioned */
+    z-index: 5; /* Higher than the purple box */
 }
 
-.hero-content h1, .hero-content p {
-    margin: 10px 0;
+/* Hover effect for the CV link box */
+.cv-link-box:hover {
+    background-color: #787878; /* Highlight color on hover */
+    color: #333;
+    transform: translateY(-5px); /* Slight lift effect */
 }
 
-.hero-content h1 {
-    font-size: 3.5rem;
-    opacity: 0;
-    z-index: 7;
+/* Hero text fade-in effect */
+.hero h1 {
+    font-size: 8rem;
     animation: fade-in 3s ease forwards;
+    opacity: 0;
+    z-index: 4;
 }
 
-.hero-content p {
-    font-size: 2rem;
-    margin-top: 20px;
-    opacity: 0;
-    z-index: 6;
+.hero p {
+    font-size: 5rem;
+    margin-top: 30px;
     animation: fade-in 3s ease forwards;
+    opacity: 0;
+    z-index: 3;
 }
 
 @keyframes fade-in {
-    from {
-        opacity: 0;
-    }
     to {
         opacity: 1;
     }
 }
 
-/* Nav Boxes */
-.nav-box-container {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 20px;
-    margin-top: 50px;
-    padding: 40px;
-    max-width: 1000px;
-    justify-items: center;
-    position: relative;
-    z-index: 2;
-}
-
-.nav-box {
-    display: block;
-    text-align: center;
-    text-decoration: none;
-    color: black;
-    background-color: #f5f5f5;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 15px;
-    width: 230px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s, box-shadow 0.2s;
-    height: auto;
-}
-
-.nav-box:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
-    background-color: #e8f4ff;
-}
-
-.nav-box h2 {
-    font-size: 1.5rem;
-}
-
-/* Purple rotating background box */
+/* Purple moving shape with lower opacity*/
 .hero::after {
     content: '';
     position: absolute;
@@ -234,9 +207,9 @@ input[type="checkbox"].menu-toggle {
     left: -80%;
     width: 200%;
     height: 200%;
-    background: rgba(128, 0, 128, 0.2); /* Purple color with low opacity */
+    background: rgba(128, 0, 128, 0.4); /* Purple color with low opacity */
     animation: rotate-bg 20s linear infinite;
-    z-index: 0; /* Ensure this is behind everything else */
+    z-index: 1; /* Ensure this is lower */
 }
 
 @keyframes rotate-bg {
