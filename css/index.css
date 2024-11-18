@@ -504,8 +504,6 @@ ul li {
 .link {
     color: #6A1B9A; /* Purple for the links */
     text-decoration: none;
-    font-weight: bold;
-    font-size: 1rem;
 }
 
 .link:hover {
