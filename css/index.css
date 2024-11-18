@@ -117,34 +117,13 @@ nav {
     z-index: 5; /* Higher than the purple box */
 }
 
+
 /* Hover effect for the CV link box */
 .cv-link-box:hover {
     background-color: #787878; /* Highlight color on hover */
     color: #333;
     transform: translateY(-5px); /* Slight lift effect */
 }
-
-/* Purple moving shape with lower opacity
-.hero::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -80%;
-    width: 200%;
-    height: 200%;
-    background: rgba(128, 0, 128, 0.4); /* Purple color with low opacity */
-    animation: rotate-bg 20s linear infinite;
-    z-index: 1; /* Ensure this is lower */
-}
-
-@keyframes rotate-bg {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-} */
 
 /* Hero text fade-in effect */
 .hero h1 {
