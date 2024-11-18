@@ -61,6 +61,17 @@ nav {
     color: #333;
 }
 
+
+
+
+/* Hamburger icon */
+.hamburger {
+    display: none;  /* Default, hides on larger screens */
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
 .navbar-list {
     display: none;
 }
@@ -78,18 +89,10 @@ nav {
     color: #333;
 }
 
-/* Ensure the checkbox is hidden */
 input[type="checkbox"].menu-toggle {
     display: none !important;  /* Use !important to override any conflicting styles */
 }
 
-/* Hamburger icon */
-.hamburger {
-    display: none;  /* Default, hides on larger screens */
-    font-size: 30px;
-    color: white;
-    cursor: pointer;
-}
 
 /* Responsive styles (for mobile screens) */
 @media (max-width: 768px) {
