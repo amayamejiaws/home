@@ -93,7 +93,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url('/Users/lillianma/Library/Mobile\ Documents/com\~apple\~CloudDocs/test-website/images/junco1.JPG') no-repeat center center/cover; /* Background image */
+    background: url('../images/junco1.JPG') no-repeat center center/cover; /* Background image */
     color: #fff;
     text-align: center;
     position: relative;
@@ -114,7 +114,7 @@ nav {
     display: inline-block;
     transition: background-color 0.3s ease, transform 0.3s ease;
     position: relative; /* Ensure it's positioned */
-    z-index: 2; /* Higher than the purple box */
+    z-index: 5; /* Higher than the purple box */
 }
 
 /* Hover effect for the CV link box */
@@ -151,7 +151,7 @@ nav {
     font-size: 3rem;
     animation: fade-in 2s ease forwards;
     opacity: 0;
-    z-index: 2;
+    z-index: 5;
 }
 
 .hero p {
@@ -159,7 +159,7 @@ nav {
     margin-top: 20px;
     animation: fade-in 3s ease forwards;
     opacity: 0;
-    z-index: 2;
+    z-index: 5;
 }
 
 @keyframes fade-in {
