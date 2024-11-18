@@ -226,8 +226,6 @@ input[type="checkbox"].menu-toggle {
     font-size: 1.5rem;
 }
 
-
-
 /* Purple rotating background box */
 .hero::after {
     content: '';
@@ -250,18 +248,15 @@ input[type="checkbox"].menu-toggle {
     }
 }
 
-
 /* Mobile Styles */
 @media (max-width: 768px) {
-
-    /* Hero Section Styling for Mobile */
     .hero {
         height: 120vh;
         display: flex;
         justify-content: center;
         align-items: center;
-        background: url('../images/junco2.jpeg') no-repeat center center/cover;
-        color: #fff;
+        background: url('../images/junco2.JPG') no-repeat center center/cover;
+        color: #fff
         text-align: center;
         position: relative;
         overflow: hidden;
