@@ -493,10 +493,8 @@ ul li {
 }
 
 @media screen and (max-width: 768px) {
-    #research {
-    padding: 20px 20px; /* Space inside the section */
-    }
     .research-container {
+        padding: 20px 20px;
         flex-direction: column; /* Stack image and text vertically */
         justify-content: flex-start; /* Align items at the start */
         align-items: center; /* Center items horizontally */
@@ -505,7 +503,7 @@ ul li {
     /* Ensures the image stays below the text */
     .research-text {
         order: 1; /* Text comes first */
-        padding: 0 20px; /* Add padding on the left and right */
+        padding: 0 10px; /* Add padding on the left and right */
         text-align: center; /* Keep text aligned to the left */
         width: 100%; /* Full width for text */
         max-width: 600px; /* Optional: Limit the text width for readability */
@@ -523,6 +521,10 @@ ul li {
     }
     p.left-align, p.right-align {
         text-align: center;
+    }
+    
+    ul {
+    list-style-type: disc;
     }
 }
 
