@@ -64,7 +64,7 @@ nav {
 
 /* Hover effect for the links */
 .nav-left a:hover, .nav-right a:hover {
-    background-color: #ffd100; /* Highlight color on hover */
+    background-color: #f4f4f9; /* Highlight color on hover */
     color: #333;
 }
 
