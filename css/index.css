@@ -129,7 +129,7 @@ nav {
     font-size: 3rem;
     animation: fade-in 2s ease forwards;
     opacity: 0;
-    z-index: 5;
+    z-index: 4;
 }
 
 .hero p {
@@ -137,7 +137,7 @@ nav {
     margin-top: 20px;
     animation: fade-in 3s ease forwards;
     opacity: 0;
-    z-index: 5;
+    z-index: 3;
 }
 
 @keyframes fade-in {
