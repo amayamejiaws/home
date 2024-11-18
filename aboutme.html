@@ -11,26 +11,33 @@
 <body>
     <!-- Header with navigation -->
     <header>
-        <header>
-            <nav>
-                <div class="nav-left">
-                    <ul class="navbar">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="aboutme.html">About Me</a></li>
-                        <li><a href="research.html">Research</a></li> 
-                        <li><a href="communityinitiatives.html">Community Initiatives</a></li> 
-                    </ul>
-                </div>
-                
-                <div class="nav-right">
-                    <ul class="navbar">
-                        <li><a href="/files/CV AmayaMejia.pdf" target="_blank">Curriculum Vitae</a></li> 
-                        <li><a href="data-availability.html">Data Availability</a>
-                        <li><a href="contact.html">Contact</a>
-                    </ul>
-                </div>
-            </nav>
-        </header>
+        <nav>
+            <div class="nav-left">
+                <ul class="navbar">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aboutme.html">About Me</a></li>
+                    <li><a href="research.html">Research</a></li> 
+                    <li><a href="communityinitiatives.html">Community Initiatives</a></li> 
+                </ul>
+            </div>
+            
+            <div class="nav-right">
+                <ul class="navbar">
+                    <li><a href="/files/CV AmayaMejia.pdf" target="_blank">Curriculum Vitae</a></li> 
+                    <li><a href="data-availability.html">Data Availability</a>
+                    <li><a href="contact.html">Contact</a>
+                </ul>
+            </div>
+
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="hamburger">&#9776;</label>
+            <ul class="navbar-list">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+        </nav>
     </header>
     
     <!-- About Me Section -->
@@ -57,15 +64,6 @@
 </footer>
 
 <script src="index.js"></script>
-
-<script>
-    const hamburger = document.getElementById('hamburger');
-    const navbar = document.querySelector('.navbar');
-
-    hamburger.addEventListener('click', () => {
-        navbar.classList.toggle('active'); // Toggle the 'active' class
-    });
-</script>
 
 </body>
 </html>
