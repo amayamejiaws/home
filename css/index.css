@@ -81,40 +81,24 @@ nav {
 }
 
 
-/* Purple rotating background box */
-.hero::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -80%;
-    width: 200%;
-    height: 200%;
-    background: rgba(128, 0, 128, 0.2); /* Purple color with low opacity */
-    animation: rotate-bg 20s linear infinite;
-    z-index: 0; /* Ensure this is behind everything else */
-}
-
-/* Keyframe for the purple background rotation */
-@keyframes rotate-bg {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
-
 /* Home page Hero Section */
 .hero {
-    height: 100vh;
+    height: 100vh; /* Full viewport height */
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url('../images/junco1.JPG') no-repeat center center/cover;
+    background: url('../images/junco1.JPG') no-repeat center center/cover; /* Ensures the image fully covers the section */
     color: #fff;
     text-align: center;
     position: relative;
     overflow: hidden;
+    margin: 0; /* Make sure no margins are applied */
+    padding: 0; /* Remove padding */
+}
+
+.hero-content {
+    position: relative; /* Make sure the text is above the background */
+    z-index: 1; /* Ensure text is above the purple rectangle */
 }
 
 .hero-content h1, .hero-content p {
@@ -184,22 +168,96 @@ nav {
     font-size: 1.5rem;
 }
 
-/* Media Query for Smaller Screens */
+
+/* Purple rotating background box */
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -80%;
+    width: 200%;
+    height: 200%;
+    background: rgba(128, 0, 128, 0.2); /* Purple color with low opacity */
+    animation: rotate-bg 20s linear infinite;
+    z-index: 0; /* Ensure this is behind everything else */
+}
+
+/* Keyframe for the purple background rotation */
+@keyframes rotate-bg {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+
+    /* Hero Section Styling for Mobile */
+    .hero {
+        height: 120vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: url('../images/junco1.JPG') no-repeat center center/cover;
+        color: #fff;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem; /* Make font smaller for mobile */
+    }
+
+    .hero-content p {
+        font-size: 1.5rem; /* Make font smaller for mobile */
+    }
+
+    /* Hide nav boxes on the hero section for mobile */
+    .nav-box-container {
+        display: none; /* Remove nav boxes from the hero section */
+    }
+
+    /* Style the navigation bar with black background and center items */
+    .navbar {
+        background-color: #333; /* Black background for nav */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .navbar li {
+        margin: 10px 0; /* Space between nav items */
+    }
+
+    .navbar a {
+        color: white;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 10px;
+        transition: background-color 0.3s ease;
+    }
+
+    .navbar a:hover {
+        background-color: #f4f4f9;
+        color: #333;
+    }
+}
+
+/* After scrolling, make nav appear in black */
 @media (max-width: 768px) {
     .nav-box-container {
-        grid-template-columns: repeat(2, 1fr);
+        display: block; /* Make the nav boxes appear again when scrolling */
     }
 }
 
-@media (max-width: 480px) {
-    .nav-box h2 {
-        font-size: 1.2em;
-    }
-
-    .nav-box p {
-        font-size: 0.9em;
-    }
-}
 
 /* ------------------------------- SECTIONS ------------------------------- */
 .section {
