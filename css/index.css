@@ -311,6 +311,7 @@ nav {
 /* ------------------------------- SECTIONS ------------------------------- */
 .section {
     padding: 60px 20px;
+    padding-top: 80px;
     margin: 40px auto;
     max-width: 1200px;
     background: #fff;
@@ -358,6 +359,40 @@ ul li {
     margin-bottom: 10px;
 }
 
+/* Mobile Styles for smaller screens */
+@media (max-width: 768px) {
+    .section {
+        padding: 40px 15px; /* Adjust padding for smaller screens */
+        padding-top: 60px;
+        margin: 20px 10px;   /* Reduce margin to create space around */
+        max-width: 100%;     /* Make sections full width on mobile */
+    }
+
+    .section h2 {
+        font-size: 1.8rem;  /* Adjust font size for smaller screens */
+        margin-bottom: 15px; /* Reduce margin space */
+    }
+
+    .section p {
+        font-size: 1rem;     /* Adjust font size for better readability */
+        line-height: 1.6;    /* Adjust line height for better spacing */
+    }
+
+    ul {
+        padding-left: 0;     /* Remove left padding */
+        margin-top: 15px;    /* Adjust margin-top */
+    }
+
+    ul li {
+        margin-bottom: 8px;  /* Slightly reduce margin between items */
+    }
+
+    /* Optional: Adjust the section hover effect for mobile */
+    .section:hover {
+        transform: translateY(0);  /* Disable hover translate effect on mobile */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adjust shadow */
+    }
+}
 /* ------------------------------- ABOUT SECTION ------------------------------- */
 /* About Section */
 #about {
