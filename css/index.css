@@ -407,7 +407,7 @@ ul li {
 /* ------------------------------- RESEARCH SECTION ------------------------------- */
 #researchgoals {
     background-color: #fff; 
-    padding: 40px 1px; /* Space inside the box */
+    padding: 40px 10px; /* Space inside the box */
     border-radius: 12px; /* Rounded corners */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
     text-align: center; /* Center-align the text */
@@ -526,7 +526,7 @@ ul li {
     }
 
     .researchgoals-text p {
-        font-size: 14px;
+        font-size: 18px;
     }
     
     .research-container {
@@ -547,7 +547,7 @@ ul li {
         font-size: 24px;
     }
     .research-text p{
-        font-size: 14px;
+        font-size: 18px;
     }
     .research-image {
         order: 2; /* Image comes second */
@@ -569,7 +569,7 @@ ul li {
     }
 
     .researchextra-text p{
-        font-size: 14px;
+        font-size: 18px;
     }
     
     ul li {
@@ -582,7 +582,7 @@ ul li {
         color: #6A1B9A; /* Purple for the links */
         text-decoration: none;
         font-size: 18px;
-        padding-left: 4ch;
+        padding-left: 0ch;
     }
 }
 
