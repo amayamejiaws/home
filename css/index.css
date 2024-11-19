@@ -234,31 +234,11 @@ input[type="checkbox"].menu-toggle {
     }
     
     .hero-content h1 {
-        : 2.5rem; /* Make font smaller for mobile */
+        : 1.8rem; /* Make font smaller for mobile */
     }
 
     .hero-content p {
-        : 1.5rem; /* Make font smaller for mobile */
-    }
-
-    /* Black background for nav box wrapper */
-    .nav-box-wrapper {
-        background-color: black;
-        width: 100%;
-        padding: 20px 0; /* Add some space around the nav boxes */
-    }
-
-    .nav-box-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-        padding: 0 10px;
-    }
-
-    .nav-box {
-        width: 100%;
-        max-width: 300px;
+        : 1.2rem; /* Make font smaller for mobile */
     }
 }
 
