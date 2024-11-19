@@ -406,11 +406,25 @@ ul li {
 
 /* ------------------------------- RESEARCH ------------------------------- */
 #researchgoals {
-    padding: 40px 40px; /* Space inside the section */
-    margin-top: 30px; /* Adds space between the hero and about sections */
-    background: #e6e6fa; /* White background */
-    border-radius: 12px;
+    background-color: #fff; 
+    color: #6A1B9A; 
+    padding: 40px 20px; /* Space inside the box */
+    border-radius: 12px; /* Rounded corners */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    text-align: center; /* Center-align the text */
+    font-size: 1.2rem; /* Larger font size */
+    line-height: 1.8; /* Better readability */
+}
+
+#researchgoals h2 {
+    font-size: 2rem; /* Larger font size for heading */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+#researchgoals p {
+    font-size: 1.2rem; /* Larger font size for paragraph */
+    margin: 0 auto; /* Center-align the text */
+    max-width: 800px; /* Limit the width of the text for better readability */
 }
 
 #research {
