@@ -548,7 +548,7 @@ ul li {
         font-size: 26px;
     }
     .research-text p{
-        font-size: 14px;
+        font-size: 16px;
     }
     .research-image {
         order: 2; /* Image comes second */
@@ -566,13 +566,14 @@ ul li {
     }
     
     ul {
-        padding-left: 0px; /* Remove any left padding on the ul */
-        margin-left: 10px; /* Add margin to keep it within the screen */
+        padding-left: 40px; /* Remove any left padding on the ul */
+        margin-left: 0px; /* Add margin to keep it within the screen */
         box-sizing: border-box; /* Prevent overflow due to padding */
+        font-size: 16px;
     }
 
     .link {
-        font-size: 15px;
+        font-size: 16px;
         padding-left: 0ch;
     }
 }
