@@ -522,12 +522,17 @@ ul li {
 }
 
 @media screen and (max-width: 768px) {
-    #researchgoals, #research, #researchextra {
-        padding: 20px 15px; /* Same padding for all */
-    }
-
     #researchgoals {
         margin-top: 50px;
+        padding: 20px 15px; 
+    }
+
+    #research {
+        padding: 20px 5px;
+    }
+
+    #researchextra {
+        padding: 20px 40px;
     }
     
     .researchgoals-text h2 {
@@ -547,7 +552,7 @@ ul li {
 
     .research-text {
         order: 1;
-        text-align: center; 
+        text-align: center;
         width: 100%;
     }
     .research-text h2{
@@ -559,7 +564,7 @@ ul li {
     .research-image {
         order: 2; /* Image comes second */
         margin-top: 20px; /* Add space between the text and the image */
-        width: 80%; /* Full width for the image */
+        width: 100%; /* Full width for the image */
         text-align: center; /* Center the image container */
     }
     .research-image img {
