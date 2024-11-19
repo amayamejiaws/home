@@ -522,9 +522,12 @@ ul li {
 }
 
 @media screen and (max-width: 768px) {
+    #researchgoals, #research, #researchextra {
+        padding: 20px 15px; /* Same padding for all */
+    }
+
     #researchgoals {
-        margin-top: 30px;
-        padding: 20px 10px; /* Reduced padding on mobile */
+        margin-top: 50px;
     }
     
     .researchgoals-text h2 {
@@ -542,9 +545,6 @@ ul li {
         align-items: center; /* Center items horizontally */
     }
 
-    #researchgoals {
-        padding: 30px 15px; /* Reduced padding on mobile */
-    }
     .research-text {
         order: 1;
         text-align: center; 
@@ -569,17 +569,6 @@ ul li {
     }
     p.left-align, p.right-align {
         text-align: center;
-    }
-    
-    #researchextra {
-        padding: 20px 40px; /* Adjust padding to be more compact */
-    }
-    .researchextra-text h2{
-        font-size: 24px;
-    }
-
-    .researchextra-text p{
-        font-size: 18px;
     }
     
     ul li {
