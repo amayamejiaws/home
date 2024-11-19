@@ -487,17 +487,6 @@ p.right-align {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/*.researchextra-text h2{
-    font-size: 32px; /* Larger font size for heading */
-    margin-bottom: 20px; /* Space below the heading */
-}
-
-.researchextra-text p{
-    font-size: 22px; /* Larger font size for paragraph */
-    margin: 0 auto; /* Center-align the text */
-    max-width: 800px; /* Limit the width of the text for better readability */
-}*/
-
 /* List Styling */
 ul {
     list-style-type: disc; /* Use bullet points */
@@ -532,7 +521,7 @@ ul li {
     }
 
     #researchextra {
-        padding: 20px 40px;
+        padding: 20px 5px;
     }
     
     .researchgoals-text h2 {
