@@ -531,11 +531,10 @@ ul li {
     /* Ensures the image stays below the text */
     .research-text {
         order: 1; /* Text comes first */
-        padding: 0 3px; /* Add padding on the left and right */
-        text-align: center; /* Keep text aligned to the left */
+        padding: 0 0px;
+        text-align: center; 
         width: 100%; /* Full width for text */
-        max-width: 600px; /* Optional: Limit the text width for readability */
-        font-size: 12px;
+        font-size: 10px;
     }
     .research-image {
         order: 2; /* Image comes second */
