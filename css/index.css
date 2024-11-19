@@ -365,10 +365,12 @@ ul li {
 .about-text h2 {
     color: #6A1B9A; /* Purple color */
     margin-bottom: 20px;
+    font-size: 26px; 
 }
 
 .about-text p {
     line-height: 1.8;
+    font-size: 16px;
 }
 
 /* Responsive Design */
