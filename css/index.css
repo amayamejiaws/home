@@ -522,7 +522,7 @@ ul li {
 
 @media screen and (max-width: 768px) {
     .research-container {
-        padding: 20px 5px;
+        padding: 20px 0px;
         flex-direction: column; /* Stack image and text vertically */
         justify-content: flex-start; /* Align items at the start */
         align-items: center; /* Center items horizontally */
@@ -534,7 +534,7 @@ ul li {
         padding: 0 0px;
         text-align: center; 
         width: 100%; /* Full width for text */
-        font-size: 10px;
+        font-size: 8px;
     }
     .research-image {
         order: 2; /* Image comes second */
