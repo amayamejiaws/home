@@ -635,6 +635,74 @@ ul li {
     display: block;
 }
 
+/* ------------------------------- CONTACT SECTION ------------------------------- */
+.contact-section {
+    padding: 60px 20px;
+    padding-top: 80px;
+    margin: 40px auto;
+    max-width: 1200px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+    
+.contact-section h2 {
+    color: #6A1B9A; /* Purple */
+    margin-bottom: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.contact-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    width: 80px;
+    height: 3px;
+    background-color: #FF69B4; /* Pink */
+    transform: translateX(-50%);
+}
+
+.contact-section p {
+    text-align: center;
+    line-height: 1.8;
+    font-size: 20px; 
+}
+
+ul {
+    margin-top: 20px;
+    padding-left: 20px;
+    font-size: 20px;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+/* Mobile Styles for smaller screens */
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 40px 15px; /* Adjust padding for smaller screens */
+        padding-top: 60px;
+        margin: 20px 10px;   /* Reduce margin to create space around */
+        max-width: 100%;     /* Make sections full width on mobile */
+    }
+
+    .contact-section h2 {
+        : 1.8rem;  /* Adjust font size for smaller screens */
+        margin-bottom: 15px; /* Reduce margin space */
+    }
+
+    .contact-section p {
+        : 1rem;     /* Adjust font size for better readability */
+        line-height: 1.6;    /* Adjust line height for better spacing */
+    }
+}
+
 /* ------------------------------- FOOTER ------------------------------- */
 /* Footer */
 footer {
