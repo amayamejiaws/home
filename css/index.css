@@ -522,6 +522,10 @@ ul li {
 }
 
 @media screen and (max-width: 768px) {
+    #researchgoals {
+        padding: 15px 5px; /* Reduced padding on mobile */
+    }
+    
     .researchgoals-text h2 {
         font-size: 28px;
     }
@@ -540,7 +544,7 @@ ul li {
     /* Ensures the image stays below the text */
     .research-text {
         order: 1; /* Text comes first */
-        padding: 0 0px;
+        padding: 10px 10px;
         text-align: center; 
         width: 100%;
     }
@@ -565,6 +569,9 @@ ul li {
         text-align: center;
     }
     
+    #researchextra {
+        padding: 20px 20px; /* Adjust padding to be more compact */
+    }
     .researchextra-text h2{
         font-size: 24px;
     }
