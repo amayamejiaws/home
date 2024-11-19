@@ -675,7 +675,7 @@ ul li {
 
 ul {
     margin-top: 20px;
-    padding-left: 20px;
+    padding-left: 50px;
     font-size: 20px;
 }
 
@@ -693,13 +693,18 @@ ul li {
     }
 
     .contact-section h2 {
-        : 1.8rem;  /* Adjust font size for smaller screens */
+        : 26px;  /* Adjust font size for smaller screens */
         margin-bottom: 15px; /* Reduce margin space */
     }
 
     .contact-section p {
-        : 1rem;     /* Adjust font size for better readability */
+        : 16px;     /* Adjust font size for better readability */
         line-height: 1.6;    /* Adjust line height for better spacing */
+    }
+    ul {
+        margin-top: 20px;
+        padding-left: 0px;
+        font-size: 1rem;
     }
 }
 
