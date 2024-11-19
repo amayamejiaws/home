@@ -424,7 +424,7 @@ ul li {
 #researchgoals p {
     font-size: 24px; /* Larger font size for paragraph */
     margin: 0 auto; /* Center-align the text */
-    color: #eee;
+    color: #000;
     max-width: 800px; /* Limit the width of the text for better readability */
 }
 
