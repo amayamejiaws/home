@@ -523,7 +523,8 @@ ul li {
 
 @media screen and (max-width: 768px) {
     #researchgoals {
-        padding: 15px 5px; /* Reduced padding on mobile */
+        margin-top: 30px;
+        padding: 20px 10px; /* Reduced padding on mobile */
     }
     
     .researchgoals-text h2 {
@@ -541,10 +542,11 @@ ul li {
         align-items: center; /* Center items horizontally */
     }
 
-    /* Ensures the image stays below the text */
+    #researchgoals {
+        padding: 30px 15px; /* Reduced padding on mobile */
+    }
     .research-text {
-        order: 1; /* Text comes first */
-        padding: 10px 10px;
+        order: 1;
         text-align: center; 
         width: 100%;
     }
@@ -570,7 +572,7 @@ ul li {
     }
     
     #researchextra {
-        padding: 20px 20px; /* Adjust padding to be more compact */
+        padding: 20px 40px; /* Adjust padding to be more compact */
     }
     .researchextra-text h2{
         font-size: 24px;
