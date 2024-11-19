@@ -417,12 +417,12 @@ ul li {
 }
 
 #researchgoals h2 {
-    font-size: 2rem; /* Larger font size for heading */
+    font-size: 40px; /* Larger font size for heading */
     margin-bottom: 20px; /* Space below the heading */
 }
 
 #researchgoals p {
-    font-size: 1.2rem; /* Larger font size for paragraph */
+    font-size: 26px; /* Larger font size for paragraph */
     margin: 0 auto; /* Center-align the text */
     max-width: 800px; /* Limit the width of the text for better readability */
 }
@@ -464,12 +464,12 @@ ul li {
 .research-text h2 {
     color: #6A1B9A; /* Purple color */
     margin-bottom: 30px;
-    font-size: 50px;
+    font-size: 32px;
 }
 
 .research-text p {
     line-height: 1.8;
-    font-size: 30px;
+    font-size: 22px;
 }
 p.left-align {
     text-align: left;
@@ -477,12 +477,23 @@ p.left-align {
 p.right-align {
     text-align: right;
 }
+    
 #researchextra{
     padding: 40px 40px; /* Add padding on the left and right */
     margin-top: 20px;
     background: #fff;
     border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+#researchextra h2 {
+    font-size: 32px; /* Larger font size for heading */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+#researchextra p {
+    font-size: 22px; /* Larger font size for paragraph */
+    margin: 0 auto; /* Center-align the text */
+    max-width: 800px; /* Limit the width of the text for better readability */
 }
 
 /* List Styling */
@@ -493,14 +504,15 @@ ul {
 
 ul li {
     margin-bottom: 20px; /* Space between list items */
-    line-height: 1; /* Better readability */
+    line-height: 1.3; /* Better readability */
+    font-size: 22px;
 }
 
 /* Link Styling */
 .link {
     color: #6A1B9A; /* Purple for the links */
-    margin-left: 10px;
     text-decoration: none;
+    font-size: 22px;
     padding-left: 4ch;
 }
 
