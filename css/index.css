@@ -533,7 +533,12 @@ ul li {
         order: 1; /* Text comes first */
         padding: 0 0px;
         text-align: center; 
-        width: 100%; /* Full width for text */
+        width: 100%;
+    }
+    .research-text h2{
+        font-size: 12px;
+    }
+    .research-text p{
         font-size: 8px;
     }
     .research-image {
