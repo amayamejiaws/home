@@ -548,7 +548,7 @@ ul li {
         font-size: 26px;
     }
     .research-text p{
-        font-size: 18px;
+        font-size: 14px;
     }
     .research-image {
         order: 2; /* Image comes second */
@@ -565,12 +565,14 @@ ul li {
         text-align: center;
     }
     
-    ul li {
-        font-size: 18px;
+    ul {
+        padding-left: 0px; /* Remove any left padding on the ul */
+        margin-left: 10px; /* Add margin to keep it within the screen */
+        box-sizing: border-box; /* Prevent overflow due to padding */
     }
 
     .link {
-        font-size: 18px;
+        font-size: 15px;
         padding-left: 0ch;
     }
 }
