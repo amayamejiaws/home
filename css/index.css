@@ -537,7 +537,7 @@ ul li {
         text-align: center; /* Keep text aligned to the left */
         width: 100%; /* Full width for text */
         max-width: 600px; /* Optional: Limit the text width for readability */
-        font-size: 50%
+        font-size: 12px;
     }
     .research-image {
         order: 2; /* Image comes second */
@@ -553,9 +553,8 @@ ul li {
     p.left-align, p.right-align {
         text-align: center;
     }
-    
     ul {
-        padding-left: 10px;
+        padding-left: 0px;
         list-style-type: disc;
     }
 }
