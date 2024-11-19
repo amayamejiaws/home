@@ -304,11 +304,13 @@ input[type="checkbox"].menu-toggle {
 .section p {
     text-align: center;
     line-height: 1.8;
+    font-size: 20px; 
 }
 
 ul {
     margin-top: 20px;
     padding-left: 20px;
+    font-size: 20px;
 }
 
 ul li {
@@ -422,7 +424,7 @@ ul li {
 }
 
 .researchgoals-text p{
-    font-size: 24px; /* Larger font size for paragraph */
+    font-size: 22px; /* Larger font size for paragraph */
     margin: 0 auto; /* Center-align the text */
     color: #000;
     max-width: 800px; /* Limit the width of the text for better readability */
@@ -470,7 +472,7 @@ ul li {
 
 .research-text p {
     line-height: 1.8;
-    font-size: 22px;
+    font-size: 20px;
 }
 p.left-align {
     text-align: left;
