@@ -404,11 +404,10 @@ ul li {
     }
 }
 
-/* ------------------------------- RESEARCH ------------------------------- */
+/* ------------------------------- RESEARCH SECTION ------------------------------- */
 #researchgoals {
     background-color: #fff; 
-    color: #6A1B9A; 
-    padding: 40px 20px; /* Space inside the box */
+    padding: 40px 1px; /* Space inside the box */
     border-radius: 12px; /* Rounded corners */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
     text-align: center; /* Center-align the text */
@@ -417,13 +416,15 @@ ul li {
 }
 
 #researchgoals h2 {
-    font-size: 40px; /* Larger font size for heading */
+    font-size: 38px; /* Larger font size for heading */
+    color: #6A1B9A; 
     margin-bottom: 20px; /* Space below the heading */
 }
 
 #researchgoals p {
-    font-size: 26px; /* Larger font size for paragraph */
+    font-size: 24px; /* Larger font size for paragraph */
     margin: 0 auto; /* Center-align the text */
+    color: #eee;
     max-width: 800px; /* Limit the width of the text for better readability */
 }
 
