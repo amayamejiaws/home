@@ -486,7 +486,8 @@ p.right-align {
     border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-.researchextra-text h2{
+
+/*.researchextra-text h2{
     font-size: 32px; /* Larger font size for heading */
     margin-bottom: 20px; /* Space below the heading */
 }
@@ -495,7 +496,7 @@ p.right-align {
     font-size: 22px; /* Larger font size for paragraph */
     margin: 0 auto; /* Center-align the text */
     max-width: 800px; /* Limit the width of the text for better readability */
-}
+}*/
 
 /* List Styling */
 ul {
@@ -522,7 +523,7 @@ ul li {
 
 @media screen and (max-width: 768px) {
     .researchgoals-text h2 {
-        font-size: 24px;
+        font-size: 28px;
     }
 
     .researchgoals-text p {
@@ -544,7 +545,7 @@ ul li {
         width: 100%;
     }
     .research-text h2{
-        font-size: 24px;
+        font-size: 26px;
     }
     .research-text p{
         font-size: 18px;
@@ -578,6 +579,7 @@ ul li {
 
     .link {
         font-size: 18px;
+        padding-left: 0ch;
     }
 }
 
