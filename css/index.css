@@ -570,6 +570,15 @@ ul li {
     .research-image:hover .research-description-hover {
         opacity: 1;
     }
+    
+    .research-image img {
+        transform: none !important; /* Prevent zooming */
+        transition: none !important; /* Remove smooth transition */
+    }
+
+    .research-image:hover img {
+        transform: none; /* Ensure hover doesn't trigger */
+    }
 }
 
     
