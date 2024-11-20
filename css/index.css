@@ -358,6 +358,14 @@ ul li {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+.about-logo img {
+    width: 30%;
+    max-width: 100px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
 .about-text {
     max-width: 600px;
 }
@@ -385,6 +393,10 @@ ul li {
 
     .about-text {
         text-align: center;
+    }
+
+    .about-logo img {
+        max-width: 50px;
     }
 }
 
