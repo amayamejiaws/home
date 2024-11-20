@@ -562,6 +562,7 @@ ul li {
     .research-image img {
         transform: none !important; /* Prevent zooming */
         transition: none !important; /* Remove smooth transition */
+        margin-bottom: 0px;
     }
 
     .research-image:hover img {
