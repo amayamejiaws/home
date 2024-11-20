@@ -628,6 +628,15 @@ p.right-align {
     p.left-align, p.right-align {
         text-align: center;
     }
+    
+    ul {
+        margin-top: 16px;
+    }
+
+    .link {
+        font-size: 16px;
+    }
+
 }
 
 @media screen and (min-width: 768px) {
