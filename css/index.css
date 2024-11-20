@@ -468,7 +468,23 @@ ul li {
     flex-wrap: nowrap; /* Prevent wrapping on larger screens */
     justify-content: space-between; /* Spread text and image evenly */
 }
+    
+.research-gallery {
+    display: flex;
+    flex-wrap: wrap; /* Wrap items to the next line if needed */
+    gap: 20px; /* Space between items */
+    justify-content: center; /* Center all items */
+    padding: 20px;
+}
 
+/* Individual research item container */
+.research-item {
+    display: flex;
+    flex-direction: column; /* Stack image and description vertically */
+    align-items: center; /* Center align image and text */
+    max-width: 400px; /* Limit width of each item */
+}
+    
 .research-image {
     flex: 1 1 40%; /* Image takes 40% of the container */
     position: relative; /* For positioning the hover effect */
