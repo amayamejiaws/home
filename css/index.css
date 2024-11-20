@@ -405,13 +405,18 @@ ul li {
 
 /* ------------------------------- RESEARCH SECTION ------------------------------- */
 #researchgoals {
-    background-color: #fff; 
-    padding: 40px 10px; /* Space inside the box */
-    border-radius: 12px; /* Rounded corners */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
-    text-align: center; /* Center-align the text */
-    font-size: 1.2rem; /* Larger font size */
-    line-height: 1.8; /* Better readability */
+    background: url('images/Slide_Horizontal_Haemoproteus.jpg');
+    background-repeat: repeat;
+    background-size: cover; 
+    color: white; /* Ensures text is readable on the image */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    margin-top: 50px;
+    padding: 20px;
 }
 
 .researchgoals-text h2 {
