@@ -467,6 +467,8 @@ ul li {
     padding: 0; /* Remove padding */
     margin: 20px 0; /* Add space around the list */
     display: flex; /* Display links horizontally */
+    flex-direction: column;
+    justify-content: center;
     gap: 15px; /* Space between links */
     flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
