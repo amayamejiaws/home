@@ -365,6 +365,7 @@ ul li {
     height: auto;
     border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 200px;
 }
 
 .about-text {
@@ -397,7 +398,8 @@ ul li {
     }
 
     .about-logo img {
-        max-width: 50px;
+        max-width: 200px;
+        margin-bottom: 30px;
     }
 }
 
