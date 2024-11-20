@@ -492,6 +492,7 @@ ul li {
     .nav-links {
         flex-direction: column; /* Stack links vertically */
         gap: 10px; /* Reduce spacing */
+        text-align: center;
     }
 
     .nav-links a {
