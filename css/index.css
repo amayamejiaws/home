@@ -628,6 +628,11 @@ p.right-align {
     }
 }
 
+@media screen and (min-width: 768px) {
+    .research-description-static {
+        display: none; /* Hide static description on desktop */
+    }
+}
 /* ------------------------------- TABS ------------------------------- */
 /* Box Styling for Tabs */
 .tabs-container {
