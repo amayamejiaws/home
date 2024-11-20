@@ -348,6 +348,7 @@ ul li {
     gap: 20px;
     flex-wrap: wrap; /* Ensures responsiveness on smaller screens */
     justify-content: center;
+    margin-bottom: 30px;
 }
 
 .about-image img {
@@ -359,7 +360,7 @@ ul li {
 }
 
 .about-logo img {
-    width: 50%;
+    width: 100%;
     max-width: 250px;
     height: auto;
     border-radius: 12px;
