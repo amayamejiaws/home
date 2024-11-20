@@ -498,7 +498,6 @@ ul li {
     width: auto; /* Image takes full width of its container */
     max-width: 350px; /* Limit max size of the image */
     height: 100%; /* Maintain aspect ratio */
-    border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease; /* Add a smooth zoom-in effect on hover */
 }
@@ -539,7 +538,6 @@ ul li {
     font-size: 14px; /* Adjust font size */
     width: 100%; /* Ensure it spans the full width of the image */
     margin-top: 0; /* Attach directly below the image with no space */
-    border-radius: 0 0 12px 12px; /* Rounded bottom corners */
 }
 
 .research-text {
@@ -601,7 +599,6 @@ p.right-align {
         align-items: center; /* Center items horizontally */
     }
    
-
     .research-text {
         order: 1;
         text-align: center;
@@ -630,6 +627,12 @@ p.right-align {
     }
     p.left-align, p.right-align {
         text-align: center;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .research-description-static {
+        display: none; /* Hide static description on desktop */
     }
 }
 
