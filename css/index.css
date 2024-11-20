@@ -463,48 +463,6 @@ ul li {
     margin: 0 auto;
     color: black; 
 }
-
-/* Navigation Links Styling */
-.nav-links {
-    list-style: none; /* Remove bullets */
-    padding: 0; /* Remove padding */
-    margin: 20px 0; /* Add space around the list */
-    display: flex; /* Display links horizontally */
-    flex-direction: column;
-    justify-content: center;
-    gap: 15px; /* Space between links */
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
-}
-
-.nav-links li {
-    display: inline; /* Ensure each list item is inline */
-}
-
-.nav-links a {
-    text-decoration: none; /* Remove underline */
-    color: #6A1B9A; /* Purple color */
-    font-size: 18px; /* Adjust font size */
-    font-weight: bold; /* Make text bold */
-    transition: color 0.3s ease; /* Smooth color change on hover */
-}
-
-.nav-links a:hover {
-    color: #9C27B0; /* Lighter purple on hover */
-}
-
-/* Responsive adjustments */
-@media screen and (max-width: 768px) {
-    .nav-links {
-        flex-direction: column; /* Stack links vertically */
-        gap: 7px; /* Reduce spacing */
-        text-align: center;
-    }
-
-    .nav-links a {
-        font-size: 14px; /* Adjust font size for smaller screens */
-    }
-}
-
     
 /* --------------------- RESEARCH BODY --------------------- */
 #research {
