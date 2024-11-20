@@ -506,22 +506,21 @@ ul li {
 .research-image:hover img {
     transform: scale(1.05); /* Slight zoom on hover */
 }
-
-/* Hover description text */
 .research-description-hover {
+    opacity: 0;
     position: absolute;
-    bottom: 0; /* Position it at the bottom of the container */
-    left: 0;
-    width: 100%; /* Make the description take the full width */
-    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
-    color: white;
-    text-align: center; /* Center the text */
-    padding: 0; /* Remove padding to remove spaces */
-    margin: 0; /* Remove margin to remove spaces */
-    opacity: 0; /* Hidden by default */
-    pointer-events: none; /* Allow hover to work smoothly */
+    bottom: 0;
+    text-align: center;
+    width: 100%;
     transition: opacity 0.3s ease; /* Smooth fade-in effect */
     font-size: 16px;
+}
+
+.description-text {
+  background-color: #000;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
 }
 
 /* Show the description text on hover */
@@ -531,10 +530,9 @@ ul li {
 
 /* Always-visible description for phones */
 .research-description-static {
-    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent black background */
     color: white; /* White text */
     text-align: center; /* Center the text */
-    padding: 10px; /* Add some padding for the description */
     font-size: 14px; /* Adjust font size */
     width: 100%; /* Ensure it spans the full width of the image */
     margin-top: 0; /* Attach directly below the image with no space */
@@ -629,13 +627,6 @@ p.right-align {
         text-align: center;
     }
 }
-
-@media screen and (min-width: 768px) {
-    .research-description-static {
-        display: none; /* Hide static description on desktop */
-    }
-}
-
 
 /* ------------------------------- TABS ------------------------------- */
 /* Box Styling for Tabs */
