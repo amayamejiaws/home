@@ -328,8 +328,9 @@ ul li {
     }
 
     ul {
-        padding-left: 0;     /* Remove left padding */
+        padding-left: 10px;     /* Remove left padding */
         margin-top: 15px;    /* Adjust margin-top */
+        text-align: left;
     }
 
     ul li {
