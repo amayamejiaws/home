@@ -361,14 +361,15 @@ ul li {
 /* About Section Content Layout */
 .about-container {
     display: flex;
-    align-items: center;
-    gap: 100px;
-    flex-wrap: wrap; /* Ensures responsiveness on smaller screens */
-    justify-content: center;
+    align-items: flex-start;
+    gap: 60px;
+    flex-wrap: wrap; 
+    justify-content: space-between;
     margin-bottom: 30px;
 }
 
 .about-image img {
+    flex: 1 1 40%;
     width: 100%;
     max-width: 300px;
     height: auto;
@@ -377,6 +378,7 @@ ul li {
 }
 
 .about-logo img {
+    flex: 1 1 30%;
     width: 80%;
     max-width: 300px;
     height: auto;
@@ -386,6 +388,7 @@ ul li {
 }
 
 .about-text {
+    flex: 1 1 60%;
     max-width: 1200px;
 }
 
@@ -493,12 +496,12 @@ ul li {
 @media screen and (max-width: 768px) {
     .nav-links {
         flex-direction: column; /* Stack links vertically */
-        gap: 10px; /* Reduce spacing */
+        gap: 7px; /* Reduce spacing */
         text-align: center;
     }
 
     .nav-links a {
-        font-size: 16px; /* Adjust font size for smaller screens */
+        font-size: 14px; /* Adjust font size for smaller screens */
     }
 }
 
@@ -669,11 +672,11 @@ p.right-align {
     }
     
     .text-overlay h2 {
-        font-size: 28px;
+        font-size: 27px;
     }
 
     .text-overlay p {
-        font-size: 18px;
+        font-size: 16px;
     }
     
     .research-container {
@@ -692,7 +695,7 @@ p.right-align {
         font-size: 26px;
     }
     .research-text p{
-        font-size: 16px;
+        font-size: 15px;
     }
     .research-gallery {
         order: 2; /* Image comes second */
