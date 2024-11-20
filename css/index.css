@@ -345,10 +345,10 @@ ul li {
 .about-container {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 50px;
     flex-wrap: wrap; /* Ensures responsiveness on smaller screens */
     justify-content: center;
-    margin-bottom: 30px;
+    margin-bottom: 60px;
 }
 
 .about-image img {
@@ -361,7 +361,7 @@ ul li {
 
 .about-logo img {
     width: 100%;
-    max-width: 250px;
+    max-width: 300px;
     height: auto;
     border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -379,7 +379,7 @@ ul li {
 
 .about-text p {
     line-height: 1.8;
-    font-size: 16px;
+    font-size: 18px;
 }
 
 /* Responsive Design */
