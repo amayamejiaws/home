@@ -552,11 +552,11 @@ ul li {
 @media screen and (max-width: 768px) {
     .research-description-hover {
         display: none; /* Hide hover description on mobile */
-        margin-top: 0px;
     }
 
     .research-description-static {
         display: block; /* Always show static description on mobile */
+        margin-top: 0px;
     }
 }
 
@@ -651,6 +651,7 @@ p.right-align {
         width: auto; /* Maintain natural aspect ratio */
         height: auto; /* Ensure correct proportions */
         max-width: 100%; /* Ensure the image is responsive */
+        margin-bottom: 0px;
     }
     
     p.left-align, p.right-align {
