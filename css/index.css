@@ -509,10 +509,10 @@ ul li {
 
 /* Hover description text */
 .research-description-hover {
-    position: absolute; /* Positioned over the image */
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: absolute;
+    bottom: 0; /* Position it at the bottom of the container */
+    left: 0;
+    width: 100%; /* Make the description take the full width */
     background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
     color: white;
     padding: 10px 15px;
@@ -521,7 +521,7 @@ ul li {
     pointer-events: none; /* Prevent it from blocking hover on the image */
     transition: opacity 0.3s ease; /* Smooth fade-in on hover */
     font-size: 14px;
-    text-align: center;
+    text-align: left;
 }
 
 /* Show the description text on hover */
