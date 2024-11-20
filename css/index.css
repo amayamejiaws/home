@@ -517,7 +517,7 @@ ul li {
     bottom: 0; /* Position it at the bottom of the container */
     left: 0;
     width: 105%; /* Make the description take the full width */
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0, 0, 0, 0.4);
     color: white;
     text-align: center; /* Center the text */
     padding: 0; /* Remove padding to remove spaces */
@@ -526,6 +526,7 @@ ul li {
     pointer-events: none; /* Allow hover to work smoothly */
     transition: opacity 0.3s ease; /* Smooth fade-in effect */
     font-size: 16px;
+    z-indez: 10;
 }
 
 /* Show the hover description when hovering over the image (on desktop) */
@@ -535,7 +536,7 @@ ul li {
 
 /* Static description (transparent black background with white text) */
 .research-description-static {
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0, 0, 0, 0.4);
     color: white; /* White text */
     text-align: center; /* Center the text */
     padding: 10px; /* Add some padding for the description */
@@ -560,23 +561,14 @@ ul li {
     .research-description-static {
         display: none; /* Hide static description on desktop */
     }
+
+    /* Show the description text on hover */
+    .research-image:hover .research-description-hover {
+        opacity: 1;
+    }
 }
 
-/* Show the description text on hover */
-.research-image:hover .research-description-hover {
-    opacity: 1;
-}
-
-/* Always-visible description for phones */
-.research-description-static {
-    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent black background */
-    color: white; /* White text */
-    text-align: center; /* Center the text */
-    font-size: 14px; /* Adjust font size */
-    width: 100%; /* Ensure it spans the full width of the image */
-    margin-top: 0; /* Attach directly below the image with no space */
-}
-
+    
 .research-text {
     flex: 1 1 60%; /* Text takes 60% of the container */
     padding: 0 40px; /* Add padding on the left and right */
@@ -651,24 +643,19 @@ p.right-align {
         order: 2; /* Image comes second */
     }
      
-    .research-description-hover {
-        display: none; /* Hide hover description on small screens */
-    }
-    .research-description-static {
-        display: block; /* Always show the static description */
-    }
     .research-image img {
         width: auto; /* Maintain natural aspect ratio */
         height: auto; /* Ensure correct proportions */
-        max-width: 80%; /* Ensure the image is responsive */
+        max-width: 100%; /* Ensure the image is responsive */
     }
+    
     p.left-align, p.right-align {
         text-align: center;
     }
     
     ul {
         margin-top: 16px;
-        text-align: center;
+        text-align: left;
     }
 
     .link {
