@@ -433,7 +433,7 @@ ul li {
     font-size: 36px;
     margin-bottom: 10px;
     text-transform: uppercase;
-    color: #000000; /* Deep purple */
+    color:#FF69B4; 
     text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5); /* Add a light shadow for readability */
 }
 
@@ -441,22 +441,9 @@ ul li {
     font-size: 24px;
     max-width: 800px;
     margin: 0 auto;
-    color: #000000; /* Deep purple */
+    color: #FF69B4; 
     text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.5); /* Subtle shadow for balance */
 }
-    
-/*.researchgoals-text h2 {
-    font-size: 38px; /* Larger font size for heading */
-    color: #6A1B9A; 
-    margin-bottom: 20px; /* Space below the heading */
-}
-
-.researchgoals-text p{
-    font-size: 22px; /* Larger font size for paragraph */
-    margin: 0 auto; /* Center-align the text */
-    color: #000;
-    max-width: 800px; /* Limit the width of the text for better readability */
-}*/
 
 #research {
     padding: 40px 40px; /* Space inside the section */
@@ -486,7 +473,6 @@ ul li {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Text Styling */
 .research-text {
     flex: 1 1 60%; /* Text takes 60% of the container */
     padding: 0 40px; /* Add padding on the left and right */
@@ -515,10 +501,6 @@ p.right-align {
     background: #fff;
     border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.link-research {
-    padding-left: 4ch;
 }
 
 @media screen and (max-width: 768px) {
@@ -580,14 +562,6 @@ p.right-align {
         padding-left: 30px; /* Remove any left padding on the ul */
         margin-left: 0px; /* Add margin to keep it within the screen */
         box-sizing: border-box; /* Prevent overflow due to padding */
-    }
-    ul li {
-        font-size: 16px;
-    }
-
-    .link {
-        font-size: 16px;
-        padding-left: 0ch;
     }
 }
 
