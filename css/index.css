@@ -233,12 +233,12 @@ input[type="checkbox"].menu-toggle {
         overflow: hidden;
     }
     
-    .hero-content h1 {
-        : 1.2rem; /* Make font smaller for mobile */
+    .hero h1 {
+        : 1.5rem; /* Make font smaller for mobile */
     }
 
-    .hero-content p {
-        : 0.8rem; /* Make font smaller for mobile */
+    .hero p {
+        : 1.2rem; /* Make font smaller for mobile */
     }
 }
 
@@ -348,7 +348,7 @@ ul li {
     gap: 100px;
     flex-wrap: wrap; /* Ensures responsiveness on smaller screens */
     justify-content: center;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
 }
 
 .about-image img {
@@ -369,7 +369,7 @@ ul li {
 }
 
 .about-text {
-    max-width: 600px;
+    max-width: 1200px;
 }
 
 .about-text h2 {
@@ -400,6 +400,7 @@ ul li {
     .about-logo img {
         max-width: 200px;
         margin: 10px 0px;
+        align-items: center;
     }
 }
 
