@@ -523,7 +523,7 @@ ul li {
     background-color: rgba(0, 0, 0, 0.4);
     color: white;
     text-align: center; /* Center the text */
-    padding: 0; /* Remove padding to remove spaces */
+    padding: 10px 20px; /* Remove padding to remove spaces */
     margin: 0; /* Remove margin to remove spaces */
     opacity: 0; /* Hidden by default */
     pointer-events: none; /* Allow hover to work smoothly */
@@ -542,7 +542,7 @@ ul li {
     background-color: rgba(0, 0, 0, 0.4);
     color: white; /* White text */
     text-align: center; /* Center the text */
-    padding: 0; /* Add some padding for the description */
+    padding: 10px 20px; /* Add some padding for the description */
     margin: 0;
     font-size: 14px; /* Adjust font size */
     width: 100%; /* Ensure it spans the full width of the image */
@@ -552,6 +552,7 @@ ul li {
 @media screen and (max-width: 768px) {
     .research-description-hover {
         display: none; /* Hide hover description on mobile */
+        margin-top: 0px;
     }
 
     .research-description-static {
