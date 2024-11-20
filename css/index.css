@@ -505,7 +505,6 @@ p.right-align {
 
 @media screen and (max-width: 768px) {
     #researchgoals {
-        margin-top: 50px;
         padding: 20px 15px; 
     }
 
