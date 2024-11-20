@@ -532,10 +532,14 @@ ul li {
 
 /* Always-visible description for phones */
 .research-description-static {
-    display: none; /* Hidden by default for larger screens */
-    margin-top: 10px;
-    font-size: 14px;
-    color: #333; /* Dark gray for readability */
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+    color: white; /* White text */
+    text-align: center; /* Center the text */
+    padding: 10px; /* Add some padding for the description */
+    font-size: 14px; /* Adjust font size */
+    width: 100%; /* Ensure it spans the full width of the image */
+    margin-top: 0; /* Attach directly below the image with no space */
+    border-radius: 0 0 12px 12px; /* Rounded bottom corners */
 }
 
 .research-text {
@@ -582,11 +586,11 @@ p.right-align {
         padding: 20px 5px;
     }
     
-    .researchgoals-text h2 {
+    .text-overlay h2 {
         font-size: 28px;
     }
 
-    .researchgoals-text p {
+    .text-overlay p {
         font-size: 18px;
     }
     
@@ -596,13 +600,7 @@ p.right-align {
         justify-content: flex-start; /* Align items at the start */
         align-items: center; /* Center items horizontally */
     }
-    
-    .research-description-hover {
-        display: none; /* Hide hover description on small screens */
-    }
-    .research-description-static {
-        display: block; /* Always show the static description */
-    }
+   
 
     .research-text {
         order: 1;
@@ -615,11 +613,15 @@ p.right-align {
     .research-text p{
         font-size: 16px;
     }
-    .research-image {
+    .research-gallery {
         order: 2; /* Image comes second */
-        margin-top: 20px; /* Add space between the text and the image */
-        width: 100%; /* Full width for the image */
-        text-align: center; /* Center the image container */
+    }
+     
+    .research-description-hover {
+        display: none; /* Hide hover description on small screens */
+    }
+    .research-description-static {
+        display: block; /* Always show the static description */
     }
     .research-image img {
         width: auto; /* Maintain natural aspect ratio */
