@@ -416,6 +416,7 @@ ul li {
 }
 
 /* ------------------------------- RESEARCH SECTION ------------------------------- */
+/* --------------------- RESEARCH GOALS --------------------- */
 #researchgoals {
     background: url('../images/Slide_Horizontal_Haemoproteus.jpg');
     background-repeat: repeat;
@@ -430,7 +431,7 @@ ul li {
     padding: 20px;
 }
 
-#researchgoals .text-overlay {
+.researchgoals-container {
     background: rgba(255, 255, 255, 0.7); /* Semi-transparent white */
     padding: 20px 30px;
     border-radius: 10px; /* Rounded corners for aesthetics */
@@ -452,7 +453,8 @@ ul li {
     margin: 0 auto;
     color: black; 
 }
-
+    
+/* --------------------- RESEARCH BODY --------------------- */
 #research {
     padding: 40px 40px; /* Space inside the section */
     margin-top: 30px; /* Adds space between the hero and about sections */
@@ -535,16 +537,6 @@ ul li {
     color: #333; /* Dark gray for readability */
 }
 
-/* Make the static description visible on smaller screens */
-@media screen and (max-width: 768px) {
-    .research-description-hover {
-        display: none; /* Hide hover description on small screens */
-    }
-    .research-description-static {
-        display: block; /* Always show the static description */
-    }
-}
-
 .research-text {
     flex: 1 1 60%; /* Text takes 60% of the container */
     padding: 0 40px; /* Add padding on the left and right */
@@ -567,6 +559,7 @@ p.right-align {
     text-align: right;
 }
     
+/* --------------------- RESEARCH ADDITIONAL INFORMATION --------------------- */
 #researchextra{
     padding: 40px 80px; /* Add padding on the left and right */
     margin-top: 20px;
@@ -601,6 +594,13 @@ p.right-align {
         flex-direction: column; /* Stack image and text vertically */
         justify-content: flex-start; /* Align items at the start */
         align-items: center; /* Center items horizontally */
+    }
+    
+    .research-description-hover {
+        display: none; /* Hide hover description on small screens */
+    }
+    .research-description-static {
+        display: block; /* Always show the static description */
     }
 
     .research-text {
