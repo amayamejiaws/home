@@ -418,8 +418,19 @@ ul li {
     margin-top: 50px;
     padding: 20px;
 }
-
 .researchgoals-text h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.researchgoals-text p {
+    font-size: 18px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+    
+/*.researchgoals-text h2 {
     font-size: 38px; /* Larger font size for heading */
     color: #6A1B9A; 
     margin-bottom: 20px; /* Space below the heading */
@@ -430,7 +441,7 @@ ul li {
     margin: 0 auto; /* Center-align the text */
     color: #000;
     max-width: 800px; /* Limit the width of the text for better readability */
-}
+}*/
 
 #research {
     padding: 40px 40px; /* Space inside the section */
