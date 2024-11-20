@@ -141,7 +141,7 @@ input[type="checkbox"].menu-toggle {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url('../images/ANFbackground.JPG') no-repeat center center/cover; /* Background image */
+    background: url('../images/ANFbackground.jpg') no-repeat center center/cover; /* Background image */
     color: #fff;
     text-align: center;
     position: relative;
@@ -226,7 +226,7 @@ input[type="checkbox"].menu-toggle {
         display: flex;
         justify-content: center;
         align-items: center;
-        background: url('../images/ANFbackground.JPG') no-repeat center center/cover;
+        background: url('../images/ANFbackground.jpg') no-repeat center center/cover;
         color: #fff
         text-align: center;
         position: relative;
@@ -234,11 +234,11 @@ input[type="checkbox"].menu-toggle {
     }
     
     .hero-content h1 {
-        : 1.8rem; /* Make font smaller for mobile */
+        : 1.2rem; /* Make font smaller for mobile */
     }
 
     .hero-content p {
-        : 1.2rem; /* Make font smaller for mobile */
+        : 0.8rem; /* Make font smaller for mobile */
     }
 }
 
