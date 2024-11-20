@@ -405,7 +405,7 @@ ul li {
 
 /* ------------------------------- RESEARCH SECTION ------------------------------- */
 #researchgoals {
-    background: url('images/Slide_Horizontal_Haemoproteus.jpg');
+    background: url('../images/Slide_Horizontal_Haemoproteus.jpg');
     background-repeat: repeat;
     background-size: cover; 
     color: white; /* Ensures text is readable on the image */
