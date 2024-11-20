@@ -471,6 +471,8 @@ ul li {
 
 .research-image {
     flex: 1 1 40%; /* Image takes 40% of the container */
+    position: relative; /* For positioning the hover effect */
+    text-align: center; /* Center-align content within */
 }
 
 .research-image img {
@@ -479,6 +481,52 @@ ul li {
     height: 100%; /* Maintain aspect ratio */
     border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease; /* Add a smooth zoom-in effect on hover */
+}
+
+/* Hover zoom effect for the image */
+.research-image:hover img {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Hover description text */
+.research-description-hover {
+    position: absolute; /* Positioned over the image */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    opacity: 0; /* Hidden by default */
+    pointer-events: none; /* Prevent it from blocking hover on the image */
+    transition: opacity 0.3s ease; /* Smooth fade-in on hover */
+    font-size: 14px;
+    text-align: center;
+}
+
+/* Show the description text on hover */
+.research-image:hover .research-description-hover {
+    opacity: 1;
+}
+
+/* Always-visible description for phones */
+.research-description-static {
+    display: none; /* Hidden by default for larger screens */
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333; /* Dark gray for readability */
+}
+
+/* Make the static description visible on smaller screens */
+@media screen and (max-width: 768px) {
+    .research-description-hover {
+        display: none; /* Hide hover description on small screens */
+    }
+    .research-description-static {
+        display: block; /* Always show the static description */
+    }
 }
 
 .research-text {
