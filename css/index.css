@@ -361,15 +361,14 @@ ul li {
 /* About Section Content Layout */
 .about-container {
     display: flex;
-    align-items: flex-start;
-    gap: 60px;
-    flex-wrap: wrap; 
-    justify-content: space-between;
-    margin-bottom: 30px;
+    align-items: center;
+    gap: 100px;
+    flex-wrap: wrap; /* Ensures responsiveness on smaller screens */
+    justify-content: center;
+    margin-bottom: 60px;
 }
 
 .about-image img {
-    flex: 1 1 40%;
     width: 100%;
     max-width: 300px;
     height: auto;
@@ -378,7 +377,6 @@ ul li {
 }
 
 .about-logo img {
-    flex: 1 1 30%;
     width: 80%;
     max-width: 300px;
     height: auto;
@@ -388,8 +386,7 @@ ul li {
 }
 
 .about-text {
-    flex: 1 1 60%;
-    max-width: 1200px;
+    max-width: 600px;
 }
 
 .about-text h2 {
@@ -402,7 +399,7 @@ ul li {
     line-height: 1.8;
     font-size: 18px;
 }
-
+    
 /* Responsive Design */
 @media screen and (max-width: 768px) {
     .about-container {
