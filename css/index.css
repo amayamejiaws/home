@@ -25,12 +25,13 @@ body {
 }
 
 .fa {
-  padding: 0px;
-  font-size: 100px;
-  width: 100px;
-  text-align: center;
-  text-decoration: none;
-  margin: 5px 2px;
+    padding: 0px;
+    font-size: 100px;
+    width: 30px;
+    text-align: left;
+    text-decoration: none;
+    margin: 5px 2px;
+    margin-bottom: 20px;
 }
 
 .fa:hover {
