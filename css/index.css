@@ -763,14 +763,18 @@ p.right-align {
     padding: 20px;
     background: #fff;
     border-top: 1px solid #ccc;
-    height: 750px; /* Set a fixed height */
+    height: 400px; /* Set a fixed height */
     overflow-y: auto;
 }
 
 .mytabs .tab-content.active {
     display: block;
 }
-
+@media screen and (max-width: 768px) {
+    .mytabs .tab-content {
+        height: 200px;
+    }
+}
 /* --------------------- IMAGES --------------------- */
 .community-gallery {
     display: flex; /* Use flexbox for alignment */
