@@ -26,7 +26,7 @@ body {
 
 .fa {
     padding: 0px;
-    font-size: 100px;
+    font-size: 200px;
     width: 30px;
     text-align: left;
     text-decoration: none;
@@ -763,7 +763,7 @@ p.right-align {
     padding: 20px;
     background: #fff;
     border-top: 1px solid #ccc;
-    height: 400px; /* Set a fixed height */
+    height: 600px; /* Set a fixed height */
     overflow-y: auto;
 }
 
@@ -772,15 +772,17 @@ p.right-align {
 }
 @media screen and (max-width: 768px) {
     .mytabs .tab-content {
-        height: 200px;
+        height: 500px;
     }
 }
 /* --------------------- IMAGES --------------------- */
 .community-gallery {
-    justify-content: center; /* Center all items horizontally */
     align-items: center; /* Center items vertically */
     gap: 20px; /* Space between items */
     padding: 20px; /* Add padding around the gallery */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
 }
 
 /* Individual community item container */
