@@ -14,7 +14,14 @@ body {
     padding-top: 40px;
 }
 @media (max-width: 768px) {
-    padding-top: 60px;
+    .fa {
+      padding: 0px;
+      font-size: 20px;
+      width: 100px;
+      text-align: center;
+      text-decoration: none;
+      margin: 5px 2px;
+    }
 }
 
 .fa {
@@ -782,6 +789,7 @@ p.right-align {
     width: 100%; /* Ensure the image container is full width */
     overflow: hidden; /* Hide the overflow content */
     max-width: 500px;
+    margin: 20px 0px; 
 }
 .community-image img {
     width: 100%; /* Image takes full width of its container */
@@ -845,7 +853,8 @@ p.right-align {
         width: auto; /* Maintain natural aspect ratio */
         height: auto; /* Ensure correct proportions */
         max-width: 100%; /* Ensure the image is responsive */
-        margin-bottom: 0px;
+        margin: 15px 0x;
+        position: relative;
     }
     .community-description-hover {
         display: none; /* Hide hover description on mobile */
@@ -854,9 +863,6 @@ p.right-align {
     .community-description-static {
         display: block; /* Always show static description on mobile */
         margin-top: 0;/* Remove any default margin */
-    }
-    .community-image {
-        position: relative;
     }
     
     .community-image img {
