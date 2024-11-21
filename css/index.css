@@ -777,8 +777,6 @@ p.right-align {
 }
 /* --------------------- IMAGES --------------------- */
 .community-gallery {
-    display: flex; /* Use flexbox for alignment */
-    flex-wrap: wrap; /* Wrap items to the next line if needed */
     justify-content: center; /* Center all items horizontally */
     align-items: center; /* Center items vertically */
     gap: 20px; /* Space between items */
@@ -793,14 +791,15 @@ p.right-align {
     justify-content: center; /* Center items within container */
     position: relative; /* For hover effects */
     width: 100%; /* Full width of container */
-    max-width: 500px; /* Limit the size of each image container */
-    margin: 20px 0; /* Add spacing between rows */
+    max-width: 750px; /* Limit the size of each image container */
+    margin: 15px 0; /* Add spacing between rows */
     overflow: hidden; /* Prevent overflow */
     transition: transform 0.3s ease; /* Smooth zoom-in effect on hover */
 }
 .community-image img {
     width: 100%; /* Image takes full width of its container */
     height: auto; /* Maintain aspect ratio */
+    position: relative; /* For hover effects */
 }
 .community-image:hover{
     transform: scale(1.15); /* Slight zoom on hover */
@@ -858,7 +857,7 @@ p.right-align {
     .community-image img {
         width: auto; /* Maintain natural aspect ratio */
         height: auto; /* Ensure correct proportions */
-        max-width: 100%; /* Ensure the image is responsive */
+        max-width: 100%; 
         margin: 15px 0x;
         position: relative;
     }
