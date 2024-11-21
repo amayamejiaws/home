@@ -713,6 +713,7 @@ p.right-align {
 
 .alltabs .tab-label.active {
     background: #6A1B9A;  /* Change background of the active tab */
+    color: #fff
     border-bottom: none;  /* Remove the bottom border of active tab */
 }
 
@@ -733,9 +734,8 @@ p.right-align {
     display: block;
 }
 
-    .community-gallery {
-    display: flex;
-    flex: 1 1 40%; /* Image takes 40% of the container */
+/* --------------------- TABS --------------------- */
+.community-gallery {
     flex-wrap: wrap; /* Wrap items to the next line if needed */
     gap: 20px; /* Space between items */
     justify-content: center; /* Center all items */
@@ -749,27 +749,21 @@ p.right-align {
     align-items: center; /* Center align image and text */
     max-width: 400px; /* Limit width of each item */
 }
-    
-/* General styles for the image container */
+
 .community-image {
     position: relative; /* For positioning the hover description at the bottom */
     width: 100%; /* Ensure the image container is full width */
     overflow: hidden; /* Hide the overflow content */
-}
 
-/* Image styling */
 .community-image img {
     width: 100%; /* Image takes full width of its container */
     height: auto; /* Maintain aspect ratio */
     transition: transform 0.3s ease; /* Smooth zoom-in effect on hover */
 }
-
-/* Hover zoom effect */
 .community-image:hover img {
     transform: scale(1.05); /* Slight zoom on hover */
 }
 
-/* Hover description at the bottom (no space) */
 .community-description-hover {
     position: absolute;
     bottom: 0; /* Position it at the bottom of the container */
