@@ -772,21 +772,16 @@ p.right-align {
 }
 
 /* Individual community item container */
-.community-item {
-    display: flex;
-    flex-direction: column; /* Stack image and description vertically */
-    align-items: center; /* Center align image and text */
-    max-width: 400px; /* Limit width of each item */
-}
-
 .community-image {
     display: flex;
     flex-direction: column; /* Stack image and description vertically */
+    gap: 20px
+    justify-content: center; /* Center all items */
     align-items: center; /* Center align image and text */
     position: relative; /* For positioning the hover description at the bottom */
     width: 100%; /* Ensure the image container is full width */
     overflow: hidden; /* Hide the overflow content */
-    max-width: 750px;
+    max-width: 500px;
 }
 .community-image img {
     width: 100%; /* Image takes full width of its container */
@@ -794,14 +789,14 @@ p.right-align {
     transition: transform 0.3s ease; /* Smooth zoom-in effect on hover */
 }
 .community-image:hover img {
-    transform: scale(1.05); /* Slight zoom on hover */
+    transform: scale(1.15); /* Slight zoom on hover */
 }
 
 .community-description-hover {
     position: absolute;
     bottom: 0; /* Position it at the bottom of the container */
     left: 0;
-    width: 105%; /* Make the description take the full width */
+    width: 115%; /* Make the description take the full width */
     background-color: rgba(0, 0, 0, 0.4);
     color: white;
     text-align: center; /* Center the text */
