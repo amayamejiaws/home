@@ -681,8 +681,8 @@ p.right-align {
         opacity: 1;
     }
 }
-/* ------------------------------- TABS ------------------------------- */
-/* Box Styling for Tabs */
+/* ------------------------------- COMMUNITY INITIATIVES ------------------------------- */
+/* --------------------- TABS --------------------- */
 .tabs-container {
     border: 2px solid #ccc;  /* Border around the box */
     border-radius: 10px;  /* Rounded corners for the box */
@@ -712,7 +712,7 @@ p.right-align {
 }
 
 .alltabs .tab-label.active {
-    background: #fff;  /* Change background of the active tab */
+    background: #6A1B9A;  /* Change background of the active tab */
     border-bottom: none;  /* Remove the bottom border of active tab */
 }
 
@@ -720,7 +720,6 @@ p.right-align {
     background: #d2d2d2;
 }
 
-/* Tab content */
 .mytabs .tab-content {
     display: none; /* Hide all tab content by default */
     padding: 20px;
@@ -730,9 +729,135 @@ p.right-align {
     overflow-y: auto;
 }
 
-/* Show the tab content when the tab is active */
 .mytabs .tab-content.active {
     display: block;
+}
+
+    .community-gallery {
+    display: flex;
+    flex: 1 1 40%; /* Image takes 40% of the container */
+    flex-wrap: wrap; /* Wrap items to the next line if needed */
+    gap: 20px; /* Space between items */
+    justify-content: center; /* Center all items */
+    padding: 20px;
+}
+
+/* Individual community item container */
+.community-item {
+    display: flex;
+    flex-direction: column; /* Stack image and description vertically */
+    align-items: center; /* Center align image and text */
+    max-width: 400px; /* Limit width of each item */
+}
+    
+/* General styles for the image container */
+.community-image {
+    position: relative; /* For positioning the hover description at the bottom */
+    width: 100%; /* Ensure the image container is full width */
+    overflow: hidden; /* Hide the overflow content */
+}
+
+/* Image styling */
+.community-image img {
+    width: 100%; /* Image takes full width of its container */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.3s ease; /* Smooth zoom-in effect on hover */
+}
+
+/* Hover zoom effect */
+.community-image:hover img {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Hover description at the bottom (no space) */
+.community-description-hover {
+    position: absolute;
+    bottom: 0; /* Position it at the bottom of the container */
+    left: 0;
+    width: 105%; /* Make the description take the full width */
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    text-align: center; /* Center the text */
+    padding: 5px 15px; /* Remove padding to remove spaces */
+    margin: 0; /* Remove margin to remove spaces */
+    opacity: 0; /* Hidden by default */
+    pointer-events: none; /* Allow hover to work smoothly */
+    transition: opacity 0.3s ease; /* Smooth fade-in effect */
+    font-size: 16px;
+    z-indez: 10;
+}
+
+/* Show the hover description when hovering over the image (on desktop) */
+.community-image:hover .community-description-hover {
+    opacity: 1; /* Make the description visible */
+}
+
+/* Static description (transparent black background with white text) */
+.community-description-static {
+    position: absolute;
+    bottom: 0; /* Position it at the bottom of the container */
+    left: 0;
+    width: 100%; /* Make the description take the full width */
+    background-color: rgba(0, 0, 0, 1);
+    color: white;
+    text-align: center; /* Center the text */
+    padding: 5px 20px; /* Remove padding to remove spaces */
+    margin: 0; /* Remove margin to remove spaces */
+    font-size: 14px;
+    z-indez: 10;
+    box-sizing: border-box;
+}
+@media screen and (max-width: 768px) {
+    .community-container {
+        padding: 20px 0px;
+        flex-direction: column; /* Stack image and text vertically */
+        justify-content: flex-start; /* Align items at the start */
+        align-items: center; /* Center items horizontally */
+    }
+
+    .community-gallery {
+        order: 2; /* Image comes second */
+    }
+     
+    .community-image img {
+        width: auto; /* Maintain natural aspect ratio */
+        height: auto; /* Ensure correct proportions */
+        max-width: 100%; /* Ensure the image is responsive */
+        margin-bottom: 0px;
+    }
+    .community-description-hover {
+        display: none; /* Hide hover description on mobile */
+    }
+
+    .community-description-static {
+        display: block; /* Always show static description on mobile */
+        margin-top: 0;/* Remove any default margin */
+    }
+    .community-image {
+        position: relative;
+    }
+    
+    .community-image img {
+        transform: none !important; /* Prevent zooming */
+        transition: none !important; /* Remove smooth transition */
+        margin-bottom: 0px;
+    }
+
+    .community-image:hover img {
+        transform: none; /* Ensure hover doesn't trigger */
+    }
+}
+
+/* Show the hover description only on desktop screens */
+@media screen and (min-width: 768px) {
+    .community-description-static {
+        display: none; /* Hide static description on desktop */
+    }
+
+    /* Show the description text on hover */
+    .community-image:hover .community-description-hover {
+        opacity: 1;
+    }
 }
 
 /* ------------------------------- CONTACT SECTION ------------------------------- */
