@@ -542,7 +542,7 @@ ul li {
     background-color: rgba(0, 0, 0, 0.4);
     color: white; /* White text */
     text-align: center; /* Center the text */
-    padding: 10px 20px; /* Add some padding for the description */
+    padding: 0px 20px; /* Add some padding for the description */
     margin: 0;
     font-size: 14px; /* Adjust font size */
     width: 100%; /* Ensure it spans the full width of the image */
@@ -559,9 +559,7 @@ ul li {
 
     .research-description-static {
         display: block; /* Always show static description on mobile */
-        margin-top: 0px;/* Remove any default margin */
-        position: absolute; /* Ensure it sits directly over the image */
-        bottom: 0; 
+        margin-top: 0;/* Remove any default margin */
     }
     .research-image {
         position: relative;
