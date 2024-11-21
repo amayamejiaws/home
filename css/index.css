@@ -775,6 +775,35 @@ p.right-align {
         height: 600px;
     }
 }
+    
+/* --------------------- TEXT --------------------- */
+.community-text {
+    padding: 0 40px; /* Add padding on the left and right */
+}
+
+.community-text h3 {
+    color: #000;
+    margin-bottom: 30px;
+    font-size: 32px;
+}
+
+.community-text p {
+    line-height: 1.8;
+    font-size: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .community-text {
+        text-align: left;
+        width: 100%;
+    }
+    .community-text h2{
+        font-size: 26px;
+    }
+    .community-text p{
+        font-size: 15px;
+    }
+}
 /* --------------------- IMAGES --------------------- */
 .community-gallery {
     align-items: center; /* Center items vertically */
@@ -793,7 +822,7 @@ p.right-align {
     justify-content: center; /* Center items within container */
     position: relative; /* For hover effects */
     width: 100%; /* Full width of container */
-    max-width: 750px; /* Limit the size of each image container */
+    max-width: 675px; /* Limit the size of each image container */
     margin: 15px 0; /* Add spacing between rows */
     overflow: hidden; /* Prevent overflow */
     transition: transform 0.3s ease; /* Smooth zoom-in effect on hover */
@@ -844,6 +873,7 @@ p.right-align {
     z-indez: 10;
     box-sizing: border-box;
 }
+    
 @media screen and (max-width: 768px) {
     .community-container {
         padding: 20px 0px;
@@ -851,17 +881,20 @@ p.right-align {
         justify-content: flex-start; /* Align items at the start */
         align-items: center; /* Center items horizontally */
     }
-
-    .community-gallery {
-        order: 2; /* Image comes second */
-    }
      
     .community-image img {
         width: auto; /* Maintain natural aspect ratio */
         height: auto; /* Ensure correct proportions */
         max-width: 100%; 
-        margin: 15px 0x;
+        margin: 0px 0x;
         position: relative;
+        transform: none !important; /* Prevent zooming */
+        transition: none !important; /* Remove smooth transition */
+        margin-bottom: 0px;
+    }
+    
+    .community-image:hover img {
+        transform: none; /* Ensure hover doesn't trigger */
     }
     .community-description-hover {
         display: none; /* Hide hover description on mobile */
@@ -871,16 +904,8 @@ p.right-align {
         display: block; /* Always show static description on mobile */
         margin-top: 0;/* Remove any default margin */
     }
-    
-    .community-image img {
-        transform: none !important; /* Prevent zooming */
-        transition: none !important; /* Remove smooth transition */
-        margin-bottom: 0px;
-    }
 
-    .community-image:hover img {
-        transform: none; /* Ensure hover doesn't trigger */
-    }
+
 }
 
 /* Show the hover description only on desktop screens */
