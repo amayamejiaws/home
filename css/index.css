@@ -688,7 +688,7 @@ p.right-align {
     border-radius: 10px;  /* Rounded corners for the box */
     background-color: #f9f9f9;  /* Light background for the box */
     padding: 20px;  /* Add some padding inside the box */
-    max-width: 1400px;
+    max-width: 1000px;
     margin: 50px auto;  /* Center the box on the page */
 }
 
