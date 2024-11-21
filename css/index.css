@@ -830,6 +830,7 @@ p.right-align {
     margin: 15px 0; /* Add spacing between rows */
     overflow: hidden; /* Prevent overflow */
     transition: transform 0.3s ease; /* Smooth zoom-in effect on hover */
+    gap: 20px;
 }
 .community-image img {
     width: 100%; /* Image takes full width of its container */
@@ -864,7 +865,7 @@ p.right-align {
 /* Static description (transparent black background with white text) */
 .community-description-static {
     position: absolute;
-    bottom: 0; /* Position it at the bottom of the container */
+    bottom: -3px; /* Position it at the bottom of the container */
     left: 0;
     width: 100%; /* Make the description take the full width */
     background-color: rgba(0, 0, 0, 1);
@@ -906,7 +907,6 @@ p.right-align {
 
     .community-description-static {
         display: block; /* Always show static description on mobile */
-        margin-top: 0;/* Remove any default margin */
     }
 
 
