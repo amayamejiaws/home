@@ -797,11 +797,12 @@ p.right-align {
         text-align: left;
         width: 100%;
     }
-    .community-text h2{
+    .community-text h3{
         font-size: 26px;
     }
     .community-text p{
         font-size: 15px;
+        text-align: left;
     }
 }
 /* --------------------- IMAGES --------------------- */
