@@ -546,6 +546,8 @@ ul li {
     margin: 0;
     font-size: 14px; /* Adjust font size */
     width: 100%; /* Ensure it spans the full width of the image */
+    bottom: 0;
+    left: 0;
 }
 
 /* Show the static description on mobile screens */
