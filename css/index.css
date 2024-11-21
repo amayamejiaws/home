@@ -779,11 +779,11 @@ p.right-align {
 /* --------------------- TEXT --------------------- */
 .community-text {
     padding: 0 40px; /* Add padding on the left and right */
+    text-align: left;
 }
 
 .community-text h3 {
     color: #000;
-    margin-bottom: 30px;
     font-size: 32px;
 }
 
