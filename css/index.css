@@ -20,8 +20,8 @@ body {
 .social-links {
     display: flex;
     gap: 10px; /* Space between buttons */
-    justify-content: center; /* Center the buttons */
-    margin-top: 10px;
+    justify-content: left; /* Center the buttons */
+    margin: 10px 0px;
 }
 
 .social-button {
@@ -31,11 +31,9 @@ body {
     width: 35px; /* Width of the button */
     height: 35px; /* Height of the button */
     border-radius: 50%; /* Make it circular */
-    background-color: #6A1B9A; /* Example background color */
     color: white; /* Icon color */
     text-decoration: none; /* Remove underline */
     font-size: 16px; /* Adjust icon size */
-    transition: background-color 0.3s ease;
 }
 
 .social-button:hover {
