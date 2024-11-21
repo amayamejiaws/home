@@ -523,7 +523,7 @@ ul li {
     background-color: rgba(0, 0, 0, 0.4);
     color: white;
     text-align: center; /* Center the text */
-    padding: 10px 20px; /* Remove padding to remove spaces */
+    padding: 10px 15px; /* Remove padding to remove spaces */
     margin: 0; /* Remove margin to remove spaces */
     opacity: 0; /* Hidden by default */
     pointer-events: none; /* Allow hover to work smoothly */
@@ -539,16 +539,17 @@ ul li {
 
 /* Static description (transparent black background with white text) */
 .research-description-static {
-    background-color: rgba(0, 0, 0, 0.4);
-    color: white; /* White text */
-    text-align: center; /* Center the text */
-    padding: 0px 15px; /* Add some padding for the description */
-    margin: 0;
-    font-size: 14px; /* Adjust font size */
-    width: 100%; /* Ensure it spans the full width of the image */
-    bottom: 5px;
-    left: 0;
     position: absolute;
+    bottom: 0; /* Position it at the bottom of the container */
+    left: 0;
+    width: 100%; /* Make the description take the full width */
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    text-align: center; /* Center the text */
+    padding: 10px 20px; /* Remove padding to remove spaces */
+    margin: 0; /* Remove margin to remove spaces */
+    font-size: 14px;
+    z-indez: 10;
 }
 
 /* Show the static description on mobile screens */
