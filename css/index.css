@@ -772,31 +772,32 @@ p.right-align {
 
 /* --------------------- IMAGES --------------------- */
 .community-gallery {
+    display: flex; /* Use flexbox for alignment */
     flex-wrap: wrap; /* Wrap items to the next line if needed */
+    justify-content: center; /* Center all items horizontally */
+    align-items: center; /* Center items vertically */
     gap: 20px; /* Space between items */
-    justify-content: center; /* Center all items */
-    padding: 20px;
+    padding: 20px; /* Add padding around the gallery */
 }
 
 /* Individual community item container */
 .community-image {
     display: flex;
     flex-direction: column; /* Stack image and description vertically */
-    gap: 20px
-    justify-content: center; /* Center all items */
-    align-items: center; /* Center align image and text */
-    position: relative; /* For positioning the hover description at the bottom */
-    width: 100%; /* Ensure the image container is full width */
-    overflow: hidden; /* Hide the overflow content */
-    max-width: 500px;
-    margin: 20px 0px; 
+    align-items: center; /* Center image and text */
+    justify-content: center; /* Center items within container */
+    position: relative; /* For hover effects */
+    width: 100%; /* Full width of container */
+    max-width: 500px; /* Limit the size of each image container */
+    margin: 20px 0; /* Add spacing between rows */
+    overflow: hidden; /* Prevent overflow */
+    transition: transform 0.3s ease; /* Smooth zoom-in effect on hover */
 }
 .community-image img {
     width: 100%; /* Image takes full width of its container */
     height: auto; /* Maintain aspect ratio */
-    transition: transform 0.3s ease; /* Smooth zoom-in effect on hover */
 }
-.community-image:hover img {
+.community-image:hover{
     transform: scale(1.15); /* Slight zoom on hover */
 }
 
