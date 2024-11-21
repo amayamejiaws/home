@@ -772,7 +772,7 @@ p.right-align {
 }
 @media screen and (max-width: 768px) {
     .mytabs .tab-content {
-        height: 500px;
+        height: 600px;
     }
 }
 /* --------------------- IMAGES --------------------- */
