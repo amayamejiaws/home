@@ -774,6 +774,9 @@ p.right-align {
     .mytabs .tab-content {
         height: 600px;
     }
+    .mytabs .tab-content {
+    padding: 10px;
+    }
 }
     
 /* --------------------- TEXT --------------------- */
@@ -854,7 +857,6 @@ p.right-align {
     z-indez: 10;
 }
 
-/* Show the hover description when hovering over the image (on desktop) */
 .community-image:hover .community-description-hover {
     opacity: 1; /* Make the description visible */
 }
@@ -881,6 +883,7 @@ p.right-align {
         flex-direction: column; /* Stack image and text vertically */
         justify-content: flex-start; /* Align items at the start */
         align-items: center; /* Center items horizontally */
+        gap: 7px;
     }
      
     .community-image img {
