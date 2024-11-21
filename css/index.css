@@ -543,10 +543,10 @@ ul li {
     bottom: 0; /* Position it at the bottom of the container */
     left: 0;
     width: 100%; /* Make the description take the full width */
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 1);
     color: white;
     text-align: center; /* Center the text */
-    padding: 10px 20px; /* Remove padding to remove spaces */
+    padding: 5px 20px; /* Remove padding to remove spaces */
     margin: 0; /* Remove margin to remove spaces */
     font-size: 14px;
     z-indez: 10;
