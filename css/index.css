@@ -774,10 +774,14 @@ p.right-align {
 }
 
 .community-image {
+    display: flex;
+    flex-direction: column; /* Stack image and description vertically */
+    align-items: center; /* Center align image and text */
     position: relative; /* For positioning the hover description at the bottom */
     width: 100%; /* Ensure the image container is full width */
     overflow: hidden; /* Hide the overflow content */
-
+    max-width: 750px;
+}
 .community-image img {
     width: 100%; /* Image takes full width of its container */
     height: auto; /* Maintain aspect ratio */
