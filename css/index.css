@@ -17,6 +17,30 @@ body {
     padding-top: 60px;
 }
 
+.social-links {
+    display: flex;
+    gap: 10px; /* Space between buttons */
+    justify-content: center; /* Center the buttons */
+    margin-top: 10px;
+}
+
+.social-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px; /* Width of the button */
+    height: 35px; /* Height of the button */
+    border-radius: 50%; /* Make it circular */
+    background-color: #6A1B9A; /* Example background color */
+    color: white; /* Icon color */
+    text-decoration: none; /* Remove underline */
+    font-size: 16px; /* Adjust icon size */
+    transition: background-color 0.3s ease;
+}
+
+.social-button:hover {
+    background-color: #500B70; /* Darker shade on hover */
+}
 /* Header and navigation styling */
 header {
     background-color: #333;
@@ -712,8 +736,7 @@ p.right-align {
 }
 
 .alltabs .tab-label.active {
-    background: #6A1B9A;  /* Change background of the active tab */
-    color: #fff
+    background: #decfe8;  /* Change background of the active tab */
     border-bottom: none;  /* Remove the bottom border of active tab */
 }
 
@@ -734,7 +757,7 @@ p.right-align {
     display: block;
 }
 
-/* --------------------- TABS --------------------- */
+/* --------------------- IMAGES --------------------- */
 .community-gallery {
     flex-wrap: wrap; /* Wrap items to the next line if needed */
     gap: 20px; /* Space between items */
