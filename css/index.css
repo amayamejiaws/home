@@ -523,7 +523,7 @@ ul li {
     background-color: rgba(0, 0, 0, 0.4);
     color: white;
     text-align: center; /* Center the text */
-    padding: 10px 15px; /* Remove padding to remove spaces */
+    padding: 5px 15px; /* Remove padding to remove spaces */
     margin: 0; /* Remove margin to remove spaces */
     opacity: 0; /* Hidden by default */
     pointer-events: none; /* Allow hover to work smoothly */
@@ -550,45 +550,8 @@ ul li {
     margin: 0; /* Remove margin to remove spaces */
     font-size: 14px;
     z-indez: 10;
+    box-sizing: border-box;
 }
-
-/* Show the static description on mobile screens */
-@media screen and (max-width: 768px) {
-    .research-description-hover {
-        display: none; /* Hide hover description on mobile */
-    }
-
-    .research-description-static {
-        display: block; /* Always show static description on mobile */
-        margin-top: 0;/* Remove any default margin */
-    }
-    .research-image {
-        position: relative;
-    }
-    
-    .research-image img {
-        transform: none !important; /* Prevent zooming */
-        transition: none !important; /* Remove smooth transition */
-        margin-bottom: 0px;
-    }
-
-    .research-image:hover img {
-        transform: none; /* Ensure hover doesn't trigger */
-    }
-}
-
-/* Show the hover description only on desktop screens */
-@media screen and (min-width: 768px) {
-    .research-description-static {
-        display: none; /* Hide static description on desktop */
-    }
-
-    /* Show the description text on hover */
-    .research-image:hover .research-description-hover {
-        opacity: 1;
-    }
-}
-
     
 .research-text {
     flex: 1 1 60%; /* Text takes 60% of the container */
@@ -621,6 +584,7 @@ p.right-align {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* --------------------- RESEARCH PHONE SCREEN --------------------- */
 @media screen and (max-width: 768px) {
     #researchgoals {
         padding: 20px 15px; 
@@ -683,12 +647,38 @@ p.right-align {
     .link {
         font-size: 16px;
     }
+    .research-description-hover {
+        display: none; /* Hide hover description on mobile */
+    }
 
+    .research-description-static {
+        display: block; /* Always show static description on mobile */
+        margin-top: 0;/* Remove any default margin */
+    }
+    .research-image {
+        position: relative;
+    }
+    
+    .research-image img {
+        transform: none !important; /* Prevent zooming */
+        transition: none !important; /* Remove smooth transition */
+        margin-bottom: 0px;
+    }
+
+    .research-image:hover img {
+        transform: none; /* Ensure hover doesn't trigger */
+    }
 }
 
+/* Show the hover description only on desktop screens */
 @media screen and (min-width: 768px) {
     .research-description-static {
         display: none; /* Hide static description on desktop */
+    }
+
+    /* Show the description text on hover */
+    .research-image:hover .research-description-hover {
+        opacity: 1;
     }
 }
 /* ------------------------------- TABS ------------------------------- */
