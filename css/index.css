@@ -13,17 +13,109 @@ body {
     overflow-x: hidden;
     padding-top: 40px;
 }
+
+ul {
+    margin-top: 20px;
+    margin-left: 0px;
+    padding-left: 20px;
+    font-size: 20px;
+}
+
+ul li {
+    margin-bottom: 10px;
+    margin-left: 0px;
+    line-height: 1.3; /* Better readability */
+}
+
+.link {
+    color: #6A1B9A; /* Purple for the links */
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.link:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Mobile Styles for smaller screens */
 @media (max-width: 768px) {
-    .fa {
-      padding: 0px;
-      font-size: 20px;
-      width: 20px;
-      text-align: center;
-      text-decoration: none;
-      margin: 5px 2px;
+    ul {
+        padding-left: 10px;     /* Remove left padding */
+        margin-top: 15px;    /* Adjust margin-top */
+        text-align: left;
+    }
+
+    ul li {
+        margin-bottom: 8px;  /* Slightly reduce margin between items */
     }
 }
 
+/* ------------------------------- GENERAL SECTIONS ------------------------------- */
+.section {
+    padding: 60px 20px;
+    padding-top: 80px;
+    margin: 40px auto;
+    max-width: 1200px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.section h2 {
+    color: #6A1B9A; /* Purple */
+    margin-bottom: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    width: 80px;
+    height: 3px;
+    background-color: #FF69B4; /* Pink */
+    transform: translateX(-50%);
+}
+
+.section p {
+    text-align: center;
+    line-height: 1.8;
+    font-size: 20px; 
+}
+@media (max-width: 768px) {
+    .section {
+        padding: 40px 15px; /* Adjust padding for smaller screens */
+        padding-top: 60px;
+        margin: 20px 10px;   /* Reduce margin to create space around */
+        max-width: 100%;     /* Make sections full width on mobile */
+    }
+
+    .section h2 {
+        font-size: 1.8rem;  /* Adjust font size for smaller screens */
+        margin-bottom: 15px; /* Reduce margin space */
+    }
+
+    .section p {
+        font-size: 1rem;     /* Adjust font size for better readability */
+        line-height: 1.6;    /* Adjust line height for better spacing */
+    }
+    .section:hover {
+        transform: translateY(0);  /* Disable hover translate effect on mobile */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adjust shadow */
+    }
+} 
+
+/* ------------------------------- SOCIAL MEDIA LINKS ------------------------------- */
 .fa {
     padding: 0px;
     font-size: 200px;
@@ -55,7 +147,18 @@ body {
   color: purple;
 }
 
-/* Header and navigation styling */
+@media (max-width: 768px) {
+    .fa {
+      padding: 0px;
+      font-size: 20px;
+      width: 20px;
+      text-align: center;
+      text-decoration: none;
+      margin: 5px 2px;
+    }
+} 
+
+/* ------------------------------- HEADER AND NAV BAR ------------------------------- */
 header {
     background-color: #333;
     padding: 10px 0;
@@ -104,7 +207,7 @@ nav {
 }
 
 
-/* Hamburger icon */
+/* --------------------- NAV BAR HAMBURGER MENU --------------------- */
 .hamburger {
     display: none;  /* Default, hides on larger screens */
     font-size: 30px;
@@ -133,8 +236,6 @@ input[type="checkbox"].menu-toggle {
     display: none !important;  /* Use !important to override any conflicting styles */
 }
 
-
-/* Responsive styles (for mobile screens) */
 @media (max-width: 768px) {
     .hamburger {
         display: block;  /* Shows hamburger on mobile screens */
@@ -165,18 +266,42 @@ input[type="checkbox"].menu-toggle {
         align-items: center;
         width: 100%;
     }
-
-    /* When the checkbox is checked, show the nav links */
+    
     .menu-toggle:checked + .hamburger + .navbar-list {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-
 }
 
+/* --------------------- NAV BAR NEXT BUTTON --------------------- */
+.mobile-next {
+  display: none;
+}
 
-/* Home page Hero Section */
+/* Show the Next button only on small screens */
+@media screen and (max-width: 768px) {
+  .mobile-next {
+    display: block;
+  }
+
+  .mobile-next a {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    background-color: #decfe8; /* Example background */
+    color: #000; /* Example text color */
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  .mobile-next a:hover {
+    background-color: #bfa6d0; /* Hover effect */
+  }
+}
+
+/* ------------------------------- HOME PAGE ------------------------------- */
 .hero {
     height: 100vh;
     display: flex;
@@ -189,7 +314,6 @@ input[type="checkbox"].menu-toggle {
     overflow: hidden;
 }
 
-/* CV Link Box */
 .cv-link-box {
     margin-top: 30px;
     padding: 15px 30px;
@@ -212,7 +336,7 @@ input[type="checkbox"].menu-toggle {
     transform: translateY(-5px); /* Slight lift effect */
 }
 
-/* Hero text fade-in effect */
+/* Hero text */
 .hero h1,
 .hero p {
     position: relative; /* Ensure z-index works */
@@ -260,7 +384,6 @@ input[type="checkbox"].menu-toggle {
     }
 }
 
-/* Mobile Styles */
 @media (max-width: 768px) {
     .hero {
         height: 120vh;
@@ -275,117 +398,14 @@ input[type="checkbox"].menu-toggle {
     }
     
     .hero h1 {
-        font-size: 1.8rem; /* Make font smaller for mobile */
+        font-size: 2.2rem; /* Make font smaller for mobile */
     }
 
     .hero p {
-        font-size: 1.2rem; /* Make font smaller for mobile */
+        font-size: 1.5rem; /* Make font smaller for mobile */
     }
 }
 
-
-
-/* ------------------------------- SECTIONS ------------------------------- */
-.section {
-    padding: 60px 20px;
-    padding-top: 80px;
-    margin: 40px auto;
-    max-width: 1200px;
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.section:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
-}
-
-.section h2 {
-    color: #6A1B9A; /* Purple */
-    margin-bottom: 20px;
-    text-align: center;
-    position: relative;
-}
-
-.section h2::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    width: 80px;
-    height: 3px;
-    background-color: #FF69B4; /* Pink */
-    transform: translateX(-50%);
-}
-
-.section p {
-    text-align: center;
-    line-height: 1.8;
-    font-size: 20px; 
-}
-
-ul {
-    margin-top: 20px;
-    margin-left: 0px;
-    padding-left: 20px;
-    font-size: 20px;
-}
-
-ul li {
-    margin-bottom: 10px;
-    margin-left: 0px;
-    line-height: 1.3; /* Better readability */
-}
-
-.link {
-    color: #6A1B9A; /* Purple for the links */
-    text-decoration: none;
-    font-size: 20px;
-}
-
-.link:hover {
-    text-decoration: underline; /* Underline on hover */
-}
-
-/* Mobile Styles for smaller screens */
-@media (max-width: 768px) {
-    .section {
-        padding: 40px 15px; /* Adjust padding for smaller screens */
-        padding-top: 60px;
-        margin: 20px 10px;   /* Reduce margin to create space around */
-        max-width: 100%;     /* Make sections full width on mobile */
-    }
-
-    .section h2 {
-        : 1.8rem;  /* Adjust font size for smaller screens */
-        margin-bottom: 15px; /* Reduce margin space */
-    }
-
-    .section p {
-        : 1rem;     /* Adjust font size for better readability */
-        line-height: 1.6;    /* Adjust line height for better spacing */
-    }
-
-    ul {
-        padding-left: 10px;     /* Remove left padding */
-        margin-top: 15px;    /* Adjust margin-top */
-        text-align: left;
-    }
-
-    ul li {
-        margin-bottom: 8px;  /* Slightly reduce margin between items */
-    }
-
-    /* Optional: Adjust the section hover effect for mobile */
-    .section:hover {
-        transform: translateY(0);  /* Disable hover translate effect on mobile */
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adjust shadow */
-    }
-}
 /* ------------------------------- ABOUT SECTION ------------------------------- */
 /* About Section */
 #about {
@@ -437,8 +457,7 @@ ul li {
     line-height: 1.8;
     font-size: 18px;
 }
-    
-/* Responsive Design */
+
 @media screen and (max-width: 768px) {
     .about-container {
         flex-direction: column; /* Stack image and text vertically */
@@ -788,9 +807,7 @@ p.right-align {
     background: url('../images/HoLA_City_Birds.jpg');
     background-repeat: norepeat;
     background-size: cover; 
-    background-position: bottom; 
-    color: white; /* Ensures text is readable on the image */
-    text-align: center;
+    background-position: 50% 75%; 
     display: flex;
     flex-direction: column;
     justify-content: center;
