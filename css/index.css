@@ -981,6 +981,7 @@ p.right-align {
 
 .student-photo {
     flex: 3; /* 30% of the container width */
+    align-items: right;
 }
     
 .student-photo img {
