@@ -275,7 +275,7 @@ input[type="checkbox"].menu-toggle {
     }
     
     .hero h1 {
-        font-size: 1.2rem; /* Make font smaller for mobile */
+        font-size: 1.5rem; /* Make font smaller for mobile */
     }
 
     .hero p {
@@ -763,7 +763,7 @@ p.right-align {
     padding: 20px;
     background: #fff;
     border-top: 1px solid #ccc;
-    height: 600px; /* Set a fixed height */
+    height: 650px; /* Set a fixed height */
     overflow-y: auto;
 }
 
@@ -816,7 +816,7 @@ p.right-align {
 /* --------------------- IMAGES --------------------- */
 .community-gallery {
     align-items: center; /* Center items vertically */
-    gap: 20px; /* Space between items */
+    gap: 25px; /* Space between items */
     padding: 20px; /* Add padding around the gallery */
     display: flex;
     flex-direction: column;
@@ -835,7 +835,6 @@ p.right-align {
     margin: 15px 0; /* Add spacing between rows */
     overflow: hidden; /* Prevent overflow */
     transition: transform 0.3s ease; /* Smooth zoom-in effect on hover */
-    gap: 20px;
 }
 .community-image img {
     width: 100%; /* Image takes full width of its container */
@@ -843,15 +842,15 @@ p.right-align {
     position: relative; /* For hover effects */
 }
 .community-image:hover{
-    transform: scale(1.15); /* Slight zoom on hover */
+    transform: scale(1.1); /* Slight zoom on hover */
 }
 
 .community-description-hover {
     position: absolute;
     bottom: 0; /* Position it at the bottom of the container */
     left: 0;
-    width: 115%; /* Make the description take the full width */
-    background-color: rgba(0, 0, 0, 0.4);
+    width: 110%; /* Make the description take the full width */
+    background-color: rgba(0, 0, 0, 0.5);
     color: white;
     text-align: center; /* Center the text */
     padding: 5px 15px; /* Remove padding to remove spaces */
