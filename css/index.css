@@ -941,17 +941,25 @@ p.right-align {
     gap: 20px; /* Space between photo and text */
 }
 
+.student-photo {
+    flex: 3; /* 30% of the container width */
+}
+    
 .student-photo img {
     width: 150px;
     height: 150px;
     object-fit: cover; /* Ensure the image fits well */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add some depth */
 }
-
+    
+.student-info {
+    flex: 7; /* 70% of the container width */
+}
 .student-info h3 {
     margin: 0;
     font-size: 22px;
     color: #000;
+    text-align: left;
 }
 
 .student-info p {
@@ -959,6 +967,7 @@ p.right-align {
     line-height: 1.6;
     font-size: 16px;
     color: #555;
+    text-align: left;
 }
 
 /* Responsive Design */
