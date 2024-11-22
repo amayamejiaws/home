@@ -927,6 +927,60 @@ p.right-align {
         opacity: 1;
     }
 }
+/* --------------------- PREVIOUS STUDENT SECTION --------------------- */
+.previous-students {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Space between each student */
+    padding: 20px;
+}
+
+.student {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Space between photo and text */
+}
+
+.student-photo img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover; /* Ensure the image fits well */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add some depth */
+}
+
+.student-info h3 {
+    margin: 0;
+    font-size: 22px;
+    color: #000;
+}
+
+.student-info p {
+    margin: 5px 0 0;
+    line-height: 1.6;
+    font-size: 16px;
+    color: #555;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .student {
+        flex-direction: column; /* Stack photo and text vertically */
+        text-align: center;
+    }
+
+    .student-photo img {
+        width: 100px; /* Smaller image for mobile */
+        height: 100px;
+    }
+
+    .student-info h3 {
+        font-size: 18px;
+    }
+
+    .student-info p {
+        font-size: 14px;
+    }
+}
 
 /* ------------------------------- CONTACT SECTION ------------------------------- */
 .contact-section {
