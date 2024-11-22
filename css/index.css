@@ -931,14 +931,15 @@ p.right-align {
 .previous-students {
     display: flex;
     flex-direction: column;
-    gap: 30px; /* Space between each student */
-    padding: 20px;
+    gap: 20px; /* Space between each student */
+    padding: 20px 20px;
 }
 
 .student {
     display: flex;
+    flex-direction: row;
     align-items: center;
-    gap: 20px; /* Space between photo and text */
+    gap: 10px; /* Space between photo and text */
 }
 
 .student-photo {
@@ -947,7 +948,7 @@ p.right-align {
     
 .student-photo img {
     width: 150px;
-    height: 150px;
+    height: 210px;
     object-fit: cover; /* Ensure the image fits well */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add some depth */
 }
