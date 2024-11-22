@@ -560,7 +560,7 @@ ul li {
     width: 105%; /* Make the description take the full width */
     background-color: rgba(0, 0, 0, 0.4);
     color: white;
-    text-align: center; /* Center the text */
+    text-align: left; 
     padding: 5px 15px; /* Remove padding to remove spaces */
     margin: 0; /* Remove margin to remove spaces */
     opacity: 0; /* Hidden by default */
@@ -849,11 +849,11 @@ p.right-align {
     position: absolute;
     bottom: 0; /* Position it at the bottom of the container */
     left: 0;
-    width: 110%; /* Make the description take the full width */
-    background-color: rgba(0, 0, 0, 0.5);
+    width: 105%; /* Make the description take the full width */
+    background-color: rgba(0, 0, 0, 0.4);
     color: white;
-    text-align: center; /* Center the text */
-    padding: 0; /* Remove padding to remove spaces */
+    text-align: left; /* Center the text */
+    padding: 5px 15px; /* Remove padding to remove spaces */
     margin: 0; /* Remove margin to remove spaces */
     opacity: 0; /* Hidden by default */
     pointer-events: none; /* Allow hover to work smoothly */
