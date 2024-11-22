@@ -989,7 +989,7 @@ p.right-align {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 10px; /* Space between photo and text */
+    gap: 0px; /* Space between photo and text */
 }
 
 .student-photo {
@@ -1007,7 +1007,7 @@ p.right-align {
 .student-info {
     flex: 7; /* 70% of the container width */
 }
-.student-info h2 {
+.previous-students h2 {
     margin: 0;
     font-size: 28px;
     color: #000;
