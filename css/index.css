@@ -257,6 +257,13 @@ input[type="checkbox"].menu-toggle {
     .hamburger {
         display: block;  /* Shows hamburger on mobile screens */
     }
+    
+    .nav-links {
+        display: flex; /* Ensures links are side by side */
+        justify-content: space-between; /* Aligns links to the right */
+        align-items: center;
+        width: 100%;
+    }
 
     .next-page-link, .last-page-link {
         display: block;
@@ -267,6 +274,7 @@ input[type="checkbox"].menu-toggle {
         width: 100%;
         text-align: center;
     }
+    
 
     .nav-left, .nav-right {
         display: none;  /* Hide the regular menu links */
@@ -303,32 +311,6 @@ input[type="checkbox"].menu-toggle {
     }
 }
 
-/* --------------------- NAV BAR NEXT BUTTON --------------------- */
-.mobile-next {
-  display: none;
-}
-
-/* Show the Next button only on small screens */
-@media screen and (max-width: 768px) {
-  .mobile-next {
-    display: block;
-  }
-
-  .mobile-next a {
-    display: block;
-    padding: 10px;
-    text-align: center;
-    background-color: #decfe8; /* Example background */
-    color: #000; /* Example text color */
-    border-radius: 5px;
-    font-weight: bold;
-    text-decoration: none;
-  }
-
-  .mobile-next a:hover {
-    background-color: #bfa6d0; /* Hover effect */
-  }
-}
 
 /* ------------------------------- HOME PAGE ------------------------------- */
 .hero {
@@ -1010,8 +992,6 @@ p.right-align {
     .community-description-static {
         display: block; /* Always show static description on mobile */
     }
-
-
 }
 
 /* Show the hover description only on desktop screens */
