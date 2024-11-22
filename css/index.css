@@ -207,12 +207,29 @@ nav {
 }
 
 
-/* --------------------- NAV BAR HAMBURGER MENU --------------------- */
+/* --------------------- NAV BAR HAMBURGER MENU + NEXT PAGE --------------------- */
 .hamburger {
     display: none;  /* Default, hides on larger screens */
     font-size: 30px;
     color: white;
     cursor: pointer;
+}
+
+.next-page-link, .last-page-link {
+    display: none; /* Default: hides on larger screens */
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin-left: auto;
+    padding: 10px 20px;
+    background-color: #333;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.next-page-link:hover, .last-page-link:hove {
+    background-color: #f4f4f9;
+    color: #333;
 }
 
 .navbar-list {
@@ -241,6 +258,16 @@ input[type="checkbox"].menu-toggle {
         display: block;  /* Shows hamburger on mobile screens */
     }
 
+    .next-page-link, .last-page-link {
+        display: block;
+    }
+
+    .nav-left, .nav-right {
+        display: none; /* Hide the regular menu links */
+        width: 100%;
+        text-align: center;
+    }
+
     .nav-left, .nav-right {
         display: none;  /* Hide the regular menu links */
         width: 100%;
@@ -267,10 +294,12 @@ input[type="checkbox"].menu-toggle {
         width: 100%;
     }
     
-    .menu-toggle:checked + .hamburger + .navbar-list {
+     .header {
         display: flex;
-        flex-direction: column;
+        justify-content: space-between;
         align-items: center;
+        padding: 10px;
+        background-color: #333;
     }
 }
 
