@@ -275,11 +275,11 @@ input[type="checkbox"].menu-toggle {
     }
     
     .hero h1 {
-        : 1.5rem; /* Make font smaller for mobile */
+        font-size: 1.2rem; /* Make font smaller for mobile */
     }
 
     .hero p {
-        : 1.2rem; /* Make font smaller for mobile */
+        font-size: 1.2rem; /* Make font smaller for mobile */
     }
 }
 
@@ -771,11 +771,14 @@ p.right-align {
     display: block;
 }
 @media screen and (max-width: 768px) {
+    .tabs-container {
+        padding: 20px 10px;
+    }
     .mytabs .tab-content {
         height: 600px;
     }
     .mytabs .tab-content {
-    padding: 10px;
+        padding: 10px 10px;
     }
 }
     
@@ -793,15 +796,17 @@ p.right-align {
 .community-text p {
     line-height: 1.8;
     font-size: 20px;
+    text-align: left;
 }
 
 @media screen and (max-width: 768px) {
     .community-text {
+        padding: 0 15px;
         text-align: left;
         width: 100%;
     }
     .community-text h3{
-        font-size: 26px;
+        font-size: 23px;
     }
     .community-text p{
         font-size: 15px;
