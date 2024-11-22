@@ -853,7 +853,7 @@ p.right-align {
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     text-align: center; /* Center the text */
-    padding: 5px 15px; /* Remove padding to remove spaces */
+    padding: 0; /* Remove padding to remove spaces */
     margin: 0; /* Remove margin to remove spaces */
     opacity: 0; /* Hidden by default */
     pointer-events: none; /* Allow hover to work smoothly */
