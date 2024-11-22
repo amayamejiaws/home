@@ -984,6 +984,7 @@ p.right-align {
     flex-direction: column;
     gap: 20px; /* Space between each student */
     padding: 20px 20px;
+    margin: 10px 10px;
 }
 
 .student {
