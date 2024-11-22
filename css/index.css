@@ -773,6 +773,7 @@ p.right-align {
 @media screen and (max-width: 768px) {
     .tabs-container {
         padding: 20px 10px;
+        max-width: 700px;
     }
     .mytabs .tab-content {
         height: 700px;
@@ -994,7 +995,9 @@ p.right-align {
 
 .student-photo {
     flex: 3; /* 30% of the container width */
-    align-items: right;
+    display: flex; /* Ensure proper centering */
+    align-items: center;
+    justify-content: center;
 }
     
 .student-photo img {
