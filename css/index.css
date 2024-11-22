@@ -726,7 +726,7 @@ p.right-align {
     border-radius: 10px;  /* Rounded corners for the box */
     background-color: #f9f9f9;  /* Light background for the box */
     padding: 20px;  /* Add some padding inside the box */
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 50px auto;  /* Center the box on the page */
 }
 
@@ -763,7 +763,7 @@ p.right-align {
     padding: 20px;
     background: #fff;
     border-top: 1px solid #ccc;
-    height: 650px; /* Set a fixed height */
+    height: 1000px; /* Set a fixed height */
     overflow-y: auto;
 }
 
@@ -775,7 +775,7 @@ p.right-align {
         padding: 20px 10px;
     }
     .mytabs .tab-content {
-        height: 600px;
+        height: 700px;
     }
     .mytabs .tab-content {
         padding: 10px 10px;
@@ -820,6 +820,7 @@ p.right-align {
     margin: 0 auto;
     color: black; 
 }
+
 .community-text {
     padding: 0 40px; /* Add padding on the left and right */
     text-align: left;
@@ -837,6 +838,18 @@ p.right-align {
 }
 
 @media screen and (max-width: 768px) {
+    #communitytitle {
+        padding: 20px 15px; 
+    }
+    
+    .text-overlay h2 {
+        font-size: 27px;
+    }
+
+    .text-overlay p {
+        font-size: 16px;
+    }
+    
     .community-text {
         padding: 0 15px;
         text-align: left;
