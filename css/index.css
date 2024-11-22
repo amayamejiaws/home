@@ -783,6 +783,43 @@ p.right-align {
 }
     
 /* --------------------- TEXT --------------------- */
+#communitytitle {
+    background: url('../images/HoLA_City_Birds.jpg');
+    background-repeat: norepeat;
+    background-size: cover; 
+    color: white; /* Ensures text is readable on the image */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    padding: 20px;
+}
+
+/* Background box for contrast */
+#communitytitle .text-overlay {
+    background: rgba(255, 255, 255, 0.7); /* Semi-transparent white */
+    padding: 20px 30px;
+    border-radius: 10px; /* Rounded corners for aesthetics */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    max-width: 800px; /* Keep the box centered and limited in width */
+    text-align: center;
+}
+    
+.text-overlay h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: black; 
+}
+
+.text-overlay p {
+    font-size: 24px;
+    max-width: 900px;
+    margin: 0 auto;
+    color: black; 
+}
 .community-text {
     padding: 0 40px; /* Add padding on the left and right */
     text-align: left;
