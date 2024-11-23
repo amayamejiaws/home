@@ -1158,8 +1158,9 @@ p.right-align {
 /* ------------------------------- CV SECTION ------------------------------- */
 .cv-container {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;    /* Horizontally center items */
+    justify-content: center; /* Vertically center items */
     padding: 40px 40px;
     margin: 40px auto;
     max-width: 1200px;
@@ -1204,15 +1205,18 @@ p.right-align {
 }
 
 .cv-link-box a{
-    text-decoration: none;
-    color: white; /* Text color */
+    display: inline-block; /* Ensure it's not full width */
+    margin-top: 20px;      /* Add space between the text and button */
+    padding: 10px 20px;
+    background-color: #3f0566; /* Purple background */
+    color: white;           /* White text */
     font-size: 1rem;
-    padding: 10px 20px; /* Add padding to make the boxes larger */
-    border: 1px solid #333; /* Border for the boxes */
-    border-radius: 3px; /* Slightly rounded corners */
-    transition: background-color 0.3s ease, color 0.3s ease;
-    background-color: #3f0566;
+    font-weight: bold;
+    border-radius: 5px;    /* Rounded corners */
+    text-decoration: none; /* Remove underline */
     text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .cv-link-box:hover {
@@ -1221,6 +1225,9 @@ p.right-align {
 }
 
 .pdf-viewer {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center iframe and text */
     justify-content: center;
     padding: 60px 20px;
     margin: 40px auto;
@@ -1271,7 +1278,7 @@ p.right-align {
     .pdf-frame {
         height: 60vh; /* Adjust height for smaller devices */
     }
-} 
+}
 
 /* ------------------------------- CONTACT SECTION ------------------------------- */
 .contact-section {
