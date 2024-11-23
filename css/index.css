@@ -279,8 +279,13 @@ input[type="checkbox"].menu-toggle {
         align-items: center;
     }
     
-    .menu-toggle:checked ~ .navbar-list {
-        display: flex;
+    input[type="checkbox"].menu-toggle:checked ~ .hamburger + .navbar-list {
+        display: flex; /* Show navbar when checkbox is checked */
+    }
+    
+    input[type="checkbox"].menu-toggle:checked ~ .next-page-link,
+    input[type="checkbox"].menu-toggle:checked ~ .last-page-link {
+        display: none; /* Hide next and last page links when hamburger is open */
     }
     
     .menu-toggle {
