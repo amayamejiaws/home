@@ -190,8 +190,7 @@ header {
 
 /* Mobile-First Design */
 .nav-left,
-.nav-right,
-.nav-links {
+.nav-righ{
     display: none; /* Hidden by default for smaller screens */
 }
 
@@ -225,6 +224,7 @@ header {
 .menu-toggle:checked ~ .navbar-list {
     display: flex;
 }
+
 .mobile-page-links {
         display: flex;
         justify-content: space-between;
@@ -281,16 +281,9 @@ header {
         justify-content: flex-end;
         gap: 15px;
     }
-
-    .nav-links {
-        display: block; /* Center link between sections */
-        text-align: center;
-    }
-    
-    .navbar-list {
+    .mobile-page-links{
         display: none;
     }
-}
 
 /* ------------------------------- HOME PAGE ------------------------------- */
 .hero {
