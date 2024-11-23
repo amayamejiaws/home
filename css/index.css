@@ -971,10 +971,10 @@ p.right-align {
 
 .community-description-hover {
     position: absolute;
-    bottom: 0; /* Position it at the bottom of the container */
+    bottom: 2px; /* Position it at the bottom of the container */
     left: 0;
-    width: 105%; /* Make the description take the full width */
-    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%; /* Make the description take the full width */
+    background-color: rgba(0, 0, 0, 0.7);
     color: white;
     text-align: left; /* Center the text */
     padding: 5px 15px; /* Remove padding to remove spaces */
