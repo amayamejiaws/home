@@ -224,18 +224,16 @@ header {
     display: flex;
 }
 
-.mobile-page-links {
+/* Mobile Page Links and Hamburger */
+.mobile-nav-container {
     display: flex;
-    justify-content: space-between; /* Space out elements */
-    align-items: center; /* Vertically center elements */
-    padding: 10px;
-    background-color: #333;
+    justify-content: space-between; /* Space between elements */
+    align-items: center;
     width: 100%;
 }
 
 .last-page-link,
 .next-page-link {
-    display: block;
     font-size: 1rem;
     color: white;
     background-color: #444;
@@ -251,14 +249,46 @@ header {
     background-color: #666;
 }
 
+/* Keep Last Page Link Left */
 .last-page-link {
     text-align: left;
+    order: 0; /* Ensure it's placed on the left */
 }
 
-.next-page-link {
-    text-align: right;
-}
+/* Mobile View: Next Page and Hamburger Menu */
+@media (max-width: 768px) {
+    .nav-left,
+    .nav-right {
+        display: none; /* Hide the original navbar items for mobile */
+    }
 
+    .navbar-list {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Arrange Next Page and Hamburger with "Last Page" Link */
+    .mobile-nav-container {
+        display: flex;
+        justify-content: space-between; /* Space between elements */
+        align-items: center;
+        width: 100%;
+    }
+
+    .next-page-link {
+        order: 1; /* Place "Next Page" before hamburger */
+    }
+
+    .hamburger {
+        order: 2; /* Place hamburger menu after "Next Page" */
+    }
+
+    /* Ensure Last Page is to the left */
+    .last-page-link {
+        order: 0; /* Keep it on the left */
+    }
+}
 /* Desktop View */
 @media (min-width: 768px) {
     .hamburger {
@@ -291,21 +321,28 @@ header {
     }
 }
 
-@media (max-width: 768px) {
-    .nav-left,
-    .nav-right {
-        display: none; /* Hide the original navbar items for mobile */
-    }
+/* Global Link Style */
+.navbar a,
+.next-page-link,
+.last-page-link {
+    color: white; /* Set all links to white */
+    text-decoration: none; /* Remove underline */
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
 
-    .navbar-list {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-    }
+/* Visited Links */
+.navbar a:visited,
+.next-page-link:visited,
+.last-page-link:visited {
+    color: white; /* Ensure visited links remain white */
+}
 
-    .mobile-page-links {
-        display: block;
-    }
+/* Hover State */
+.navbar a:hover,
+.next-page-link:hover,
+.last-page-link:hover {
+    color: #f4f4f9; /* Lighter color on hover */
 }
 /* ------------------------------- HOME PAGE ------------------------------- */
 .hero {
