@@ -266,8 +266,7 @@ input[type="checkbox"].menu-toggle {
         align-items: center;
     }
 
-    input[type="checkbox"].menu-toggle:checked ~ .mobile-nav-container .next-page-link,
-    input[type="checkbox"].menu-toggle:checked ~ .mobile-nav-container .last-page-link {
+    input[type="checkbox"].menu-toggle:checked ~ .page-links {
         display: none;
     }
     
