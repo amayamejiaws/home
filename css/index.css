@@ -295,21 +295,26 @@ header {
         display: none; /* Hide hamburger menu on desktop */
     }
 
-    .nav-left, .nav-right {
+    .nav-left{
         display: flex;
-        align-items: center; /* Vertically align items within left and right */
+        align-items: left; /* Vertically align items within left and right */
         margin: 0;
         padding: 0;
+        gap: 15px;
+    }
+    
+    .nav-right{
+        display: flex;
+        align-items: right; /* Vertically align items within left and right */
+        margin: 0;
+        padding: 0;
+        gap: 15px;
     }
 
     .navbar {
         display: flex; /* Align items in a row */
         justify-content: space-between; /* Space between left and right sections */
         width: 100%; /* Ensure full width for navbar */
-    }
-
-    .nav-left, .nav-right {
-        gap: 15px; /* Space between the items inside each section */
     }
 
     .navbar-list {
