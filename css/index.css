@@ -280,7 +280,7 @@ input[type="checkbox"].menu-toggle {
 }
 /* ------------------------------- HOME PAGE ------------------------------- */
 .hero {
-    height: 90vh;
+    height: 95vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -405,7 +405,7 @@ input[type="checkbox"].menu-toggle {
 
 @media (max-width: 768px) {
     .hero {
-        height: 70vh;
+        height: 80vh;
         display: flex;
         justify-content: center;
         align-items: center;
