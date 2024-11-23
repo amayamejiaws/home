@@ -1150,13 +1150,13 @@ p.right-align {
     text-align: left; /* Align text to the left */
 }
 
-.contact-section h2 {
+.text-container h2 {
     color: #6A1B9A; /* Purple */
     margin-bottom: 20px;
     position: relative;
 }
 
-.contact-section h2::after {
+.text-container h2::after {
     content: '';
     position: absolute;
     bottom: -10px;
@@ -1167,7 +1167,7 @@ p.right-align {
     transform: translateX(-50%);
 }
 
-.contact-section p {
+.text-container p {
     line-height: 1.8;
     font-size: 20px; 
 }
