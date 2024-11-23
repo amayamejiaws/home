@@ -1225,19 +1225,19 @@ p.right-align {
 }
 
 .home-page .footer-links {
-    position: fixed; /* Fix the button to the bottom */
-    bottom: 20px;    /* Adjust distance from the bottom */
-    left: 50%;       /* Center it horizontally */
+    position: fixed;        /* Fixed positioning relative to the viewport */
+    bottom: 0;              /* Align it to the very bottom of the viewport */
+    left: 50%;              /* Center it horizontally */
     transform: translateX(-50%); /* Adjust for perfect centering */
     background-color: #6A1B9A; /* Purple background */
-    color: white;    /* White text */
-    padding: 15px 30px; /* Add padding */
+    color: white;           /* White text */
+    padding: 15px 30px;     /* Add padding */
     border: 1px solid #6A1B9A; /* Border matching the background */
-    border-radius: 3px; /* Slightly rounded corners */
-    text-decoration: none; /* Remove underline */
+    border-radius: 3px;     /* Slightly rounded corners */
+    text-decoration: none;  /* Remove underline */
     font-size: 1rem;
-    text-align: center; /* Center the text inside the link */
-    z-index: 999; /* Ensure the button is above other elements */
+    text-align: center;     /* Center the text inside the link */
+    z-index: 999;           /* Ensure the button is above other elements */
     transition: background-color 0.3s ease;
 }
 
