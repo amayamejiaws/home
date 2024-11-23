@@ -416,6 +416,7 @@ input[type="checkbox"].menu-toggle {
 /* About Section Content Layout */
 .about-container {
     display: flex;
+    justify-content: center;
     align-items: center;
     gap: 100px;
     flex-wrap: wrap; /* Ensures responsiveness on smaller screens */
@@ -435,8 +436,6 @@ input[type="checkbox"].menu-toggle {
     width: 80%;
     max-width: 300px;
     height: auto;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin: 40px 0px;
 }
 
@@ -1051,8 +1050,9 @@ p.right-align {
     display: flex;
     flex-direction: column;
     gap: 20px; /* Space between each student */
-    padding: 20px 20px;
+    padding: 20px 30px;
     margin: 10px 10px;
+    justify-content: center;
 }
 
 .student {
@@ -1079,6 +1079,7 @@ p.right-align {
 .student-info {
     flex: 7; /* 70% of the container width */
 }
+
 .previous-students h2 {
     margin: 0;
     font-size: 28px;
@@ -1101,6 +1102,11 @@ p.right-align {
 }
 
 @media screen and (max-width: 768px) {
+    .previous-students {
+        padding: 10px 30px;
+        justify-content: center;
+    }
+
     .student {
         flex-direction: column; /* Stack photo and text vertically */
         text-align: center;
@@ -1109,6 +1115,7 @@ p.right-align {
     .student-photo img {
         width: 100px; /* Smaller image for mobile */
         height: 100px;
+        margin-bottom: 7px
     }
 
     .student-info h3 {
@@ -1188,7 +1195,8 @@ p.right-align {
         padding: 40px 15px; /* Adjust padding for smaller screens */
         padding-top: 60px;
         margin: 20px 10px; /* Reduce margin to create space around */
-        max-width: 100%; /* Make sections full width on mobile */
+        max-width: 100%; /* Make sections full width on mobile */ 
+        justify-content: center;
     }
 
     .contact-section .image-container {
@@ -1202,17 +1210,13 @@ p.right-align {
     .contact-section h2 {
         font-size: 26px; /* Adjust font size for smaller screens */
         margin-bottom: 15px; /* Reduce margin space */
+        text-align: center;
     }
 
     .contact-section p {
         font-size: 16px; /* Adjust font size for better readability */
         line-height: 1.6; /* Adjust line height for better spacing */
-    }
-
-    ul {
-        margin-top: 20px;
-        padding-left: 0px;
-        font-size: 1rem;
+        text-align: center;
     }
 }
 
