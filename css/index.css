@@ -120,7 +120,7 @@ ul li {
 /* ------------------------------- SOCIAL MEDIA LINKS ------------------------------- */
 .fa {
     padding: 0px;
-    font-size: 200px;
+    font-size: 500px;
     width: 30px;
     text-align: left;
     text-decoration: none;
@@ -132,21 +132,11 @@ ul li {
     opacity: 0.7;
 }
 
-
-.fa-instagram {
-  background: none;
-  color: purple;
-}
-
-
-.fa-link {
-  background: none;
-  color: purple;
-}
-
+.fa-instagram,
+.fa-link,
 .fa-envelope {
-  background: none;
-  color: purple;
+    background: none;
+    color: purple;
 }
 
 @media (max-width: 768px) {
