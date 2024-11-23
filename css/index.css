@@ -303,13 +303,34 @@ input[type="checkbox"].menu-toggle {
     display: inline-block;
     transition: background-color 0.3s ease, transform 0.3s ease;
     position: relative; /* Ensure it's positioned */
-    z-index: 5; /* Higher than the purple box */
+    z-index: 999; /* Higher than the purple box */
 }
 
 .cv-link-box:hover {
     background-color: #787878; /* Highlight color on hover */
     color: #333;
     transform: translateY(-5px); /* Slight lift effect */
+}
+
+.footer-link-home {
+    position: absolute;      
+    bottom: 20px;
+    right: 20px;
+    transform: translateX(-50%); /* Adjust for perfect centering */
+    background-color: #3f0566; /* Purple background */
+    color: white;           /* White text */
+    padding: 10px 20px;     /* Add padding */
+    border-radius: 3px;     /* Slightly rounded corners */
+    text-decoration: none;  /* Remove underline */
+    font-size: 1rem;
+    text-align: center;     /* Center the text inside the link */
+    z-index: 999;           /* Ensure the button is above other elements */
+    transition: background-color 0.3s ease;
+}
+
+.footer-link-home:hover {
+    background-color: #4A148C; /* Darker purple on hover */
+    color: white; /* Text stays white on hover */
 }
 
 /* Hero text */
@@ -1224,26 +1245,7 @@ p.right-align {
     color: white; /* Text color on hover */
 }
 
-.home-page .footer-links {
-    position: absolute;      
-    bottom: 20px;
-    right: 20px;
-    transform: translateX(-50%); /* Adjust for perfect centering */
-    background-color: #6A1B9A; /* Purple background */
-    color: white;           /* White text */
-    padding: 10px 20px;     /* Add padding */
-    border-radius: 3px;     /* Slightly rounded corners */
-    text-decoration: none;  /* Remove underline */
-    font-size: 1rem;
-    text-align: center;     /* Center the text inside the link */
-    z-index: 999;           /* Ensure the button is above other elements */
-    transition: background-color 0.3s ease;
-}
 
-.home-page .footer-links:hover {
-    background-color: #4A148C; /* Darker purple on hover */
-    color: white; /* Text stays white on hover */
-}
 
 /* copy-right footer */
 footer {
