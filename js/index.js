@@ -51,31 +51,34 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // Image switching in Community Initiatives
-    const galleries = document.querySelectorAll(".community-gallery");
+   const galleries = document.querySelectorAll(".community-gallery");
 
     galleries.forEach(gallery => {
         const images = gallery.querySelectorAll(".community-image");
         const prevArrow = gallery.querySelector(".prev-arrow");
         const nextArrow = gallery.querySelector(".next-arrow");
 
-        let currentIndex = 0;
+        let currentIndex = 0;  // Start with the first image
 
         const updateCarousel = () => {
             images.forEach((img, idx) => {
-                img.classList.toggle("active", idx === currentIndex);
+                img.classList.remove("active");  // Remove active class from all images
+                if (idx === currentIndex) {
+                    img.classList.add("active");  // Add active class to current image
+                }
             });
         };
 
         prevArrow.addEventListener("click", () => {
-            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            currentIndex = (currentIndex - 1 + images.length) % images.length; // Loop backward
             updateCarousel();
         });
 
         nextArrow.addEventListener("click", () => {
-            currentIndex = (currentIndex + 1) % images.length;
+            currentIndex = (currentIndex + 1) % images.length; // Loop forward
             updateCarousel();
         });
 
-        updateCarousel(); // Initialize the first image
+        updateCarousel(); // Initialize the first image as active
     });
 });
