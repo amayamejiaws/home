@@ -1164,35 +1164,58 @@ p.right-align {
 
 /* ------------------------------- CV SECTION ------------------------------- */
 .cv-container {
-    text-align: center;
-    padding: 20px;
-    background-color: #fff;
-    border-bottom: 2px solid #ddd;
+    padding: 60px 20px;
+    padding-top: 80px;
+    margin: 40px auto;
+    max-width: 1200px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.cv-container h1 {
-    font-size: 2rem;
-    margin-bottom: 10px;
+.cv-container h2 {
+    color: #6A1B9A; /* Purple */
+    margin-bottom: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.cv-container h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    width: 80px;
+    height: 3px;
+    background-color: #FF69B4; /* Pink */
+    transform: translateX(-50%);
 }
 
 .cv-container p {
-    margin-bottom: 20px;
-    font-size: 1.2rem;
+    text-align: center;
+    line-height: 1.8;
+    font-size: 20px; 
 }
 
-.cv-container a {
+.cv-link-box {
     display: inline-block;
     text-decoration: none;
     background-color: #6A1B9A;
     color: #fff;
-    padding: 10px 20px;
-    font-size: 1rem;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.cv-container a:hover {
+.cv-link-box:hover {
     background-color: #4A148C;
+    transform: translateY(-3px);
 }
 
 .pdf-viewer {
@@ -1209,11 +1232,32 @@ p.right-align {
 }
 
 @media (max-width: 768px) {
+    .cv-container {
+        padding: 40px 15px; /* Adjust padding for smaller screens */
+        padding-top: 60px;
+        margin: 20px 10px;   /* Reduce margin to create space around */
+        max-width: 100%;     /* Make sections full width on mobile */
+    }
+
+    .cv-container h2 {
+        font-size: 1.8rem;  /* Adjust font size for smaller screens */
+        margin-bottom: 15px; /* Reduce margin space */
+    }
+
+    .cv-container p {
+        font-size: 1rem;     /* Adjust font size for better readability */
+        line-height: 1.6;    /* Adjust line height for better spacing */
+    }
+    
+    .cv-container:hover {
+        transform: translateY(0);  /* Disable hover translate effect on mobile */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adjust shadow */
+    }
+    
     .pdf-frame {
         height: 60vh; /* Adjust height for smaller devices */
     }
-}
-
+} 
 
 /* ------------------------------- CONTACT SECTION ------------------------------- */
 .contact-section {
