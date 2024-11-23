@@ -202,11 +202,10 @@
     }
 </script>
 <script>
-<script>
 document.addEventListener("DOMContentLoaded", () => {
-    const images = document.querySelectorAll(".community-image");
-    const prevArrow = document.querySelector(".prev-arrow");
-    const nextArrow = document.querySelector(".next-arrow");
+    const images = document.querySelectorAll(".gallery-container .community-image");
+    const prevArrow = document.querySelector(".gallery-nav .prev-arrow");
+    const nextArrow = document.querySelector(".gallery-nav .next-arrow");
 
     let currentIndex = 0; // Index of the currently visible image
 
@@ -217,16 +216,20 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     // Move to the previous image
-    prevArrow.addEventListener("click", () => {
-        currentIndex = (currentIndex - 1 + images.length) % images.length; // Loop back to the last image
-        updateCarousel();
-    });
+    if (prevArrow) {
+        prevArrow.addEventListener("click", () => {
+            currentIndex = (currentIndex - 1 + images.length) % images.length; // Loop back to the last image
+            updateCarousel();
+        });
+    }
 
     // Move to the next image
-    nextArrow.addEventListener("click", () => {
-        currentIndex = (currentIndex + 1) % images.length; // Loop back to the first image
-        updateCarousel();
-    });
+    if (nextArrow) {
+        nextArrow.addEventListener("click", () => {
+            currentIndex = (currentIndex + 1) % images.length; // Loop back to the first image
+            updateCarousel();
+        });
+    }
 
     // Initialize the carousel
     updateCarousel();
