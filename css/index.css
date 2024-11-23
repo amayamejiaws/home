@@ -936,8 +936,8 @@ p.right-align {
     display: flex;
     justify-content: space-between;
     transform: translateY(-50%);
-    opacity: 0; /* Hide arrows initially */
-    transition: opacity 0.3s ease; /* Smooth transition when they appear */
+    opacity: 1; /* Always show arrows */
+    transition: none; /* Remove the transition effect */
 }
 
 .prev-arrow, .next-arrow {
@@ -947,14 +947,12 @@ p.right-align {
     padding: 20px;
     font-size: 50px; /* Large arrow size */
     cursor: pointer;
-    transition: background-color 0.3s ease;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     z-index: 10; /* Ensure arrows are above the images */
 }
 
-/* Position the arrows on the left and right of the screen */
 .prev-arrow {
     left: 10px; /* Position on the left side */
 }
