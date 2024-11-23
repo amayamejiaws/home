@@ -1352,6 +1352,7 @@ p.right-align {
         margin: 20px 10px; /* Reduce margin to create space around */
         max-width: 100%; /* Make sections full width on mobile */ 
         justify-content: center;
+        gap: 30px;
     }
 
     .contact-section .image-container{
