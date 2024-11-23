@@ -1224,7 +1224,44 @@ p.right-align {
 }
 
 /* ------------------------------- FOOTER ------------------------------- */
-/* Footer */
+.nextpage-footer {
+    display: flex;
+    justify-content: space-between; /* Space links on the left and right */
+    align-items: center;
+    padding: 10px 20px;
+    width: 100%; /* Ensure it spans across the full width of the screen */
+    background-color: transparent;
+    border-top: 1px solid #ccc; /* Optional - border to separate the footer */
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: black; /* Text color */
+    font-size: 1rem;
+    padding: 10px 20px; /* Add padding to make the boxes larger */
+    border: 1px solid #333; /* Border for the boxes */
+    border-radius: 3px; /* Slightly rounded corners */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect for both links */
+.footer-links a:hover {
+    background-color: #f4f4f9; /* Background color on hover */
+    color: #333; /* Text color on hover */
+}
+
+/* Optional - For the previous page link (on the left) */
+.last-page-link {
+    text-align: left;
+}
+
+/* Optional - For the next page link (on the right) */
+.next-page-link {
+    text-align: right;
+}
+
+
+/* copy-right footer */
 footer {
     background-color: #3f0566; /* Purple */
     color: #fff;
