@@ -786,7 +786,7 @@ p.right-align {
 
 .mytabs .tab-content {
     display: none; /* Hide all tab content by default */
-    padding: 20px;
+    padding: 40px 20px;
     background: #fff;
     border-top: 1px solid #ccc;
     overflow-y: auto;
@@ -794,7 +794,7 @@ p.right-align {
 
 .mytabs .tab-content-scrollable {
     display: none; /* Hide all tab content by default */
-    padding: 20px;
+    padding: 40px 20px;
     background: #fff;
     border-top: 1px solid #ccc;
     height: 800px; /* Set a fixed height */
