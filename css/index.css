@@ -1204,16 +1204,21 @@ p.right-align {
     width: 100%; /* Ensure it spans across the full width of the screen */
     background-color: transparent;
 }
+.footer-links{
+    display: flex;
+    justify-content: center; 
+    gap: 30px;
+}
 
 .footer-links a {
     text-decoration: none;
-    color: black; /* Text color */
+    color: white; /* Text color */
     font-size: 1rem;
     padding: 10px 20px; /* Add padding to make the boxes larger */
     border: 1px solid #333; /* Border for the boxes */
     border-radius: 3px; /* Slightly rounded corners */
     transition: background-color 0.3s ease, color 0.3s ease;
-    background-color: #6A1B9A;
+    background-color: #3f0566;
 }
 
 .footer-links a:hover {
