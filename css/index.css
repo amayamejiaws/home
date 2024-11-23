@@ -1203,14 +1203,14 @@ p.right-align {
 .cv-link-box {
     display: inline-block;
     text-decoration: none;
-    background-color: #6A1B9A;
-    color: #fff;
-    padding: 15px 30px;
-    font-size: 1.1rem;
-    border-radius: 8px;
+    color: white; /* Text color */
+    font-size: 1rem;
+    padding: 10px 20px; /* Add padding to make the boxes larger */
+    border: 1px solid #333; /* Border for the boxes */
+    border-radius: 3px; /* Slightly rounded corners */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    background-color: #3f0566;
     text-transform: uppercase;
-    font-weight: bold;
-    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .cv-link-box:hover {
