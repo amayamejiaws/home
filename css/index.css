@@ -1231,8 +1231,7 @@ p.right-align {
     transform: translateX(-50%); /* Adjust for perfect centering */
     background-color: #6A1B9A; /* Purple background */
     color: white;           /* White text */
-    padding: 15px 30px;     /* Add padding */
-    border: 1px solid #6A1B9A; /* Border matching the background */
+    padding: 10px 20px;     /* Add padding */
     border-radius: 3px;     /* Slightly rounded corners */
     text-decoration: none;  /* Remove underline */
     font-size: 1rem;
