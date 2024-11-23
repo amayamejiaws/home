@@ -901,44 +901,20 @@ p.right-align {
 }
 /* --------------------- IMAGES --------------------- */
 .community-gallery {
-    align-items: center; /* Center items vertically */
-    gap: 25px; /* Space between items */
-    padding: 20px; /* Add padding around the gallery */
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
+    width: 100%;
+    overflow: hidden; /* Hide any overflowed content */
+    background-color: #333; /* Background color for the gallery */
+    position: relative; /* For z-index handling of arrows */
+    padding: 20px 0;
+    white-space: nowrap; /* Prevent wrapping of images */
 }
 
-/* Individual community item container */
-.community-image {
+.gallery-container {
     display: flex;
-    flex-direction: column; /* Stack image and description vertically */
-    align-items: center; /* Center image and text */
-    justify-content: center; /* Center items within container */
-    position: relative; /* For hover effects */
-    width: 100%; /* Full width of container */
-    max-width: 675px; /* Limit the size of each image container */
-    margin: 15px 0; /* Add spacing between rows */
-    overflow: hidden; /* Prevent overflow */
-    transition: transform 0.3s ease; /* Smooth zoom-in effect on hover */
-}
-.community-image img {
-    width: 100%; /* Image takes full width of its container */
-    height: auto; /* Maintain aspect ratio */
-    position: relative; /* For hover effects */
-}
-.community-image:hover{
-    transform: scale(1.1); /* Slight zoom on hover */
-}.community-gallery {
-    align-items: center; /* Center items vertically */
-    gap: 25px; /* Space between items */
-    padding: 20px; /* Add padding around the gallery */
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
+    gap: 20px;
+    transition: transform 0.3s ease; /* Smooth transition for image sliding */
 }
 
-/* Individual community item container */
 .community-image {
     display: flex;
     flex-direction: column; /* Stack image and description vertically */
