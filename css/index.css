@@ -315,8 +315,8 @@ input[type="checkbox"].menu-toggle {
 
 .footer-link-home {
     position: absolute;      
-    bottom: 5px;
-    right: 5px;
+    bottom: 20px;
+    right: 20px;
     transform: translateX(-50%); /* Adjust for perfect centering */
     background-color: #3f0566; /* Purple background */
     color: white;           /* White text */
@@ -372,7 +372,19 @@ input[type="checkbox"].menu-toggle {
     animation: rotate-bg 20s linear infinite;
     z-index: 1; /* Ensure this is lower */
 }
+.hero::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: -80%;
+    width: 200%;
+    height: 200%;
+    background: rgba(128, 0, 128, 0.3); /* Slightly lighter purple */
+    animation: rotate-bg-reverse 20s linear infinite;
+    z-index: 1; /* Same z-index as the other shape for a layered effect */
+}
 
+/* Rotating animations */
 @keyframes rotate-bg {
     from {
         transform: rotate(0deg);
@@ -382,9 +394,18 @@ input[type="checkbox"].menu-toggle {
     }
 }
 
+@keyframes rotate-bg-reverse {
+    from {
+        transform: rotate(360deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+
 @media (max-width: 768px) {
     .hero {
-        height: 120vh;
+        height: 70vh;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -396,7 +417,7 @@ input[type="checkbox"].menu-toggle {
     }
     
     .hero h1 {
-        font-size: 2.2rem; /* Make font smaller for mobile */
+        font-size: 2.4rem; /* Make font smaller for mobile */
     }
 
     .hero p {
@@ -420,9 +441,9 @@ input[type="checkbox"].menu-toggle {
     justify-content: center;
     align-items: center;
     gap: 100px;
-    flex-wrap: wrap; /* Ensures responsiveness on smaller screens */
+    flex-wrap: wrap; 
     justify-content: center;
-    margin-bottom: 60px;
+    margin-bottom: 20px;
 }
 
 .about-image img {
@@ -431,6 +452,13 @@ input[type="checkbox"].menu-toggle {
     height: auto;
     border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
 }
 
 .about-logo img {
@@ -1013,7 +1041,7 @@ p.right-align {
     }
 
     .prev-arrow, .next-arrow {
-        font-size: 30px; /* Large arrow size */
+        font-size: 25px; /* Large arrow size */
     }
     
     .community-image img {
@@ -1205,12 +1233,9 @@ p.right-align {
         justify-content: center;
     }
 
-    .contact-section .image-container {
-        margin-bottom: 20px; /* Add space between image and text on mobile */
-    }
-
     .contact-section .image-container img {
-        max-width: 100%; /* Ensure the image doesn't overflow */
+        max-width: 200px;
+        max-width: 100%;
     }
 
     .contact-section h2 {
