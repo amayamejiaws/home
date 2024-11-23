@@ -912,16 +912,13 @@ p.right-align {
 
 .community-image {
     display: none; 
-    width: 100%;
-    max-width: 100%; /* Ensure the image container doesn't exceed max width */
-    flex-shrink: 0; /* Prevent images from shrinking */
-    justify-content: center;/* Only the current image will be visible */
 }
 
 .community-image.active {
     display: block;
-    width: 100%;
-    max-width: 100%; /* Ensure the image container doesn't exceed max width */
+    object-fit: contain; /* Ensure the image fits inside the container */
+    width: 100%; /* Scale image to container width */
+    height: auto;
     flex-shrink: 0; /* Prevent images from shrinking */
     justify-content: center;
 }
