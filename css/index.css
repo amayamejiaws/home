@@ -916,26 +916,14 @@ p.right-align {
     justify-content: center; /* Center the images inside the container */
 }
 
-.community-image-ameba {
+.community-image {
     display: none; /* Hide all images initially */
     width: 100%;
     max-width: 100%; /* Ensure the image container doesn't exceed max width */
     flex-shrink: 0; /* Prevent images from shrinking */
     justify-content: center; /* Center images within the container */
 }
-.community-image-ameba img {
-    width: 100%; /* Make images take full width of the container */
-    height: auto;
-}
-
-.community-image-hola {
-    display: none; /* Hide all images initially */
-    width: 100%;
-    max-width: 100%; /* Ensure the image container doesn't exceed max width */
-    flex-shrink: 0; /* Prevent images from shrinking */
-    justify-content: center; /* Center images within the container */
-}
-.community-image-hola img {
+.community-image img {
     width: 100%; /* Make images take full width of the container */
     height: auto;
 }
