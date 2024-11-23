@@ -454,13 +454,6 @@ input[type="checkbox"].menu-toggle {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.about-logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    justify-content: center;
-}
-
 .about-logo img {
     width: 80%;
     max-width: 300px;
@@ -1211,7 +1204,6 @@ p.right-align {
 }
 
 .cv-link-box a{
-    display: inline-block;
     text-decoration: none;
     color: white; /* Text color */
     font-size: 1rem;
