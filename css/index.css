@@ -1191,17 +1191,15 @@ p.right-align {
     }
 
     .contact-section h2 {
-        font-size: 26px;  /* Adjust font size for smaller screens */
+        font-size: 26px; /* Adjust font size for smaller screens */
         margin-bottom: 15px; /* Reduce margin space */
-        text-align: center;
     }
 
     .contact-section p {
-        font-size: 16px; 
-        line-height: 1.6;
-        text-align: center;
+        font-size: 16px; /* Adjust font size for better readability */
+        line-height: 1.6; /* Adjust line height for better spacing */
     }
-        
+
     ul {
         margin-top: 20px;
         padding-left: 0px;
