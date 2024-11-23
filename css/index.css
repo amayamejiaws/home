@@ -266,14 +266,13 @@ input[type="checkbox"].menu-toggle {
         align-items: center;
     }
 
-    /* Hide next and last page links when hamburger is open */
     input[type="checkbox"].menu-toggle:checked ~ .mobile-nav-container .next-page-link,
     input[type="checkbox"].menu-toggle:checked ~ .mobile-nav-container .last-page-link {
         display: none;
     }
     
     .menu-toggle {
-        display: none; /* Hide the checkbox */
+        display: block; /* Hide the checkbox */
     }
     
     .mobile-nav-container {
