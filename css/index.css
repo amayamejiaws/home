@@ -291,7 +291,7 @@ input[type="checkbox"].menu-toggle {
     overflow: hidden;
 }
 
-.cv-link-box {
+.next-link-box {
     margin-top: 30px;
     padding: 15px 30px;
     background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
@@ -307,7 +307,7 @@ input[type="checkbox"].menu-toggle {
     z-index: 999; /* Higher than the purple box */
 }
 
-.cv-link-box:hover {
+.next-link-box:hover {
     background-color: #787878; /* Highlight color on hover */
     color: #333;
     transform: translateY(-5px); /* Slight lift effect */
