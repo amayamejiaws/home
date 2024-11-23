@@ -190,7 +190,7 @@ header {
 
 /* Mobile-First Design */
 .nav-left,
-.nav-right{
+.nav-right {
     display: none; /* Hidden by default for smaller screens */
 }
 
@@ -217,7 +217,6 @@ header {
     color: white; /* White text for all links */
     text-decoration: none;
     font-size: 1rem;
-    padding: 10px;
 }
 
 /* Show Mobile Menu When Checked */
@@ -226,13 +225,13 @@ header {
 }
 
 .mobile-page-links {
-        display: flex;
-        justify-content: space-between; /* Space out elements */
-        align-items: center; /* Vertically center elements */
-        padding: 10px;
-        background-color: #333;
-        width: 100%;
-    }
+    display: flex;
+    justify-content: space-between; /* Space out elements */
+    align-items: center; /* Vertically center elements */
+    padding: 10px;
+    background-color: #333;
+    width: 100%;
+}
 
 .last-page-link,
 .next-page-link {
@@ -252,11 +251,11 @@ header {
     background-color: #666;
 }
 
-.last-page-link{
+.last-page-link {
     text-align: left;
 }
 
-.next-page-link{
+.next-page-link {
     text-align: right;
 }
 
@@ -290,7 +289,24 @@ header {
     .mobile-page-links {
         display: none; /* Hide mobile links on desktop */
     }
+}
 
+@media (max-width: 768px) {
+    .nav-left,
+    .nav-right {
+        display: none; /* Hide the original navbar items for mobile */
+    }
+
+    .navbar-list {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .mobile-page-links {
+        display: block;
+    }
+}
 /* ------------------------------- HOME PAGE ------------------------------- */
 .hero {
     height: 100vh;
