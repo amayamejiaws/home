@@ -1164,8 +1164,8 @@ p.right-align {
 
 /* ------------------------------- CV SECTION ------------------------------- */
 .cv-container {
+    justify-content: center;
     padding: 60px 20px;
-    padding-top: 80px;
     margin: 40px auto;
     max-width: 1200px;
     background: #fff;
@@ -1176,14 +1176,14 @@ p.right-align {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.cv-container h2 {
+.cv-container h1 {
     color: #6A1B9A; /* Purple */
     margin-bottom: 20px;
     text-align: center;
     position: relative;
 }
 
-.cv-container h2::after {
+.cv-container h1::after {
     content: '';
     position: absolute;
     bottom: -10px;
@@ -1194,13 +1194,20 @@ p.right-align {
     transform: translateX(-50%);
 }
 
+.cv-container h2 {
+    margin: 0;
+    font-size: 22px;
+    color: #000;
+    text-align: left;
+}
+
 .cv-container p {
     text-align: center;
     line-height: 1.8;
     font-size: 20px; 
 }
 
-.cv-link-box {
+.cv-link-box a{
     display: inline-block;
     text-decoration: none;
     color: white; /* Text color */
@@ -1219,8 +1226,16 @@ p.right-align {
 }
 
 .pdf-viewer {
-    padding: 20px;
-    background-color: #fff;
+    justify-content: center;
+    padding: 60px 20px;
+    margin: 40px auto;
+    max-width: 1200px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .pdf-frame {
@@ -1240,12 +1255,16 @@ p.right-align {
     }
 
     .cv-container h2 {
-        font-size: 1.8rem;  /* Adjust font size for smaller screens */
+        font-size: 22px;  /* Adjust font size for smaller screens */
         margin-bottom: 15px; /* Reduce margin space */
     }
 
+    .cv-container h3 {
+        font-size: 18px;
+    }
+
     .cv-container p {
-        font-size: 1rem;     /* Adjust font size for better readability */
+        font-size: 14px;     /* Adjust font size for better readability */
         line-height: 1.6;    /* Adjust line height for better spacing */
     }
     
