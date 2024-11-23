@@ -199,50 +199,20 @@
         activeLabel.classList.add('active');
     }
 </script>
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-    const galleries = document.querySelectorAll(".community-gallery");
 
-    galleries.forEach(gallery => {
-        const images = gallery.querySelectorAll(".community-image");
-        const prevArrow = gallery.querySelector(".prev-arrow");
-        const nextArrow = gallery.querySelector(".next-arrow");
 
-        let currentIndex = 0;
+<section id="getinvolved" class="section">
+    <h2>Get Involved</h2>
+    <p>If you are interested in learning how to adapt these strategies or want to volunteer for future outreach events, you are encouraged to reach out.</p>
+    <p>For the best response times, see the <a href="contact.html">Contact</a> page.</p>
+</section>
 
-        const updateCarousel = () => {
-            images.forEach((img, idx) => {
-                img.classList.toggle("active", idx === currentIndex);
-            });
-        };
+<!-- Footer Section -->
+<footer>
+    <p>© <span id="year"></span> Amaya-Mejia. All rights reserved.</p>
+</footer>
 
-        prevArrow.addEventListener("click", () => {
-            currentIndex = (currentIndex - 1 + images.length) % images.length;
-            updateCarousel();
-        });
-
-        nextArrow.addEventListener("click", () => {
-            currentIndex = (currentIndex + 1) % images.length;
-            updateCarousel();
-        });
-
-        updateCarousel(); // Initialize the first image
-    });
-});
-</script>
-
-    <section id="getinvolved" class="section">
-        <h2>Get Involved</h2>
-        <p>If you are interested in learning how to adapt these strategies or want to volunteer for future outreach events, you are encouraged to reach out.</p>
-        <p>For the best response times, see the <a href="contact.html">Contact</a> page.</p>
-    </section>
-
-    <!-- Footer Section -->
-    <footer>
-        <p>© <span id="year"></span> Amaya-Mejia. All rights reserved.</p>
-    </footer>
-
-    <script src="js/index.js"></script>
+<script src="js/index.js"></script>
 </body>
 
 </html>
