@@ -87,32 +87,28 @@
                 </div>
                 
                 <div class="community-gallery">
-                    <div class="gallery-container">
-                        <div class="community-image" style="display: block;">
-                            <img src="../images/AMEBA_2.jpg" alt="AMEBA event image 2" />
-                            <div class="community-description-hover">Ameba is cool</div>
-                            <div class="community-description-static">Ameba is cool</div>
-                        </div>
-                        <div class="community-image" style="display: none;">
-                            <img src="../images/AMEBA_1.jpg" alt="AMEBA event image 1" />
-                            <div class="community-description-hover">Ameba is 2 cool</div>
-                            <div class="community-description-static">Ameba is 2 cool</div>
-                        </div>
-                        <div class="community-image" style="display: none;">
-                            <img src="../images/AMEBA_3.jpg" alt="AMEBA event image 3" />
-                            <div class="community-description-hover">Ameba is tres cool</div>
-                            <div class="community-description-static">Ameba is tres cool</div>
-                        </div>
-                        <div class="community-image" style="display: none;">
-                            <img src="../images/AMEBA_4.jpg" alt="AMEBA event image 4" />
-                            <div class="community-description-hover">Ameba is quadruple cool</div>
-                            <div class="community-description-static">Ameba is quadruple cool</div>
-                        </div>
+                   <button class="arrow prev-arrow">&lt;</button>
+                    <div class="community-image" style="display: block;">
+                        <img src="../images/AMEBA_2.jpg" alt="AMEBA event image 2" />
+                        <div class="community-description-hover">Ameba is cool</div>
+                        <div class="community-description-static">Ameba is cool</div>
                     </div>
-                    <div class="gallery-nav">
-                        <button class="prev-arrow">&#10094;</button>
-                        <button class="next-arrow">&#10095;</button>
+                    <div class="community-image" style="display: none;">
+                        <img src="../images/AMEBA_1.jpg" alt="AMEBA event image 1" />
+                        <div class="community-description-hover">Ameba is 2 cool</div>
+                        <div class="community-description-static">Ameba is 2 cool</div>
                     </div>
+                    <div class="community-image" style="display: none;">
+                        <img src="../images/AMEBA_3.jpg" alt="AMEBA event image 3" />
+                        <div class="community-description-hover">Ameba is tres cool</div>
+                        <div class="community-description-static">Ameba is tres cool</div>
+                    </div>
+                    <div class="community-image" style="display: none;">
+                        <img src="../images/AMEBA_4.jpg" alt="AMEBA event image 4" />
+                        <div class="community-description-hover">Ameba is quadruple cool</div>
+                        <div class="community-description-static">Ameba is quadruple cool</div>
+                    </div>
+                    <button class="arrow next-arrow">&gt;</button>
                 </div>
             </div>
 
@@ -129,33 +125,28 @@
                 </div>
 
                 <div class="community-gallery">
-                    <div class="gallery-container">
-                         <div class="community-image" style="display: block;">
-                            <img src="../images/HoLA_4.JPG" alt="HoLA 1" />
-                            <div class="community-description-hover">i am a bird enthusiasat</div>
-                            <div class="community-description-static">i am a bird enthusiast</div>
-                        </div>
-                        <div class="community-image" style="display: none;">
-                            <img src="../images/HoLA_3.JPG" alt="HoLA 2" />
-                            <div class="community-description-hover">live love birds</div>
-                            <div class="community-description-static">live love birds</div>
-                        </div>
-                        <div class="community-image" style="display: none;">
-                            <img src="../images/HoLA_2.jpg" alt="HoLA 3" />
-                            <div class="community-description-hover">but first, birding</div>
-                            <div class="community-description-static">but first, birding</div>
-                        </div>
-                        <div class="community-image" style="display: none;">
-                            <img src="../images/HoLA_1.jpg" alt="HoLA 4" />
-                            <div class="community-description-hover">birding gives me cheep thrills</div>
-                            <div class="community-description-static">birding gives me cheep thrills</div>
-                        </div>
+                    <button class="arrow prev-arrow">&lt;</button>
+                     <div class="community-image" style="display: block;">
+                        <img src="../images/HoLA_4.JPG" alt="HoLA 1" />
+                        <div class="community-description-hover">i am a bird enthusiasat</div>
+                        <div class="community-description-static">i am a bird enthusiast</div>
                     </div>
-                    
-                    <div class="gallery-nav">
-                        <button class="prev-arrow">&#10094;</button>
-                        <button class="next-arrow">&#10095;</button>
+                    <div class="community-image" style="display: none;">
+                        <img src="../images/HoLA_3.JPG" alt="HoLA 2" />
+                        <div class="community-description-hover">live love birds</div>
+                        <div class="community-description-static">live love birds</div>
                     </div>
+                    <div class="community-image" style="display: none;">
+                        <img src="../images/HoLA_2.jpg" alt="HoLA 3" />
+                        <div class="community-description-hover">but first, birding</div>
+                        <div class="community-description-static">but first, birding</div>
+                    </div>
+                    <div class="community-image" style="display: none;">
+                        <img src="../images/HoLA_1.jpg" alt="HoLA 4" />
+                        <div class="community-description-hover">birding gives me cheep thrills</div>
+                        <div class="community-description-static">birding gives me cheep thrills</div>
+                    </div>
+                    <button class="arrow next-arrow">&gt;</button>
                 </div>
             </div>
 
@@ -214,36 +205,33 @@
 </script>
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-    const images = document.querySelectorAll(".gallery-container .community-image");
-    const prevArrow = document.querySelector(".gallery-nav .prev-arrow");
-    const nextArrow = document.querySelector(".gallery-nav .next-arrow");
+    const galleries = document.querySelectorAll(".community-gallery");
 
-    let currentIndex = 0; // Index of the currently visible image
+    galleries.forEach(gallery => {
+        const images = gallery.querySelectorAll(".community-image");
+        const prevArrow = gallery.querySelector(".prev-arrow");
+        const nextArrow = gallery.querySelector(".next-arrow");
 
-    const updateCarousel = () => {
-        images.forEach((image, index) => {
-            image.style.display = index === currentIndex ? "block" : "none";
-        });
-    };
+        let currentIndex = 0;
 
-    // Move to the previous image
-    if (prevArrow) {
+        const updateCarousel = () => {
+            images.forEach((img, idx) => {
+                img.classList.toggle("active", idx === currentIndex);
+            });
+        };
+
         prevArrow.addEventListener("click", () => {
-            currentIndex = (currentIndex - 1 + images.length) % images.length; // Loop back to the last image
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
             updateCarousel();
         });
-    }
 
-    // Move to the next image
-    if (nextArrow) {
         nextArrow.addEventListener("click", () => {
-            currentIndex = (currentIndex + 1) % images.length; // Loop back to the first image
+            currentIndex = (currentIndex + 1) % images.length;
             updateCarousel();
         });
-    }
 
-    // Initialize the carousel
-    updateCarousel();
+        updateCarousel(); // Initialize the first image
+    });
 });
 </script>
 
