@@ -1225,9 +1225,9 @@ p.right-align {
 }
 
 .home-page .footer-links {
-    position: fixed;        /* Fixed positioning relative to the viewport */
-    bottom: 0;              /* Align it to the very bottom of the viewport */
-    left: 50%;              /* Center it horizontally */
+    position: absolute;      
+    bottom: 10px;             
+    right: 10px;              /* Center it horizontally */
     transform: translateX(-50%); /* Adjust for perfect centering */
     background-color: #6A1B9A; /* Purple background */
     color: white;           /* White text */
