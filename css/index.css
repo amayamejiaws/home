@@ -912,12 +912,19 @@ p.right-align {
 }
 
 .community-image {
+    display: none; 
     width: 100%;
-    display: none; /* Only the current image will be visible */
+    max-width: 100%; /* Ensure the image container doesn't exceed max width */
+    flex-shrink: 0; /* Prevent images from shrinking */
+    justify-content: center;/* Only the current image will be visible */
 }
 
 .community-image.active {
     display: block;
+    width: 100%;
+    max-width: 100%; /* Ensure the image container doesn't exceed max width */
+    flex-shrink: 0; /* Prevent images from shrinking */
+    justify-content: center;
 }
 .community-image img {
     width: 100%; /* Make images take full width of the container */
@@ -1001,10 +1008,6 @@ p.right-align {
         align-items: center; /* Center items horizontally */
         gap: 7px;
     }
-    .community-gallery {
-        padding: 20px;
-        white-space: normal;
-    }
 
     .community-image {
         width: 100%;
@@ -1024,10 +1027,7 @@ p.right-align {
         transition: none !important; /* Remove smooth transition */
         margin-bottom: 0px;
     }
-    
-    .community-image:hover img {
-        transform: none; /* Ensure hover doesn't trigger */
-    }
+  
     .community-description-hover {
         display: none; /* Hide hover description on mobile */
     }
