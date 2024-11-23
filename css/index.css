@@ -804,6 +804,9 @@ p.right-align {
 .mytabs .tab-content.active {
     display: block;
 }
+.mytabs .tab-content-scrollable.active {
+    display: block;
+}
 @media screen and (max-width: 768px) {
     .tabs-container {
         padding: 20px 10px;
