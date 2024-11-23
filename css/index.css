@@ -220,7 +220,7 @@ header {
 }
 
 /* Show Mobile Menu When Checked */
-.menu-toggle:checked ~ .navbar-list {
+.menu-toggle:checked ~ .mobile-nav-container {
     display: flex;
 }
 
