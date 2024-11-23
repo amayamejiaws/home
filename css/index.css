@@ -1198,15 +1198,13 @@ p.right-align {
 /* ------------------------------- FOOTER ------------------------------- */
 .nextpage-footer {
     display: flex;
-    justify-content: space-between; /* Space links on the left and right */
-    align-items: center;
-    padding: 10px 20px;
+    padding: 10px 10px;
     width: 100%; /* Ensure it spans across the full width of the screen */
     background-color: transparent;
 }
 .footer-links{
     display: flex;
-    justify-content: center; 
+    justify-content: space-between; 
     gap: 30px;
 }
 
