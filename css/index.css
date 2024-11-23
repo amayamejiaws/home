@@ -1164,6 +1164,8 @@ p.right-align {
 
 /* ------------------------------- CV SECTION ------------------------------- */
 .cv-container {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     padding: 60px 20px;
     margin: 40px auto;
