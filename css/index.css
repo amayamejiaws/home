@@ -901,39 +901,66 @@ p.right-align {
 }
 /* --------------------- IMAGES --------------------- */
 .community-gallery {
+    position: relative;
     width: 100%;
-    overflow: hidden; /* Hide any overflowed content */
-    background-color: #333; /* Background color for the gallery */
-    position: relative; /* For z-index handling of arrows */
-    padding: 20px 0;
-    white-space: nowrap; /* Prevent wrapping of images */
+    max-width: 800px; /* Set a max width for the gallery */
+    margin: 0 auto; /* Center the gallery container horizontally */
+    overflow: hidden; /* Hide anything outside the container */
+    display: flex; /* Use flexbox to center images */
+    justify-content: center; /* Center images horizontally */
 }
 
 .gallery-container {
     display: flex;
-    gap: 20px;
-    transition: transform 0.3s ease; /* Smooth transition for image sliding */
+    transition: transform 0.5s ease-in-out;
+    justify-content: center; /* Center the images inside the container */
 }
 
 .community-image {
-    display: flex;
-    flex-direction: column; /* Stack image and description vertically */
-    align-items: center; /* Center image and text */
-    justify-content: center; /* Center items within container */
-    position: relative; /* For hover effects */
-    width: 100%; /* Full width of container */
-    max-width: 675px; /* Limit the size of each image container */
-    margin: 15px 0; /* Add spacing between rows */
-    overflow: hidden; /* Prevent overflow */
-    transition: transform 0.3s ease; /* Smooth zoom-in effect on hover */
+    display: none; /* Hide all images initially */
+    width: 100%;
+    max-width: 100%; /* Ensure the image container doesn't exceed max width */
+    flex-shrink: 0; /* Prevent images from shrinking */
+    justify-content: center; /* Center images within the container */
 }
 .community-image img {
-    width: 100%; /* Image takes full width of its container */
-    height: auto; /* Maintain aspect ratio */
-    position: relative; /* For hover effects */
+    width: 100%; /* Make images take full width of the container */
+    height: auto;
 }
-.community-image:hover{
-    transform: scale(1.1); /* Slight zoom on hover */
+
+/* Position the arrows on the left and right of the screen */
+.gallery-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    opacity: 0; /* Hide arrows initially */
+    transition: opacity 0.3s ease; /* Smooth transition when they appear */
+}
+
+.prev-arrow, .next-arrow {
+    background-color: rgba(0, 0, 0, 0.7); /* Dark background for visibility */
+    color: white;
+    border: none;
+    padding: 20px;
+    font-size: 50px; /* Large arrow size */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10; /* Ensure arrows are above the images */
+}
+
+/* Position the arrows on the left and right of the screen */
+.prev-arrow {
+    left: 10px; /* Position on the left side */
+}
+
+.next-arrow {
+    right: 10px; /* Position on the right side */
 }
 
 .community-description-hover {
