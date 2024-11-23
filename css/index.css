@@ -1219,6 +1219,7 @@ p.right-align {
 /* ------------------------------- FOOTER ------------------------------- */
 .nextpage-footer {
     display: flex;
+    justify-content: center;
     padding: 10px 10px;
     width: 100%; /* Ensure it spans across the full width of the screen */
     background-color: transparent;
