@@ -1355,13 +1355,14 @@ p.right-align {
     }
 
     .contact-section .image-container{
+        display: flex; 
         flex-direction: column;
         justify-content: center;
         order: 2;
     }
     
     .contact-section .image-container img {
-        max-height: 150px;
+        max-height: 250px;
         width: auto;
         object-fit: contain; 
     }
