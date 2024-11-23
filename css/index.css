@@ -1177,10 +1177,11 @@ p.right-align {
 }
 
 .cv-container h1 {
-    color: #6A1B9A; /* Purple */
-    margin-bottom: 20px;
+    color: #6A1B9A; 
+    margin-bottom: 40px;
     text-align: center;
     position: relative;
+    font-size: 36px;
 }
 
 .cv-container h1::after {
@@ -1254,12 +1255,12 @@ p.right-align {
         max-width: 100%;     /* Make sections full width on mobile */
     }
 
-    .cv-container h2 {
+    .cv-container h1 {
         font-size: 22px;  /* Adjust font size for smaller screens */
         margin-bottom: 15px; /* Reduce margin space */
     }
 
-    .cv-container h3 {
+    .cv-container h2 {
         font-size: 18px;
     }
 
