@@ -263,35 +263,32 @@ header {
 /* Desktop View */
 @media (min-width: 768px) {
     .hamburger {
-        display: none; /* Hide hamburger menu */
+        display: none; /* Hide hamburger menu on desktop */
     }
+
     .nav-left, .nav-right {
         display: flex;
-        align-items: center; /* Vertically aligns items within left and right */
+        align-items: center; /* Vertically align items within left and right */
         margin: 0;
         padding: 0;
     }
 
-    .nav-left,
-    .nav-right {
-        display: flex; /* Show full navigation */
+    .navbar {
+        display: flex; /* Align items in a row */
+        justify-content: space-between; /* Space between left and right sections */
+        width: 100%; /* Ensure full width for navbar */
+    }
+
+    .nav-left, .nav-right {
+        gap: 15px; /* Space between the items inside each section */
     }
 
     .navbar-list {
-        display: none; /* Prevent overlap */
+        display: none; /* Prevent overlap for desktop */
     }
 
-    .nav-left {
-        justify-content: flex-start;
-        gap: 15px;
-    }
-
-    .nav-right {
-        justify-content: flex-end;
-        gap: 15px;
-    }
-    .mobile-page-links{
-        display: none;
+    .mobile-page-links {
+        display: none; /* Hide mobile links on desktop */
     }
 
 /* ------------------------------- HOME PAGE ------------------------------- */
