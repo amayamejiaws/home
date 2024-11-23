@@ -235,6 +235,11 @@ nav {
 input[type="checkbox"].menu-toggle {
     display: none !important;  /* Use !important to override any conflicting styles */
 }
+
+.mobile-nav-container {
+        display: none;
+    }
+
 @media (max-width: 768px) {
     .hamburger {
         display: block;  /* Shows hamburger on mobile screens */
