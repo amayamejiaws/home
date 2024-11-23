@@ -202,36 +202,35 @@
     }
 </script>
 <script>
-    document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
     const galleries = document.querySelectorAll(".community-gallery");
 
-    galleries.forEach(gallery => {
+    galleries.forEach((gallery) => {
         const images = gallery.querySelectorAll(".community-image");
         const prevArrow = gallery.querySelector(".prev-arrow");
         const nextArrow = gallery.querySelector(".next-arrow");
 
-        let currentIndex = 0;  // Start with the first image
+        let currentIndex = 0; // Start at the first image
 
+        // Function to update the active image
         const updateCarousel = () => {
             images.forEach((img, idx) => {
-                img.classList.remove("active");  // Remove active class from all images
-                if (idx === currentIndex) {
-                    img.classList.add("active");  // Add active class to current image
-                }
+                img.classList.toggle("active", idx === currentIndex); // Toggle the `active` class
             });
         };
 
+        // Event listeners for the arrows
         prevArrow.addEventListener("click", () => {
-            currentIndex = (currentIndex - 1 + images.length) % images.length; // Loop backward
+            currentIndex = (currentIndex - 1 + images.length) % images.length; // Wrap around to the last image
             updateCarousel();
         });
 
         nextArrow.addEventListener("click", () => {
-            currentIndex = (currentIndex + 1) % images.length; // Loop forward
+            currentIndex = (currentIndex + 1) % images.length; // Wrap around to the first image
             updateCarousel();
         });
 
-        updateCarousel(); // Initialize the first image as active
+        updateCarousel(); // Initialize the carousel
     });
 });
 </script>
