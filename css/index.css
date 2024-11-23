@@ -1146,14 +1146,14 @@ p.right-align {
     flex: 2; /* Text takes 2 parts of the container */
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Vertically center the text */
-    text-align: left; /* Align text to the left */
+    justify-content: center;
 }
 
 .text-container h2 {
     color: #6A1B9A; /* Purple */
     margin-bottom: 20px;
     position: relative;
+    text-align: center;
 }
 
 .text-container h2::after {
@@ -1170,6 +1170,7 @@ p.right-align {
 .text-container p {
     line-height: 1.8;
     font-size: 20px; 
+    text-align: left;
 }
 
 /* Mobile Styles for smaller screens */
