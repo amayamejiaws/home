@@ -916,14 +916,26 @@ p.right-align {
     justify-content: center; /* Center the images inside the container */
 }
 
-.community-image {
+.community-image-ameba {
     display: none; /* Hide all images initially */
     width: 100%;
     max-width: 100%; /* Ensure the image container doesn't exceed max width */
     flex-shrink: 0; /* Prevent images from shrinking */
     justify-content: center; /* Center images within the container */
 }
-.community-image img {
+.community-image-ameba img {
+    width: 100%; /* Make images take full width of the container */
+    height: auto;
+}
+
+.community-image-hola {
+    display: none; /* Hide all images initially */
+    width: 100%;
+    max-width: 100%; /* Ensure the image container doesn't exceed max width */
+    flex-shrink: 0; /* Prevent images from shrinking */
+    justify-content: center; /* Center images within the container */
+}
+.community-image-hola img {
     width: 100%; /* Make images take full width of the container */
     height: auto;
 }
@@ -970,7 +982,7 @@ p.right-align {
 
 .community-description-hover {
     position: absolute;
-    bottom: 2px; /* Position it at the bottom of the container */
+    bottom: 4px; /* Position it at the bottom of the container */
     left: 0;
     width: 100%; /* Make the description take the full width */
     background-color: rgba(0, 0, 0, 0.7);
