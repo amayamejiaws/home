@@ -1160,7 +1160,7 @@ p.right-align {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 60px 20px;
+    padding: 40px 40px;
     margin: 40px auto;
     max-width: 1200px;
     background: #fff;
@@ -1173,7 +1173,7 @@ p.right-align {
 
 .cv-container h1 {
     color: #6A1B9A; 
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     text-align: center;
     position: relative;
     font-size: 36px;
@@ -1191,7 +1191,7 @@ p.right-align {
 }
 
 .cv-container h2 {
-    margin: 0;
+    margin-bottom: 25px;
     font-size: 22px;
     color: #000;
     text-align: left;
