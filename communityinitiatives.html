@@ -202,25 +202,34 @@
     }
 </script>
 <script>
-let currentIndex = 0;
-const images = document.querySelectorAll('.community-image');
-const totalImages = images.length;
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const images = document.querySelectorAll(".community-image");
+    const prevArrow = document.querySelector(".prev-arrow");
+    const nextArrow = document.querySelector(".next-arrow");
 
-function showImage(index) {
-    // Hide all images
-    images.forEach(image => image.style.display = 'none');
-    // Show the current image
-    images[index].style.display = 'block';
-}
+    let currentIndex = 0; // Index of the currently visible image
 
-document.querySelector('.next-arrow').addEventListener('click', () => {
-    currentIndex = (currentIndex + 1) % totalImages; // Loop back to the first image
-    showImage(currentIndex);
-});
+    const updateCarousel = () => {
+        images.forEach((image, index) => {
+            image.style.display = index === currentIndex ? "block" : "none";
+        });
+    };
 
-document.querySelector('.prev-arrow').addEventListener('click', () => {
-    currentIndex = (currentIndex - 1 + totalImages) % totalImages; // Loop back to the last image
-    showImage(currentIndex);
+    // Move to the previous image
+    prevArrow.addEventListener("click", () => {
+        currentIndex = (currentIndex - 1 + images.length) % images.length; // Loop back to the last image
+        updateCarousel();
+    });
+
+    // Move to the next image
+    nextArrow.addEventListener("click", () => {
+        currentIndex = (currentIndex + 1) % images.length; // Loop back to the first image
+        updateCarousel();
+    });
+
+    // Initialize the carousel
+    updateCarousel();
 });
 </script>
 
