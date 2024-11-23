@@ -893,26 +893,31 @@ p.right-align {
     position: relative;
     width: 100%;
     max-width: 800px; /* Set a max width for the gallery */
-    margin: 0 auto;
+    margin: 0 auto; /* Center the gallery container horizontally */
     overflow: hidden; /* Hide anything outside the container */
+    display: flex; /* Use flexbox to center images */
+    justify-content: center; /* Center images horizontally */
 }
 
 .gallery-container {
     display: flex;
     transition: transform 0.5s ease-in-out;
+    justify-content: center; /* Center the images inside the container */
 }
 
 .community-image {
     display: none; /* Hide all images initially */
     width: 100%;
+    max-width: 100%; /* Ensure the image container doesn't exceed max width */
     flex-shrink: 0; /* Prevent images from shrinking */
+    justify-content: center; /* Center images within the container */
 }
-
 .community-image img {
     width: 100%; /* Make images take full width of the container */
     height: auto;
 }
 
+/* Position the arrows on the left and right of the screen */
 .gallery-nav {
     position: absolute;
     top: 50%;
@@ -920,21 +925,33 @@ p.right-align {
     display: flex;
     justify-content: space-between;
     transform: translateY(-50%);
+    opacity: 0; /* Hide arrows initially */
+    transition: opacity 0.3s ease; /* Smooth transition when they appear */
 }
 
 .prev-arrow, .next-arrow {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7); /* Dark background for visibility */
     color: white;
     border: none;
-    padding: 10px;
-    font-size: 30px;
+    padding: 20px;
+    font-size: 50px; /* Large arrow size */
     cursor: pointer;
     transition: background-color 0.3s ease;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10; /* Ensure arrows are above the images */
 }
 
-.prev-arrow:hover, .next-arrow:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+/* Position the arrows on the left and right of the screen */
+.prev-arrow {
+    left: 10px; /* Position on the left side */
 }
+
+.next-arrow {
+    right: 10px; /* Position on the right side */
+}
+
 .community-image:hover{
     transform: scale(1.1); /* Slight zoom on hover */
 }
