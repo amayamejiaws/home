@@ -161,156 +161,97 @@ ul li {
 /* ------------------------------- HEADER AND NAV BAR ------------------------------- */
 header {
     background-color: #333;
-    padding: 10px 0;
+    color: white;
+    padding: 10px;
     position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
-    z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    top: 0;
+    z-index: 10;
 }
 
-nav {
+.navbar {
     display: flex;
-    justify-content: space-between;
-    padding: 0 20px;
-}
-
-.nav-left, .nav-right {
-    display: flex;
-}
-
-.nav-left ul, .nav-right ul {
     list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
 
-.nav-left li, .nav-right li {
-    margin: 0 15px;
-}
-
-.nav-left a, .nav-right a {
+.navbar a {
     text-decoration: none;
     color: white;
-    font-weight: bold;
-    font-size: 1rem;
-    text-transform: uppercase;
-    padding: 5px 10px;
-    transition: background-color 0.3s ease;
-}
-
-.nav-left a:hover, .nav-right a:hover {
-    background-color: #f4f4f9;
-    color: #333;
-}
-
-
-/* --------------------- NAV BAR HAMBURGER MENU + NEXT PAGE --------------------- */
-.hamburger {
-    display: none;  /* Default, hides on larger screens */
-    font-size: 30px;
-    color: white;
-    cursor: pointer;
-}
-
-.next-page-link, .last-page-link {
-    display: none; /* Default: hides on larger screens */
-    color: white;
-    text-decoration: none;
     font-size: 1.2rem;
-    margin-left: auto;
-    padding: 10px 20px;
-    background-color: #333;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    transition: color 0.3s ease;
 }
 
-.next-page-link:hover, .last-page-link:hove {
-    background-color: #f4f4f9;
-    color: #333;
+.navbar a:hover {
+    color: #f4f4f9;
+}
+
+/* Mobile-First Design */
+.nav-left,
+.nav-right,
+.nav-links {
+    display: none; /* Hidden by default for smaller screens */
+}
+
+.hamburger {
+    display: block;
+    font-size: 2rem;
+    cursor: pointer;
+    color: white;
+    text-align: right;
+}
+
+.menu-toggle {
+    display: none; /* Hide the checkbox */
 }
 
 .navbar-list {
     display: none;
-}
-
-.navbar-list a {
-    text-decoration: none;
-    color: white;
-    : 1.2rem;
+    flex-direction: column;
+    list-style: none;
+    gap: 15px;
+    text-align: center;
+    background-color: #333;
     padding: 15px;
-    transition: background-color 0.3s ease;
 }
 
-.navbar-list a:hover {
-    background-color: #f4f4f9;
-    color: #333;
+/* Show Mobile Menu When Checked */
+.menu-toggle:checked ~ .navbar-list {
+    display: flex;
 }
 
-input[type="checkbox"].menu-toggle {
-    display: none !important;  /* Use !important to override any conflicting styles */
-}
-
-@media (max-width: 768px) {
+/* Desktop View */
+@media (min-width: 768px) {
     .hamburger {
-        display: block;  /* Shows hamburger on mobile screens */
-    }
-    
-    .nav-links {
-        display: flex; /* Ensures links are side by side */
-        justify-content: space-between; /* Aligns links to the right */
-        align-items: center;
-        width: 100%;
+        display: none; /* Hide hamburger menu */
     }
 
-    .next-page-link, .last-page-link {
-        display: block;
-    }
-
-    .nav-left, .nav-right {
-        display: none; /* Hide the regular menu links */
-        width: 100%;
-        text-align: center;
-    }
-    
-
-    .nav-left, .nav-right {
-        display: none;  /* Hide the regular menu links */
-        width: 100%;
-        text-align: center;
+    .nav-left,
+    .nav-right {
+        display: flex; /* Show full navigation */
     }
 
     .navbar-list {
-        display: none; /* Hide by default */
-        list-style: none;
-        padding: 0;
-        margin: 0;
+        display: none; /* Prevent overlap */
+    }
+
+    .nav-left {
+        justify-content: flex-start;
+        gap: 15px;
+    }
+
+    .nav-right {
+        justify-content: flex-end;
+        gap: 15px;
+    }
+
+    .nav-links {
+        display: block; /* Center link between sections */
         text-align: center;
-        width: 100%;
-    }
-
-    .navbar-list li {
-        margin: 10px 0;  /* Space out the items */
-    }
-
-    .navbar.active {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-    }
-    
-     .header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px;
-        background-color: #333;
     }
 }
-
 
 /* ------------------------------- HOME PAGE ------------------------------- */
 .hero {
@@ -793,7 +734,7 @@ p.right-align {
     padding: 20px;
     background: #fff;
     border-top: 1px solid #ccc;
-    height: 1000px; /* Set a fixed height */
+    height: 800px; /* Set a fixed height */
     overflow-y: auto;
 }
 
@@ -1059,7 +1000,6 @@ p.right-align {
     text-align: left;
 }
 
-/* Responsive Design */
 @media screen and (max-width: 768px) {
     .student {
         flex-direction: column; /* Stack photo and text vertically */
@@ -1082,6 +1022,7 @@ p.right-align {
 
 /* ------------------------------- CONTACT SECTION ------------------------------- */
 .contact-section {
+    display: flex;
     padding: 60px 20px;
     padding-top: 80px;
     margin: 40px auto;
@@ -1093,11 +1034,33 @@ p.right-align {
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-    
+
+.contact-section .image-container {
+    flex: 1; /* Image takes 1 part of the container */
+    margin-right: 30px; /* Space between image and text */
+    display: flex;
+    justify-content: center; /* Center the image */
+    align-items: center;
+}
+
+.contact-section .image-container img {
+    width: 100%; /* Adjust width as needed */
+    max-width: 300px; /* Maximum image size */
+    height: auto;
+    border-radius: 8px; /* Optional: Add rounded corners */
+}
+
+.contact-section .text-container {
+    flex: 2; /* Text takes 2 parts of the container */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center the text */
+    text-align: left; /* Align text to the left */
+}
+
 .contact-section h2 {
     color: #6A1B9A; /* Purple */
     margin-bottom: 20px;
-    text-align: center;
     position: relative;
 }
 
@@ -1113,39 +1076,40 @@ p.right-align {
 }
 
 .contact-section p {
-    text-align: center;
     line-height: 1.8;
     font-size: 20px; 
-}
-
-ul {
-    margin-top: 20px;
-    padding-left: 50px;
-    font-size: 20px;
-}
-
-ul li {
-    margin-bottom: 10px;
 }
 
 /* Mobile Styles for smaller screens */
 @media (max-width: 768px) {
     .contact-section {
+        flex-direction: column; /* Stack image and text on mobile */
         padding: 40px 15px; /* Adjust padding for smaller screens */
         padding-top: 60px;
-        margin: 20px 10px;   /* Reduce margin to create space around */
-        max-width: 100%;     /* Make sections full width on mobile */
+        margin: 20px 10px; /* Reduce margin to create space around */
+        max-width: 100%; /* Make sections full width on mobile */
+    }
+
+    .contact-section .image-container {
+        margin-bottom: 20px; /* Add space between image and text on mobile */
+    }
+
+    .contact-section .image-container img {
+        max-width: 100%; /* Ensure the image doesn't overflow */
     }
 
     .contact-section h2 {
-        : 26px;  /* Adjust font size for smaller screens */
+        font-size: 26px;  /* Adjust font size for smaller screens */
         margin-bottom: 15px; /* Reduce margin space */
+        text-align: center;
     }
 
     .contact-section p {
-        : 16px;     /* Adjust font size for better readability */
-        line-height: 1.6;    /* Adjust line height for better spacing */
+        font-size: 16px; 
+        line-height: 1.6;
+        text-align: center;
     }
+        
     ul {
         margin-top: 20px;
         padding-left: 0px;
