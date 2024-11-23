@@ -260,18 +260,16 @@ input[type="checkbox"].menu-toggle {
         width: 100%;
     }
 
-    input[type="checkbox"].menu-toggle:checked + .hamburger + .navbar-list {
+   input[type="checkbox"].menu-toggle:checked + .hamburger + .navbar-list {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    input[type="checkbox"].menu-toggle:checked ~ .last-page-link{
-        display: none; 
-    }
-
-    input[type="checkbox"].menu-toggle:checked ~ .next-page-link{
-        display: none; 
+    /* Hide next and last page links when hamburger is open */
+    input[type="checkbox"].menu-toggle:checked ~ .mobile-nav-container .next-page-link,
+    input[type="checkbox"].menu-toggle:checked ~ .mobile-nav-container .last-page-link {
+        display: none;
     }
     
     .menu-toggle {
