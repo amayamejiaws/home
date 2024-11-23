@@ -161,34 +161,119 @@ ul li {
 /* ------------------------------- HEADER AND NAV BAR ------------------------------- */
 header {
     background-color: #333;
-    color: white;
-    padding: 10px;
+    padding: 10px 0;
     position: fixed;
-    width: 100%;
     top: 0;
-    z-index: 10;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
-.navbar {
+nav {
     display: flex;
-    list-style: none;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
+    justify-content: space-between;
+    padding: 0 20px;
 }
 
-.navbar a {
+.nav-left, .nav-right {
+    display: flex;
+}
+
+.nav-left ul, .nav-right ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.nav-left li, .nav-right li {
+    margin: 0 15px;
+}
+
+.nav-left a, .nav-right a {
     text-decoration: none;
     color: white;
-    font-size: 1.2rem;
-    transition: color 0.3s ease;
+    font-weight: bold;
+    font-size: 1rem;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
 }
 
-.navbar a:hover {
-    color: #f4f4f9;
+.nav-left a:hover, .nav-right a:hover {
+    background-color: #f4f4f9;
+    color: #333;
 }
 
-/* Mobile-First Design */
+
+/* Hamburger icon */
+.hamburger {
+    display: none;  /* Default, hides on larger screens */
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+.navbar-list {
+    display: none;
+}
+
+.navbar-list a {
+    text-decoration: none;
+    color: white;
+    : 1.2rem;
+    padding: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-list a:hover {
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+input[type="checkbox"].menu-toggle {
+    display: none !important;  /* Use !important to override any conflicting styles */
+}
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;  /* Shows hamburger on mobile screens */
+    }
+
+    .nav-left, .nav-right {
+        display: none;  /* Hide the regular menu links */
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar-list {
+        display: none; /* Hide by default */
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    .navbar-list li {
+        margin: 10px 0;  /* Space out the items */
+    }
+
+    .navbar.active {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    /* When the checkbox is checked, show the nav links */
+    .menu-toggle:checked + .hamburger + .navbar-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+@media (max-width: 768px) {   
 .nav-left,
 .nav-right {
     display: none; /* Hidden by default for smaller screens */
@@ -223,8 +308,6 @@ header {
 .menu-toggle:checked ~ .navbar-list {
     display: flex;
 }
-
-/* Mobile Page Links and Hamburger */
 .mobile-nav-container {
     display: flex;
     justify-content: space-between; /* Space between elements */
@@ -256,7 +339,7 @@ header {
 }
 
 /* Mobile View: Next Page and Hamburger Menu */
-@media (max-width: 768px) {
+
     .nav-left,
     .nav-right {
         display: none; /* Hide the original navbar items for mobile */
@@ -289,43 +372,6 @@ header {
         order: 0; /* Keep it on the left */
     }
 }
-/* Desktop View */
-@media (min-width: 768px) {
-    .hamburger {
-        display: none; /* Hide hamburger menu on desktop */
-    }
-
-    .nav-left{
-        display: flex;
-        align-items: left; /* Vertically align items within left and right */
-        margin: 0;
-        padding: 0;
-        gap: 15px;
-    }
-    
-    .nav-right{
-        display: flex;
-        align-items: right; /* Vertically align items within left and right */
-        margin: 0;
-        padding: 0;
-        gap: 15px;
-    }
-
-    .navbar {
-        display: flex; /* Align items in a row */
-        justify-content: space-between; /* Space between left and right sections */
-        width: 100%; /* Ensure full width for navbar */
-    }
-
-    .navbar-list {
-        display: none; /* Prevent overlap for desktop */
-    }
-
-    .mobile-page-links {
-        display: none; /* Hide mobile links on desktop */
-    }
-}
-
 /* Global Link Style */
 .navbar a,
 .next-page-link,
