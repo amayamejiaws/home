@@ -218,6 +218,20 @@ document.addEventListener("DOMContentLoaded", () => {
     let currentIndex = 0; // Index of the currently visible image
 
     const updateCarousel = () => {
+        // Show or hide arrows based on the current index
+        if (currentIndex === 0) {
+            prevArrow.style.display = "none"; // Hide prevArrow on the first image
+        } else {
+            prevArrow.style.display = "block"; // Show prevArrow on other images
+        }
+
+        if (currentIndex === images.length - 1) {
+            nextArrow.style.display = "none"; // Hide nextArrow on the last image
+        } else {
+            nextArrow.style.display = "block"; // Show nextArrow on other images
+        }
+
+        // Show the current image and hide others
         images.forEach((image, index) => {
             image.style.display = index === currentIndex ? "block" : "none";
         });
@@ -225,22 +239,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Move to the previous image
     prevArrow.addEventListener("click", () => {
-        if (currentIndex === 0) {
-            currentIndex = images.length - 1; // Wrap around to the last image
-        } else {
-            currentIndex--; // Move to the previous image
+        if (currentIndex > 0) {
+            currentIndex--; // Decrease index
+            updateCarousel();
         }
-        updateCarousel();
     });
 
     // Move to the next image
     nextArrow.addEventListener("click", () => {
-        if (currentIndex === images.length - 1) {
-            currentIndex = 0; // Wrap around to the first image
-        } else {
-            currentIndex++; // Move to the next image
+        if (currentIndex < images.length - 1) {
+            currentIndex++; // Increase index
+            updateCarousel();
         }
-        updateCarousel();
     });
 
     // Initialize the carousel
