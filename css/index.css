@@ -930,43 +930,36 @@ p.right-align {
     height: auto;
 }
 
-/* Position the arrows on the left and right of the screen */
-.gallery-nav {
+.arrow {
     position: absolute;
     top: 50%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
     transform: translateY(-50%);
-    opacity: 0; /* Hide arrows initially */
-    transition: opacity 0.3s ease; /* Smooth transition when they appear */
-}
-
-.prev-arrow, .next-arrow {
-    background-color: rgba(0, 0, 0, 0.7); /* Dark background for visibility */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
     color: white;
     border: none;
-    padding: 20px;
-    font-size: 50px; /* Large arrow size */
+    padding: 10px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10; /* Ensure arrows are above the images */
+    z-index: 10;
+    display: none; /* Initially hidden */
+    font-size: 18px;
+    transition: opacity 0.3s ease;
 }
 
-/* Position the arrows on the left and right of the screen */
-.prev-arrow {
-    left: 10px; /* Position on the left side */
+.arrow:hover {
+    background-color: rgba(0, 0, 0, 0.7); /* Darken on hover */
 }
 
-.next-arrow {
-    right: 10px; /* Position on the right side */
+.arrow.prev-arrow {
+    left: 10px;
 }
 
-.community-image:hover{
-    transform: scale(1.1); /* Slight zoom on hover */
+.arrow.next-arrow {
+    right: 10px;
+}
+
+.community-gallery:hover .arrow {
+    display: block; /* Show arrows on hover */
+    opacity: 1;
 }
 
 .community-description-hover {
