@@ -215,6 +215,10 @@ header {
     text-align: center;
     background-color: #333;
     padding: 15px;
+    color: white; /* White text for all links */
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 10px;
 }
 
 /* Show Mobile Menu When Checked */
@@ -250,6 +254,48 @@ header {
     .nav-links {
         display: block; /* Center link between sections */
         text-align: center;
+    }
+}
+
+.last-page-link,
+.next-page-link {
+    display: none; 
+    font-size: 1rem;
+    color: white;
+    background-color: #444;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.last-page-link:hover,
+.next-page-link:hover {
+    background-color: #666;
+}
+
+.last-page-link{
+    text-align: left;
+}
+
+.next-page-link{
+    text-align: right;
+}
+
+@media (max-width: 768px) {
+    .mobile-page-links {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        background-color: #333;
+    }
+
+    .last-page-link,
+    .next-page-link {
+        display: block;
+        flex: 1;
+        margin: 0 5px;
     }
 }
 
