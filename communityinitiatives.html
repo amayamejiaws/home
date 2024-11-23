@@ -202,33 +202,26 @@
     }
 </script>
 <script>
-    let currentIndex = 0;
-    const images = document.querySelectorAll('.community-image');
-    const galleryContainer = document.querySelector('.gallery-container');
-    const totalImages = images.length;
+let currentIndex = 0;
+const images = document.querySelectorAll('.community-image');
+const totalImages = images.length;
 
-    function moveGallery(direction) {
-        currentIndex += direction;
+function showImage(index) {
+    // Hide all images
+    images.forEach(image => image.style.display = 'none');
+    // Show the current image
+    images[index].style.display = 'block';
+}
 
-        // Wrap around logic (when reaching the end or beginning)
-        if (currentIndex >= totalImages) {
-            currentIndex = 0;
-        } else if (currentIndex < 0) {
-            currentIndex = totalImages - 1;
-        }
+document.querySelector('.next-arrow').addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % totalImages; // Loop back to the first image
+    showImage(currentIndex);
+});
 
-        // Update the gallery position based on the current index
-        galleryContainer.style.transform = `translateX(-${currentIndex * 220}px)`; // 220px is image width + gap
-    }
-
-    // Add event listeners to arrows
-    document.querySelector('.next-arrow').addEventListener('click', function() {
-        moveGallery(1);
-    });
-
-    document.querySelector('.prev-arrow').addEventListener('click', function() {
-        moveGallery(-1);
-    });
+document.querySelector('.prev-arrow').addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + totalImages) % totalImages; // Loop back to the last image
+    showImage(currentIndex);
+});
 </script>
 
     <section id="getinvolved" class="section">
