@@ -986,7 +986,7 @@ p.right-align {
 
 .community-description-hover {
     position: absolute;
-    bottom: 0; /* Position it at the bottom of the container */
+    bottom: 5px; /* Position it at the bottom of the container */
     left: 0;
     width: 105%; /* Make the description take the full width */
     background-color: rgba(0, 0, 0, 0.4);
