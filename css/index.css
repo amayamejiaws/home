@@ -206,8 +206,6 @@ nav {
     color: #333;
 }
 
-
-/* Hamburger icon */
 .hamburger {
     display: none;  /* Default, hides on larger screens */
     font-size: 30px;
@@ -237,14 +235,13 @@ input[type="checkbox"].menu-toggle {
 }
 
 .mobile-nav-container {
-        display: none;
-    }
+    display: none;
+}
 
 @media (max-width: 768px) {
     .hamburger {
-        display: block;  /* Shows hamburger on mobile screens */
+        display: block;
         font-size: 2rem;
-        cursor: pointer;
         color: white;
         text-align: right;
         order: 2;
