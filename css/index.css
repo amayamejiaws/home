@@ -266,7 +266,8 @@ input[type="checkbox"].menu-toggle {
         align-items: center;
     }
 
-    input[type="checkbox"].menu-toggle:checked ~ .page-links {
+    input[type="checkbox"].menu-toggle:checked ~ .next-page-link, 
+    input[type="checkbox"].menu-toggle:checked ~ .last-page-link,{
         display: none;
     }
     
@@ -918,6 +919,7 @@ p.right-align {
     display: block;
     object-fit: contain; /* Ensure the image fits inside the container */
     width: 100%; /* Scale image to container width */
+    max-width: 600px;
     height: auto;
     flex-shrink: 0; /* Prevent images from shrinking */
     justify-content: center;
