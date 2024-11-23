@@ -1204,7 +1204,7 @@ p.right-align {
     font-size: 20px; 
 }
 
-.cv-link-box a{
+.cv-link-box{
     display: inline-block; /* Ensure it's not full width */
     margin-top: 20px;      /* Add space between the text and button */
     padding: 10px 20px;
@@ -1219,20 +1219,12 @@ p.right-align {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.cv-link-box a:hover {
+.cv-link-box:hover {
     background-color: #4A148C;
     transform: translateY(-3px);
 }
 
 .pdf-viewer {
-    width: 100%;
-    max-height: 80vh; /* Ensure it doesn't exceed the container's height */
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    overflow: hidden; /* Prevent extra scrollbars */
-}
-
-.pdf-frame {
     display: flex;
     flex-direction: column;
     align-items: center; /* Center iframe and text */
@@ -1246,6 +1238,16 @@ p.right-align {
     position: relative;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pdf-frame {
+    width: 100%;
+    height: calc(100vh - 200px); /* Dynamically adjust to fit within the viewport */
+    max-height: 80vh; /* Ensure it doesn't exceed the container's height */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
 }
 
 @media (max-width: 768px) {
