@@ -1246,12 +1246,6 @@ p.right-align {
     color: white; /* Text stays white on hover */
 }
 
-/* Hide the next page button in the footer for the home page */
-.nextpage-footer .footer-links {
-    display: none;
-}
-
-
 /* copy-right footer */
 footer {
     background-color: #3f0566; /* Purple */
