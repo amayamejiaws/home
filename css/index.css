@@ -890,15 +890,20 @@ p.right-align {
 }
 /* --------------------- IMAGES --------------------- */
 .community-gallery {
-    align-items: center; /* Center items vertically */
-    gap: 25px; /* Space between items */
-    padding: 20px; /* Add padding around the gallery */
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
+    width: 100%;
+    overflow: hidden; /* Hide any overflowed content */
+    background-color: #333; /* Background color for the gallery */
+    position: relative; /* For z-index handling of arrows */
+    padding: 20px 0;
+    white-space: nowrap; /* Prevent wrapping of images */
 }
 
-/* Individual community item container */
+.gallery-container {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.3s ease; /* Smooth transition for image sliding */
+}
+
 .community-image {
     display: flex;
     flex-direction: column; /* Stack image and description vertically */
@@ -956,7 +961,37 @@ p.right-align {
     z-indez: 10;
     box-sizing: border-box;
 }
-    
+
+.nav-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 2rem;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    opacity: 0; /* Arrows are hidden by default */
+    transition: opacity 0.3s ease;
+}
+
+.nav-arrow:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev-arrow {
+    left: 10px; /* Position to the left */
+}
+
+.next-arrow {
+    right: 10px; /* Position to the right */
+}
+
+.community-gallery:hover .nav-arrow {
+    opacity: 1; /* Show arrows on hover */
+}
+
 @media screen and (max-width: 768px) {
     .community-container {
         padding: 20px 0px;
@@ -965,7 +1000,19 @@ p.right-align {
         align-items: center; /* Center items horizontally */
         gap: 7px;
     }
-     
+    .community-gallery {
+        padding: 20px;
+        white-space: normal;
+    }
+
+    .community-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .nav-arrow {
+        display: none; /* Hide arrows on mobile */
+    }
     .community-image img {
         width: auto; /* Maintain natural aspect ratio */
         height: auto; /* Ensure correct proportions */
