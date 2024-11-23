@@ -199,7 +199,40 @@
         activeLabel.classList.add('active');
     }
 </script>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+    const galleries = document.querySelectorAll(".community-gallery");
 
+    galleries.forEach(gallery => {
+        const images = gallery.querySelectorAll(".community-image");
+        const prevArrow = gallery.querySelector(".prev-arrow");
+        const nextArrow = gallery.querySelector(".next-arrow");
+
+        let currentIndex = 0;  // Start with the first image
+
+        const updateCarousel = () => {
+            images.forEach((img, idx) => {
+                img.classList.remove("active");  // Remove active class from all images
+                if (idx === currentIndex) {
+                    img.classList.add("active");  // Add active class to current image
+                }
+            });
+        };
+
+        prevArrow.addEventListener("click", () => {
+            currentIndex = (currentIndex - 1 + images.length) % images.length; // Loop backward
+            updateCarousel();
+        });
+
+        nextArrow.addEventListener("click", () => {
+            currentIndex = (currentIndex + 1) % images.length; // Loop forward
+            updateCarousel();
+        });
+
+        updateCarousel(); // Initialize the first image as active
+    });
+});
+</script>
 
 <section id="getinvolved" class="section">
     <h2>Get Involved</h2>
