@@ -211,119 +211,64 @@
 
 <script>
 document.addEventListener("DOMContentLoaded", () => {
-    const images = document.querySelectorAll(".community-image-ameba");
-    const prevArrow = document.querySelector(".prev-arrow");
-    const nextArrow = document.querySelector(".next-arrow");
-
     let currentIndex = 0; // Index of the currently visible image
 
+    // Update the carousel to show/hide images and arrows
     const updateCarousel = () => {
-        // Show or hide arrows based on the current index
-        if (currentIndex === 0) {
-            prevArrow.style.display = "none"; // Hide prevArrow on the first image
-        } else {
-            prevArrow.style.display = "block"; // Show prevArrow on other images
-        }
+        const activeTab = document.querySelector('.tab-content.active');
+        const images = activeTab.querySelectorAll(".community-image");
 
-        if (currentIndex === images.length - 1) {
-            nextArrow.style.display = "none"; // Hide nextArrow on the last image
-        } else {
-            nextArrow.style.display = "block"; // Show nextArrow on other images
-        }
-
-        // Show the current image and hide others
+        // Reset the display of all images
         images.forEach((image, index) => {
             image.style.display = index === currentIndex ? "block" : "none";
         });
+
+        // Get the prev and next arrows for the active tab
+        const prevArrow = activeTab.querySelector(".prev-arrow");
+        const nextArrow = activeTab.querySelector(".next-arrow");
+
+        // Show/hide arrows based on the currentIndex
+        prevArrow.style.display = currentIndex === 0 ? "none" : "block"; // Hide prev on first image
+        nextArrow.style.display = currentIndex === images.length - 1 ? "none" : "block"; // Hide next on last image
     };
 
-    // Move to the previous image
-    prevArrow.addEventListener("click", () => {
-        if (currentIndex > 0) {
-            currentIndex--; // Decrease index
+    // Switch to the clicked tab
+    const tabLabels = document.querySelectorAll('.tab-label');
+    tabLabels.forEach(label => {
+        label.addEventListener('click', () => {
+            // Switch active tab
+            const activeTab = document.querySelector('.tab-content.active');
+            activeTab.classList.remove('active');
+            
+            const targetTabId = label.getAttribute('onclick').match(/'([^']+)'/)[1];
+            const targetTab = document.getElementById(targetTabId);
+            targetTab.classList.add('active');
+
+            // Reset the carousel when switching tabs
+            currentIndex = 0;
             updateCarousel();
-        }
-    });
-
-    // Move to the next image
-    nextArrow.addEventListener("click", () => {
-        if (currentIndex < images.length - 1) {
-            currentIndex++; // Increase index
-            updateCarousel();
-        }
-    });
-
-    // Initialize the carousel
-    updateCarousel();
-});
-    document.addEventListener("DOMContentLoaded", () => {
-    const images = document.querySelectorAll(".community-image-hola");
-    const prevArrow = document.querySelector(".prev-arrow");
-    const nextArrow = document.querySelector(".next-arrow");
-
-    let currentIndex = 0; // Index of the currently visible image
-
-    const updateCarousel = () => {
-        // Show or hide arrows based on the current index
-        if (currentIndex === 0) {
-            prevArrow.style.display = "none"; // Hide prevArrow on the first image
-        } else {
-            prevArrow.style.display = "block"; // Show prevArrow on other images
-        }
-
-        if (currentIndex === images.length - 2) {
-            nextArrow.style.display = "none"; // Hide nextArrow on the last image
-        } else {
-            nextArrow.style.display = "block"; // Show nextArrow on other images
-        }
-
-        // Show the current image and hide others
-        images.forEach((image, index) => {
-            image.style.display = index === currentIndex ? "block" : "none";
         });
-    };
-
-    // Move to the previous image
-    prevArrow.addEventListener("click", () => {
-        if (currentIndex > 0) {
-            currentIndex--; // Decrease index
-            updateCarousel();
-        }
     });
 
-    // Move to the next image
-    nextArrow.addEventListener("click", () => {
-        if (currentIndex < images.length - 1) {
-            currentIndex++; // Increase index
-            updateCarousel();
-        }
-    });
-
-    // Initialize the carousel
-    updateCarousel();
-});
-</script>
-</script>
-
-    // Set up carousel functionality for prev and next arrows in the active tab
+    // Handle the previous and next arrows for image navigation
     const prevArrows = document.querySelectorAll(".prev-arrow");
     const nextArrows = document.querySelectorAll(".next-arrow");
 
     prevArrows.forEach(prevArrow => {
         prevArrow.addEventListener("click", () => {
-            currentIndex = (currentIndex - 1 + getCurrentImages().length) % getCurrentImages().length; // Loop back to the last image
+            currentIndex = (currentIndex - 1 + getCurrentImages().length) % getCurrentImages().length; // Loop back to last image
             updateCarousel();
         });
     });
 
     nextArrows.forEach(nextArrow => {
         nextArrow.addEventListener("click", () => {
-            currentIndex = (currentIndex + 1) % getCurrentImages().length; // Loop back to the first image
+            currentIndex = (currentIndex + 1) % getCurrentImages().length; // Loop back to first image
             updateCarousel();
         });
     });
 
-    // Helper function to get the images in the active tab
+    // Helper function to get images in the active tab
     function getCurrentImages() {
         const activeTab = document.querySelector('.tab-content.active');
         return activeTab.querySelectorAll(".community-image");
