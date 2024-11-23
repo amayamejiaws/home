@@ -238,6 +238,11 @@ input[type="checkbox"].menu-toggle {
 @media (max-width: 768px) {
     .hamburger {
         display: block;  /* Shows hamburger on mobile screens */
+        font-size: 2rem;
+        cursor: pointer;
+        color: white;
+        text-align: right;
+        order: 2;
     }
 
     .nav-left, .nav-right {
@@ -266,110 +271,48 @@ input[type="checkbox"].menu-toggle {
         width: 100%;
     }
 
-    /* When the checkbox is checked, show the nav links */
     .menu-toggle:checked + .hamburger + .navbar-list {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-
-@media (max-width: 768px) {   
-.nav-left,
-.nav-right {
-    display: none; /* Hidden by default for smaller screens */
-}
-
-.hamburger {
-    display: block;
-    font-size: 2rem;
-    cursor: pointer;
-    color: white;
-    text-align: right;
-}
-
-.menu-toggle {
-    display: none; /* Hide the checkbox */
-}
-
-.navbar-list {
-    display: none;
-    flex-direction: column;
-    list-style: none;
-    gap: 15px;
-    text-align: center;
-    background-color: #333;
-    padding: 15px;
-    color: white; /* White text for all links */
-    text-decoration: none;
-    font-size: 1rem;
-}
-
-/* Show Mobile Menu When Checked */
-.menu-toggle:checked ~ .navbar-list {
-    display: flex;
-}
-.mobile-nav-container {
-    display: flex;
-    justify-content: space-between; /* Space between elements */
-    align-items: center;
-    width: 100%;
-}
-
-.last-page-link,
-.next-page-link {
-    font-size: 1rem;
-    color: white;
-    background-color: #444;
-    padding: 10px;
-    text-decoration: none;
-    border-radius: 5px;
-    margin: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.last-page-link:hover,
-.next-page-link:hover {
-    background-color: #666;
-}
-
-/* Keep Last Page Link Left */
-.last-page-link {
-    text-align: left;
-    order: 0; /* Ensure it's placed on the left */
-}
-
-/* Mobile View: Next Page and Hamburger Menu */
-
-    .nav-left,
-    .nav-right {
-        display: none; /* Hide the original navbar items for mobile */
-    }
-
-    .navbar-list {
+    
+    .menu-toggle:checked ~ .navbar-list {
         display: flex;
-        flex-direction: column;
-        text-align: center;
     }
-
-    /* Arrange Next Page and Hamburger with "Last Page" Link */
+    
+    .menu-toggle {
+        display: none; /* Hide the checkbox */
+    }
+    
     .mobile-nav-container {
         display: flex;
         justify-content: space-between; /* Space between elements */
         align-items: center;
         width: 100%;
     }
-
     .next-page-link {
         order: 1; /* Place "Next Page" before hamburger */
     }
-
-    .hamburger {
-        order: 2; /* Place hamburger menu after "Next Page" */
-    }
-
-    /* Ensure Last Page is to the left */
     .last-page-link {
+        text-align: left;
         order: 0; /* Keep it on the left */
+    }
+    .last-page-link,
+    .next-page-link {
+        font-size: 1rem;
+        color: white;
+        background-color: #444;
+        padding: 10px;
+        text-decoration: none;
+        border-radius: 5px;
+        margin: 5px;
+        transition: background-color 0.3s ease;
+    }
+    
+    .last-page-link:hover,
+    .next-page-link:hover {
+        background-color: #666;
     }
 }
 /* Global Link Style */
