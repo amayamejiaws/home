@@ -928,6 +928,13 @@ p.right-align {
     height: auto;
 }
 
+
+/* Show the arrows when hovering over the gallery */
+.community-gallery:hover .gallery-nav {
+    opacity: 1;
+    pointer-events: auto; /* Enable interactions */
+}
+
 /* Position the arrows on the left and right of the screen */
 .gallery-nav {
     position: absolute;
@@ -936,8 +943,9 @@ p.right-align {
     display: flex;
     justify-content: space-between;
     transform: translateY(-50%);
-    opacity: 1; /* Always show arrows */
-    transition: none; /* Remove the transition effect */
+    opacity: 0; /* Always show arrows */
+    pointer-events: none; /* Prevent interactions when hidden */
+    transition: opacity 0.3s ease;
 }
 
 .prev-arrow, .next-arrow {
