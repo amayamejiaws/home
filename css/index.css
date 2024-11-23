@@ -748,14 +748,15 @@ p.right-align {
 /* --------------------- TABS --------------------- */
 /* General styles for tabs */
 .tabs-container {
-    border: 2px solid #ccc; /* Border around the box */
-    border-radius: 10px; /* Rounded corners for the box */
-    background-color: #f9f9f9; /* Light background for the box */
-    padding: 20px; /* Add some padding inside the box */
+    border: 2px solid #ccc;  /* Border around the box */
+    border-radius: 10px;  /* Rounded corners for the box */
+    background-color: #f9f9f9;  /* Light background for the box */
+    padding: 20px;  /* Add some padding inside the box */
     max-width: 1200px;
-    margin: 50px auto; /* Center the box on the page */
+    margin: 50px auto;  /* Center the box on the page */
 }
 
+/* Tab styles */
 .alltabs {
     display: flex;
     margin-bottom: 10px;
@@ -775,8 +776,8 @@ p.right-align {
 }
 
 .alltabs .tab-label.active {
-    background: #decfe8; /* Change background of the active tab */
-    border-bottom: none; /* Remove the bottom border of the active tab */
+    background: #decfe8;  /* Change background of the active tab */
+    border-bottom: none;  /* Remove the bottom border of active tab */
 }
 
 .alltabs .tab-label:hover {
@@ -788,49 +789,32 @@ p.right-align {
     padding: 20px;
     background: #fff;
     border-top: 1px solid #ccc;
+    overflow-y: auto;
+}
+
+.mytabs .tab-content-scrollable {
+    display: none; /* Hide all tab content by default */
+    padding: 20px;
+    background: #fff;
+    border-top: 1px solid #ccc;
     height: 800px; /* Set a fixed height */
-    overflow: hidden; /* Disable scrolling by default */
+    overflow-y: auto;
 }
 
 .mytabs .tab-content.active {
     display: block;
 }
-
-/* Make only the mentorship section scrollable */
-.mytabs .tab-content.scrollable {
-    overflow-y: auto; /* Enable vertical scrolling */
-    scroll-behavior: smooth; /* Smooth scrolling */
-}
-
-/* Add custom scrollbar (optional) */
-.mytabs .tab-content.scrollable::-webkit-scrollbar {
-    width: 10px;
-}
-
-.mytabs .tab-content.scrollable::-webkit-scrollbar-track {
-    background: #f1f1f1;
-}
-
-.mytabs .tab-content.scrollable::-webkit-scrollbar-thumb {
-    background: #888;
-    border-radius: 5px;
-}
-
-.mytabs .tab-content.scrollable::-webkit-scrollbar-thumb:hover {
-    background: #555;
-}
-
-/* Responsive styles */
 @media screen and (max-width: 768px) {
     .tabs-container {
         padding: 20px 10px;
         max-width: 650px;
     }
     .mytabs .tab-content {
-        height: 700px;
+        padding: 10px 10px
     }
-    .mytabs .tab-content {
+    .mytabs .tab-content-scrollable {
         padding: 10px 10px;
+        height: 700px;
     }
 }
     
