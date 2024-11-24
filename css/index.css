@@ -168,32 +168,31 @@ nav {
     display: flex;
     justify-content: space-between;
     padding: 0 20px;
-    height: 100%; 
 }
 
 .nav-left, .nav-right {
     display: flex;
-    flex-direction: row;
 }
 
 .nav-left ul, .nav-right ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    display: flex;
 }
 
 .nav-left li, .nav-right li {
-    margin: 0;
-    padding: 0;
+    margin: 0 15px;
 }
 
 .nav-left a, .nav-right a {
-    text-decoration: none; 
-    color: white; 
+    text-decoration: none;
+    color: white;
     font-weight: bold;
     font-size: 1rem;
     text-transform: uppercase;
-    padding: 5px 10px; 
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
 }
 
 .nav-left a:hover, .nav-right a:hover {
