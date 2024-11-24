@@ -217,7 +217,6 @@ input[type="checkbox"].menu-toggle {
         display: flex;
         align-items: center; 
         position: fixed;
-        top: 10px;
         left: 20px;
         z-index: 1100; 
         display: block;
