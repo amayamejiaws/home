@@ -229,9 +229,11 @@ input[type="checkbox"].menu-toggle {
 
 @media (max-width: 768px) {
     .hamburger {
-        position: fixed; /* Ensure it remains at a fixed position */
-        top: 10px; /* Adjust the distance from the top */
-        left: 20px; /* Adjust the distance from the left */
+        display: flex;
+        align-items: center; 
+        position: fixed;
+        top: 10px;
+        left: 20px;
         z-index: 1100; 
         display: block;
         font-size: 2rem;
@@ -267,12 +269,19 @@ input[type="checkbox"].menu-toggle {
         text-align: left; /* Align text to the left */
     }
     
+    .menu-text {
+    font-size: 1rem; /* Adjust text size */
+        margin-left: 10px; /* Space between icon and text */
+        text-transform: uppercase; /* Optional: Make text uppercase */
+        color: white; /* Match text color to the hamburger */
+    }
+    
     .navbar-list a {
         text-decoration: none;
         color: white;
         font-size: 1rem;
         text-transform: uppercase;
-        display: block; /* Make the entire area clickable */
+        display: block; 
         transition: background-color 0.3s ease;
     }
     
