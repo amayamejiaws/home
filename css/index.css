@@ -162,14 +162,13 @@ header {
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
     height: 60px;
-    display: flex; /* Use Flexbox */
-    align-items: center; /* Center content vertically */
 }
 
 nav {
     display: flex;
     justify-content: space-between;
     padding: 0 20px;
+    align-items: center; /* Center content vertically */
 }
 
 .nav-left, .nav-right {
