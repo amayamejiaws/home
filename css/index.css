@@ -318,11 +318,11 @@ input[type="checkbox"].menu-toggle {
 
 .next-link-box {
     margin-top: 30px;
-    padding: 15px 30px;
+    padding: 10px 20px;
     background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
     color: #333;
     border-radius: 8px;
-    : 1.1rem;
+    font-size: 1.1rem;
     font-weight: bold;
     text-transform: uppercase;
     text-decoration: none;
@@ -336,27 +336,6 @@ input[type="checkbox"].menu-toggle {
     background-color: #787878; /* Highlight color on hover */
     color: #333;
     transform: translateY(-5px); /* Slight lift effect */
-}
-
-.footer-link-home {
-    position: absolute;      
-    bottom: 20px;
-    right: 20px;
-    transform: translateX(-50%); /* Adjust for perfect centering */
-    background-color: #3f0566; /* Purple background */
-    color: white;           /* White text */
-    padding: 10px 20px;     /* Add padding */
-    border-radius: 3px;     /* Slightly rounded corners */
-    text-decoration: none;  /* Remove underline */
-    font-size: 1rem;
-    text-align: center;     /* Center the text inside the link */
-    z-index: 999;           /* Ensure the button is above other elements */
-    transition: background-color 0.3s ease;
-}
-
-.footer-link-home:hover {
-    background-color: #4A148C; /* Darker purple on hover */
-    color: white; /* Text stays white on hover */
 }
 
 /* Hero text */
@@ -430,7 +409,7 @@ input[type="checkbox"].menu-toggle {
 
 @media (max-width: 768px) {
     .hero {
-        height: 80vh;
+        height: 95vh;
         display: flex;
         justify-content: center;
         align-items: center;
