@@ -154,18 +154,21 @@ ul li {
 /* ------------------------------- HEADER AND NAV BAR ------------------------------- */
 header {
     background-color: #333;
-    padding: 10px 0;
+    padding: 0; /* Remove extra padding */
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 60px;
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    display: flex; /* Use Flexbox */
+    align-items: center; /* Center content vertically */
+    height: 60px;
 }
 
 nav {
     display: flex;
+     flex-direction: row;
     justify-content: space-between;
     padding: 0 20px;
     align-items: center;
@@ -252,8 +255,8 @@ input[type="checkbox"].menu-toggle {
     }
     
     .menu-text {
-    font-size: 2rem; /* Adjust text size */
-        margin-left: 10px; /* Space between icon and text */
+        font-size: 1.5rem; /* Adjust text size */
+        margin-left: 0px; /* Space between icon and text */
         text-transform: uppercase; /* Optional: Make text uppercase */
         color: white; /* Match text color to the hamburger */
     }
