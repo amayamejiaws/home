@@ -262,7 +262,7 @@ input[type="checkbox"].menu-toggle {
 
     .navbar-list li {
         margin: 0; /* Remove margin between items */
-        padding: 10px 20px; /* Space inside each item */
+        padding: 7px 20px; /* Space inside each item */
         width: 100%; /* Ensure full clickable area */
         text-align: left; /* Align text to the left */
     }
