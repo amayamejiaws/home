@@ -229,9 +229,7 @@ input[type="checkbox"].menu-toggle {
     }
 
     .nav-left, .nav-right {
-        display: none;  /* Hide the regular menu links */
-        width: 100%;
-        text-align: center;
+        display: none; 
     }
 
     .navbar-list {
@@ -241,7 +239,7 @@ input[type="checkbox"].menu-toggle {
         margin: 0;
         position: fixed; /* Stay at the top */
         top: 60px; /* Space below the hamburger */
-        left: 20px;
+        left: 0px;
         width: 100%; /* Full width for the dropdown menu */
         background-color: #333; /* Match the header color */
         z-index: 1000; 
@@ -256,7 +254,7 @@ input[type="checkbox"].menu-toggle {
     
     .menu-text {
         font-size: 1.5rem; /* Adjust text size */
-        margin-left: 0px; /* Space between icon and text */
+        margin-left: 10px; /* Space between icon and text */
         text-transform: uppercase; /* Optional: Make text uppercase */
         color: white; /* Match text color to the hamburger */
     }
