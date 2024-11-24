@@ -194,7 +194,6 @@ nav {
     font-size: 1rem;
     text-transform: uppercase;
     padding: 5px 10px; 
-    display: inline-block;
 }
 
 .nav-left a:hover, .nav-right a:hover {
@@ -239,7 +238,7 @@ input[type="checkbox"].menu-toggle {
         margin: 0;
         position: fixed; /* Stay at the top */
         top: 60px; /* Space below the hamburger */
-        left: 0;
+        left: 20px;
         width: 100%; /* Full width for the dropdown menu */
         background-color: #333; /* Match the header color */
         z-index: 1000; 
@@ -253,7 +252,7 @@ input[type="checkbox"].menu-toggle {
     }
     
     .menu-text {
-    font-size: 1rem; /* Adjust text size */
+    font-size: 2rem; /* Adjust text size */
         margin-left: 10px; /* Space between icon and text */
         text-transform: uppercase; /* Optional: Make text uppercase */
         color: white; /* Match text color to the hamburger */
