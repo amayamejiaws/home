@@ -1095,7 +1095,7 @@ p.right-align {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 0px; /* Space between photo and text */
+    gap: 20px;
 }
 
 .student-photo {
@@ -1108,6 +1108,20 @@ p.right-align {
 .student-photo img {
     width: 150px;
     height: 210px;
+    object-fit: cover; /* Ensure the image fits well */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add some depth */
+}
+
+.group-photo {
+    flex: 3; /* 30% of the container width */
+    display: flex; /* Ensure proper centering */
+    align-items: center;
+    justify-content: center;
+}
+    
+.group-photo img {
+    width: 280px;
+    height: 200px;
     object-fit: cover; /* Ensure the image fits well */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add some depth */
 }
