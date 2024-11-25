@@ -1172,6 +1172,12 @@ p.right-align {
         margin-bottom: 7px
     }
 
+    .student-photo img {
+        width: 180px; /* Smaller image for mobile */
+        height: auto;
+        margin-bottom: 7px
+    }
+
     .student-info h3 {
         font-size: 18px;
     }
