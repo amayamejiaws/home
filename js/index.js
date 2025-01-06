@@ -1,84 +1,74 @@
-// Ensure the DOM is fully loaded
-document.addEventListener("DOMContentLoaded", () => {
+$(document).ready(function () {
     // Add dynamic year to footer
-    const yearSpan = document.getElementById("year");
-    yearSpan.textContent = new Date().getFullYear();
+    $("#year").text(new Date().getFullYear());
 
     // Add hover effects to sections
-    const sections = document.querySelectorAll(".section");
-    sections.forEach(section => {
-        section.addEventListener("mouseenter", () => {
-            section.style.backgroundColor = "#f0f8ff";
-            section.style.transition = "background-color 0.5s ease";
-        });
-
-        section.addEventListener("mouseleave", () => {
-            section.style.backgroundColor = "#fff";
-        });
-    });
+    $(".section").hover(
+        function () {
+            $(this).css({
+                backgroundColor: "#f0f8ff",
+                transition: "background-color 0.5s ease",
+            });
+        },
+        function () {
+            $(this).css("backgroundColor", "#fff");
+        }
+    );
 
     // Animate Hero Text on Scroll
-    const hero = document.querySelector(".hero");
-    const observer = new IntersectionObserver(
-        ([entry]) => {
+    const hero = $(".hero");
+    const observerOptions = {
+        threshold: 0.5,
+    };
+
+    const observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
             if (entry.isIntersecting) {
-                hero.querySelector("h1").classList.add("animate");
-                hero.querySelector("p").classList.add("animate");
+                hero.find("h1").addClass("animate");
+                hero.find("p").addClass("animate");
             }
-        },
-        { threshold: 0.5 }
-    );
-    observer.observe(hero);
+        });
+    }, observerOptions);
+
+    if (hero.length) {
+        observer.observe(hero[0]);
+    }
 
     // Floating navigation highlight
-    const navLinks = document.querySelectorAll("nav ul li a");
     const sectionsObserver = new IntersectionObserver(
-        entries => {
-            entries.forEach(entry => {
+        function (entries) {
+            entries.forEach(function (entry) {
                 if (entry.isIntersecting) {
-                    navLinks.forEach(link => link.classList.remove("active"));
-                    document
-                        .querySelector(`a[href="#${entry.target.id}"]`)
-                        .classList.add("active");
+                    $("nav ul li a").removeClass("active");
+                    $(`a[href="#${entry.target.id}"]`).addClass("active");
                 }
             });
         },
         { threshold: 0.7 }
     );
 
-    document.querySelectorAll("section").forEach(section => {
-        sectionsObserver.observe(section);
+    $("section").each(function () {
+        sectionsObserver.observe(this);
     });
+    
+    // Portfolio details carousel
+    $(document).ready(function() {
+      var owl = $('.owl-carousel');
 
-    // Image switching in Community Initiatives
-   const galleries = document.querySelectorAll(".community-gallery");
+      owl.owlCarousel({
+        items: 1,
+        loop: true,
+        autoplay: true,
+        autoplayTimeout: 3500,
+        nav: true,
+        margin: 10,
+      });
 
-    galleries.forEach(gallery => {
-        const images = gallery.querySelectorAll(".community-image");
-        const prevArrow = gallery.querySelector(".prev-arrow");
-        const nextArrow = gallery.querySelector(".next-arrow");
+      owl.on('changed.owl.carousel', function(event) {
+          var item = event.item.index - 2;     // Position of the current item
+          $('h1').removeClass('animated bounce');
+     $('.owl-item').not('.cloned').eq(item).find('h1').addClass('animated bounce');
+      });
 
-        let currentIndex = 0;  // Start with the first image
-
-        const updateCarousel = () => {
-            images.forEach((img, idx) => {
-                img.classList.remove("active");  // Remove active class from all images
-                if (idx === currentIndex) {
-                    img.classList.add("active");  // Add active class to current image
-                }
-            });
-        };
-
-        prevArrow.addEventListener("click", () => {
-            currentIndex = (currentIndex - 1 + images.length) % images.length; // Loop backward
-            updateCarousel();
-        });
-
-        nextArrow.addEventListener("click", () => {
-            currentIndex = (currentIndex + 1) % images.length; // Loop forward
-            updateCarousel();
-        });
-
-        updateCarousel(); // Initialize the first image as active
     });
-});
+})(jQuery);
