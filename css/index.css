@@ -848,7 +848,7 @@ p.right-align {
     
 /* --------------------- TEXT --------------------- */
 #communitytitle {
-    background: url('../images/HoLA_City_Birds.jpg');
+    background: url('images/HoLA_City_Birds.jpg');
     background-repeat: norepeat;
     background-size: cover; 
     background-position: 50% 75%; 
@@ -927,160 +927,67 @@ p.right-align {
     }
 }
 /* --------------------- IMAGES --------------------- */
-.community-gallery {
-    position: relative;
-    width: 100%;
-    max-width: 800px; /* Set a max width for the gallery */
-    margin: 0 auto; /* Center the gallery container horizontally */
-    overflow: hidden; /* Hide anything outside the container */
-    display: flex; /* Use flexbox to center images */
-    justify-content: center; /* Center images horizontally */
-}
-
-.gallery-container {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    justify-content: center; /* Center the images inside the container */
-}
-
-.community-image {
-    display: none; /* Hide all images initially */
-    width: 100%;
-    max-width: 100%; /* Ensure the image container doesn't exceed max width */
-    flex-shrink: 0; /* Prevent images from shrinking */
-    justify-content: center; /* Center images within the container */
-}
-.community-image img {
-    width: 100%; /* Make images take full width of the container */
+.owl-carousel{
+    width: 80%;
     height: auto;
+    text-align: center;
+    margin: 0 auto;
+    flex-shrink: 0;
 }
 
-/* Show the arrows when hovering over the gallery */
-.community-gallery:hover .gallery-nav {
-    opacity: 1;
-    pointer-events: auto; /* Enable interactions */
+.owl-carousel .owl-stage-outer {
+  overflow: hidden;
 }
 
-/* Position the arrows on the left and right of the screen */
-.gallery-nav {
-    position: absolute;
-    top: 50%;
+.owl-carousel .owl-stage {
+  display: flex;
+  align-items: center;
+  min-height: 300px;
+}
+
+.owl-carousel .owl-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-item {
+  position: relative;
+}
+
+.carousel-item img {
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    transform: translateY(-50%);
-    opacity: 0; /* Always show arrows */
-    pointer-events: none; /* Prevent interactions when hidden */
-    transition: opacity 0.3s ease;
+    height: 100%;
+    border-radius: 8px;
 }
 
-.prev-arrow, .next-arrow {
-    background-color: rgba(0, 0, 0, 0.7); /* Dark background for visibility */
-    color: white;
-    border: none;
-    padding: 20px;
-    font-size: 50px; /* Large arrow size */
-    cursor: pointer;
+.caption h1{
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10; /* Ensure arrows are above the images */
-}
-
-.prev-arrow {
-    left: 10px; /* Position on the left side */
-}
-
-.next-arrow {
-    right: 10px; /* Position on the right side */
-}
-
-.community-description-hover {
-    position: absolute;
-    bottom: 6px; /* Position it at the bottom of the container */
     left: 0;
-    width: 100%; /* Make the description take the full width */
-    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
     color: white;
-    text-align: left; /* Center the text */
-    padding: 5px 15px; /* Remove padding to remove spaces */
-    margin: 0; /* Remove margin to remove spaces */
-    opacity: 0; /* Hidden by default */
-    pointer-events: none; /* Allow hover to work smoothly */
-    transition: opacity 0.3s ease; /* Smooth fade-in effect */
-    font-size: 16px;
-    z-indez: 10;
-}
-
-.community-image:hover .community-description-hover {
-    opacity: 1; /* Make the description visible */
-}
-
-/* Static description (transparent black background with white text) */
-.community-description-static {
-    position: absolute;
-    bottom: -10px; /* Position it at the bottom of the container */
-    left: 0;
-    width: 100%; /* Make the description take the full width */
-    background-color: rgba(0, 0, 0, 1);
-    color: white;
-    text-align: center; /* Center the text */
-    padding: 5px 20px; /* Remove padding to remove spaces */
-    margin: 0; /* Remove margin to remove spaces */
-    font-size: 14px;
+    text-align: center;
+    padding: 5px 20px;
+    font-size: 24px;
     z-indez: 10;
     box-sizing: border-box;
 }
 
-@media screen and (max-width: 768px) {
-    .community-container {
-        padding: 20px 0px;
-        flex-direction: column; /* Stack image and text vertically */
-        justify-content: flex-start; /* Align items at the start */
-        align-items: center; /* Center items horizontally */
-        gap: 7px;
+@media only screen and (max-width: 768px){
+    .owl-carousel{
+        width: 80vw;
     }
-
-    .community-image {
-        width: 100%;
-        height: auto;
+    .caption h1{
+        font-size: 14px;
     }
-
-    .prev-arrow, .next-arrow {
-        font-size: 25px; /* Large arrow size */
-    }
-    
-    .community-image img {
-        width: auto; /* Maintain natural aspect ratio */
-        height: auto; /* Ensure correct proportions */
-        max-width: 100%; 
-        margin: 0px 0x;
-        position: relative;
-        transform: none !important; /* Prevent zooming */
-        transition: none !important; /* Remove smooth transition */
-        margin-bottom: 0px;
-    }
-  
-    .community-description-hover {
-        display: none; /* Hide hover description on mobile */
-    }
-
-    .community-description-static {
-        display: block; /* Always show static description on mobile */
+    .owl-carousel .owl-stage {
+      display: flex;
+      align-items: center;
+      min-height: 100px;
     }
 }
 
-/* Show the hover description only on desktop screens */
-@media screen and (min-width: 768px) {
-    .community-description-static {
-        display: none; /* Hide static description on desktop */
-    }
-
-    /* Show the description text on hover */
-    .community-image:hover .community-description-hover {
-        opacity: 1;
-    }
-}
 /* --------------------- PREVIOUS STUDENT SECTION --------------------- */
 .previous-students {
     display: flex;
