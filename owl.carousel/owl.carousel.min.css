@@ -12,7 +12,7 @@
 
 .owl-carousel {
   display: none;
-  width: 60vw;
+  width: 75vw;
   z-index: 1;
 }
 
@@ -56,9 +56,8 @@
 }
 
 .owl-carousel .owl-item img {
-  width: 100%;        /* stretches to container width */
-  height: 300px;      /* or any consistent height */
-  object-fit: cover;  /* crop to fill while preserving aspect ratio */
+  display: block;
+  width: 100%;
 }
 
 .owl-carousel .owl-dots.disabled,
