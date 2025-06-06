@@ -928,7 +928,7 @@ p.right-align {
 }
 /* --------------------- IMAGES --------------------- */
 .owl-carousel{
-    width: 50%;
+    width: 50vh;
     height: auto;
     text-align: center;
     margin: 0 auto;
