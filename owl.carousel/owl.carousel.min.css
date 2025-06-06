@@ -56,8 +56,9 @@
 }
 
 .owl-carousel .owl-item img {
-  display: block;
-  width: 100%;
+  width: 100%;        /* stretches to container width */
+  height: 300px;      /* or any consistent height */
+  object-fit: cover;  /* crop to fill while preserving aspect ratio */
 }
 
 .owl-carousel .owl-dots.disabled,
