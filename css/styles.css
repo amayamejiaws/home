@@ -318,7 +318,7 @@ input[type="checkbox"].menu-toggle {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url('../images/ANFbackground.jpg') no-repeat center center/cover; /* Background image */
+    background: url('../images/ANFbackground_Small.jpeg') no-repeat center center/cover; /* Background image */
     color: #fff;
     text-align: center;
     position: relative;
