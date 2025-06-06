@@ -7,7 +7,6 @@
 /* Common styles */
 .owl-theme .owl-dots,
 .owl-theme .owl-nav {
-  text-align: center;
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -15,21 +14,30 @@
 .owl-theme .owl-nav {
   position: absolute;
   top: 50%;
-  left: 0;
-  right: 0;
-  display: flex;
-  justify-content: space-between;
+  width: 100%;
   transform: translateY(-50%);
   pointer-events: none; /* prevent blocking interaction */
 }
 
-.owl-theme .owl-nav [class*=owl-] {
+.owl-theme .owl-nav .owl-prev,
+.owl-theme .owl-nav .owl-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   pointer-events: all;
   background: rgba(0, 0, 0, 0.5);
   color: #fff;
   border-radius: 50%;
   font-size: 20px;
   padding: 12px;
+}
+
+.owl-theme .owl-nav .owl-prev {
+  left: -20px; /* adjust as needed */
+}
+
+.owl-theme .owl-nav .owl-next {
+  right: -20px; /* adjust as needed */
 }
 
 /* Disabled state for nav */
@@ -44,6 +52,11 @@
 }
 
 /* Dots container */
+.owl-theme .owl-dots {
+  text-align: center;
+  margin-top: 15px;
+}
+
 .owl-theme .owl-dots .owl-dot {
   display: inline-block;
   zoom: 1;
