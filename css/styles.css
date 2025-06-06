@@ -806,7 +806,7 @@ p.right-align {
 }
 
 .alltabs .tab-label:hover {
-    background: #decfe8;
+    background: #c5bae3;
 }
 
 .mytabs .tab-content {
@@ -928,7 +928,7 @@ p.right-align {
 }
 /* --------------------- IMAGES --------------------- */
 .owl-carousel{
-    width: 70%;
+    width: 50%;
     height: auto;
     text-align: center;
     margin: 0 auto;
