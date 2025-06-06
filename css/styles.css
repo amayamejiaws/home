@@ -848,7 +848,7 @@ p.right-align {
     
 /* --------------------- TEXT --------------------- */
 #communitytitle {
-    background: url('images/HoLA_City_Birds_Small.jpeg');
+    background: url('../images/HoLA_City_Birds_Small.jpeg');
     background-repeat: norepeat;
     background-size: cover; 
     background-position: 50% 75%; 
