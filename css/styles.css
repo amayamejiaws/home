@@ -512,7 +512,7 @@ input[type="checkbox"].menu-toggle {
 /* ------------------------------- RESEARCH SECTION ------------------------------- */
 /* --------------------- RESEARCH GOALS --------------------- */
 #researchgoals {
-    background: url('../images/Slide_Horizontal_Haemoproteus.jpg');
+    background: url('../images/Slide_Horizontal_Haemoproteus_Small.jpeg');
     background-repeat: repeat;
     background-size: cover; 
     color: white; /* Ensures text is readable on the image */
@@ -806,7 +806,7 @@ p.right-align {
 }
 
 .alltabs .tab-label:hover {
-    background: #d2d2d2;
+    background: #decfe8;
 }
 
 .mytabs .tab-content {
@@ -848,7 +848,7 @@ p.right-align {
     
 /* --------------------- TEXT --------------------- */
 #communitytitle {
-    background: url('images/HoLA_City_Birds.jpg');
+    background: url('images/HoLA_City_Birds_Small.jpeg');
     background-repeat: norepeat;
     background-size: cover; 
     background-position: 50% 75%; 
